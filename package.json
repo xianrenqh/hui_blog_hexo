@@ -6,7 +6,25 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "sync": "yuque-hexo sync",
+    "clean:yuque": "yuque-hexo clean"
+  },
+  "yuqueConfig": {
+    "postPath": "source/_posts",
+    "cachePath": "yuque.json",
+    "mdNameFormat": "slug",
+    "adapter": "hexo",
+    "concurrency": 5,
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "xianrenqh",
+    "repo": "kyeqhg",
+    "token": "opy3o2abkXBIifNEWi1mQGgkof5ogac8CcS03c3e",
+    "onlyPublished": true,
+    "onlyPublic": true
+  },
+  "devDependencies": {
+    "yuque-hexo": "^1.6.0"
   },
   "hexo": {
     "version": "6.1.0"
