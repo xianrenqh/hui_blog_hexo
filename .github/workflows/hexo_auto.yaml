@@ -55,7 +55,7 @@ jobs:
       - name: Push Yuque #推送修改后的yuque json
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GE_TOKEN }}
 
       - name: Cache Hexo
         uses: actions/cache@v1
