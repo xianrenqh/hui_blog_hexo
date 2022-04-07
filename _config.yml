@@ -6,7 +6,7 @@
 title: 小灰灰博客
 subtitle: '小灰灰的精神驿站'
 description: '小灰灰的精神驿站'
-keywords: 小灰灰,博客,小灰灰博客,xiaohuihui,精神驿站 
+keywords: 小灰灰,博客,小灰灰博客,xiaohuihui,精神驿站
 author: 小灰灰
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -17,8 +17,8 @@ url: https://www.xiaohuihui.net
 #permalink: :year/:month/:day/:title/
 permalink: posts/:abbrlink.html  # post 是自定义的前缀
 abbrlink:
-    alg: crc32   #算法： crc16(default) and crc32
-    rep: hex     #进制： dec(default) and hex
+  alg: crc32   #算法： crc16(default) and crc32
+  rep: hex     #进制： dec(default) and hex
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -106,6 +106,9 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-- type: git
-  repository: git@gitee.com:xianrenqh/huihui-blog-hexo-page.git
-  branch: master
+  - type: git
+    repository: git@gitee.com:xianrenqh/huihui-blog-hexo-page.git
+    branch: master
+  - type: git
+    repository: git@github.com:xianrenqh/hui_blog_hexo_pages.git
+    branch: master
