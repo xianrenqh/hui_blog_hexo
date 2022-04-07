@@ -4,16 +4,16 @@
 
 # Site
 title: 小灰灰博客
-subtitle: '小灰灰博客subtitle'
-description: '小灰灰博客描述'
-keywords: 小灰灰 博客 小灰灰博客 xiaohuihui 
+subtitle: '小灰灰的精神驿站'
+description: '小灰灰的精神驿站'
+keywords: 小灰灰,博客,小灰灰博客,xiaohuihui,精神驿站 
 author: 小灰灰
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://xiaohuihui.net
+url: https://www.xiaohuihui.net
 #permalink: :year/:month/:day/:title/
 permalink: posts/:abbrlink.html  # post 是自定义的前缀
 abbrlink:
