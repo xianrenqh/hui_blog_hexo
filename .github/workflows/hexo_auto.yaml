@@ -1,43 +1,76 @@
-name: Blog CI/CD
+name: Hexo Deploy
 
-on: [push, repository_dispatch]
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 21 * * 0' # 每周日 UTC 时间 21:00, 北京时间周一凌晨5点
 
 jobs:
-  blog-cicd:
-    name: Hexo blog build & deploy
+  build:
     runs-on: ubuntu-latest
-    env:
-      TZ: Asia/Shanghai
-    steps:
-      - name: Checkout codes
-        uses: actions/checkout@v2
 
-      - name: Setup node
+    steps:
+      - name: Checkout source  # 将仓库内master分支的内容下载到工作目录
+        uses: actions/checkout@v2 # 脚本来自 https://github.com/actions/checkout
+        with:
+          ref: master
+          submodules: 'true'
+
+      - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          node-version: '14.x'
 
-      - name: Install dependencies
+      - name: Checkout Submodules
         run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+
+      - name: Setup Hexo
+        env:
+          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.email "xianrenqh@163.com"
+          git config --global user.name "xianrenqh"
           npm install hexo-cli -g
           npm install yuque-hexo -g
-          npm install
+          yuque-hexo clean
           yuque-hexo sync
-      - name: Generate files
-        run: hexo generate
 
-      - name: Deploy blog
+      - name: Setup Yuque #更新yuque 拉取的文章到GitHub仓库
         run: |
-          git clone "https://${{ secrets.GH_REF }}" deploy_git
-          mv ./deploy_git/.git ./public/
-          cd ./public
-          git config user.name "小灰灰"
-          git config user.email "qh@toushivip.com"
+          git config --global user.email "xianrenqh@163.com"
+          git config --global user.name "xianrenqh"
           git add .
-          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://${{ secrets.GH_TOKEN }}@${{ secrets.GH_REF }}" master:master
+          git commit -m "Refresh yuque json" -a
+
+      - name: Push Yuque #推送修改后的yuque json
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache Hexo
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          npm install --save
+
+      - name: Hexo Deploy
+        run: |
+          hexo clean
+          hexo generate
+          hexo deploy
