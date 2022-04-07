@@ -106,9 +106,9 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  - type: git
-    repository: git@gitee.com:xianrenqh/huihui-blog-hexo-page.git
-    branch: master
+#   - type: git
+#     repository: git@gitee.com:xianrenqh/huihui-blog-hexo-page.git
+#     branch: master
   - type: git
     repository: git@github.com:xianrenqh/hui_blog_hexo_pages.git
     branch: master
