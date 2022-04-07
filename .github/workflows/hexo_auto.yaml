@@ -1,49 +1,43 @@
-# workflow name
-name: Hexo Blog CI
-# master branch on push, auto run
-on:
-  push:
-    branches:
-      - master
+name: Blog CI/CD
+
+on: [push, repository_dispatch]
 
 jobs:
-  build:
+  blog-cicd:
+    name: Hexo blog build & deploy
     runs-on: ubuntu-latest
-
+    env:
+      TZ: Asia/Shanghai
     steps:
-      # check it to your workflow can access it
-      # from: https://github.com/actions/checkout
-      - name: Checkout Repository master branch
-        uses: actions/checkout@master
+      - name: Checkout codes
+        uses: actions/checkout@v2
 
-      # from: https://github.com/actions/setup-node
-      - name: Setup Node.js 10.x
-        uses: actions/setup-node@master
+      - name: Setup node
+        uses: actions/setup-node@v1
         with:
-          node-version: "10.x"
+          node-version: '12.x'
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Setup Hexo Dependencies
+      - name: Install dependencies
         run: |
-          npm install hexo-cli -g 
+          npm install hexo-cli -g
+          npm install yuque-hexo -g
           npm install
+          yuque-hexo sync
+      - name: Generate files
+        run: hexo generate
 
-#      - name: Setup Deploy Private Key
-#        env:
-#          HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
-#
-#        run: |
-#          mkdir -p ~/.ssh/
-#          echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
-#          chmod 600 ~/.ssh/id_rsa
-#          ssh-keyscan github.com >> ~/.ssh/known_hosts 
-
-      - name: Setup Git Infomation
+      - name: Deploy blog
         run: |
-          git config --global user.name 'xianrenqh' 
-          git config --global user.email 'xianrenqh@163.com' 
-
-      - name: Deploy Hexo
-        run: |
-          hexo clean 
-          hexo generate 
-          hexo deploy
+          git clone "https://${{ secrets.GH_REF }}" deploy_git
+          mv ./deploy_git/.git ./public/
+          cd ./public
+          git config user.name "xianrenqh"
+          git config user.email "xianrenqh@163.com"
+          git add .
+          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force --quiet "https://${{ secrets.GH_TOKEN }}@${{ secrets.GH_REF }}" master:master
