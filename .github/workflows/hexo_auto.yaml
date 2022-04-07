@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source  # 将仓库内master分支的内容下载到工作目录
+      - name: Checkout source  # 将仓库内master分支的内容下载到工作目录1
         uses: actions/checkout@v2 # 脚本来自 https://github.com/actions/checkout
         with:
           ref: master
