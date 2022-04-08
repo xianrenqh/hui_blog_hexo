@@ -9,6 +9,7 @@ tags:
   - action
   - 云函数
   - 调度
+abbrlink: 3c85ac91
 ---
 
 ## 如何开启 GitHubAction 的 workflow_dispatch 触发器
