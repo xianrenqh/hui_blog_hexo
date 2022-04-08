@@ -34,15 +34,15 @@ jobs:
         env:
           HEXO_DEPLOY_PRI: ${{ secrets.HEXO_DEPLOY_PRI }}
         run: |
-          mkdir -p ~/.ssh/
-          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.email "xianrenqh@163.com"
-          git config --global user.name "xianrenqh"
-          npm install hexo-cli -g
-          npm install yuque-hexo -g
+#          mkdir -p ~/.ssh/
+#          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+#          chmod 700 ~/.ssh
+#          chmod 600 ~/.ssh/id_rsa
+#          ssh-keyscan github.com >> ~/.ssh/known_hosts
+#          git config --global user.email "xianrenqh@163.com"
+#          git config --global user.name "xianrenqh"
+#          npm install hexo-cli -g
+#          npm install yuque-hexo -g
           yuque-hexo clean
           yuque-hexo sync
 
