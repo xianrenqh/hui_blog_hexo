@@ -1,7 +1,7 @@
 ---
 title: Github Action 使用云函数调度服务
 urlname: awh8vd
-date: '2022-04-08 11:49:09 +0800'
+date: '2022-04-08 03:49:09 +0000'
 categories:
   - 学无止境
 tags:
@@ -9,7 +9,6 @@ tags:
   - action
   - 云函数
   - 调度
-abbrlink: 3c85ac91
 ---
 
 ## 如何开启 GitHubAction 的 workflow_dispatch 触发器
