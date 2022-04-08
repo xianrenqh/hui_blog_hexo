@@ -111,4 +111,4 @@ deploy:
 #     branch: master
   - type: git
     repository: git@github.com:xianrenqh/hui_blog_hexo_pages.git
-    branch: dev
+    branch: master
