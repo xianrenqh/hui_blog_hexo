@@ -125,6 +125,27 @@ ps.公开的知识库也要设置 Token。
 然后 hexo g && hexo s 就可以访问 127.0.0.1:4000 本地看一下了
 手动发布是 hexo g && hexo d
 
+### 针对语雀图片无法正常显示的解决办法
+
+在主题的 layout 文件夹中的 post.ejs 文件中加上一句（不同主题加的位置不同）
+
+```
+<meta name="referrer" content="no-referrer" />
+```
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649404362200-7eafd317-d235-4af8-afe9-4f9c54d4dee2.png#clientId=u68da2bd8-69aa-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u4d9c66af&margin=%5Bobject%20Object%5D&name=image.png&originHeight=351&originWidth=841&originalType=url∶=1&rotation=0&showTitle=false&size=46710&status=done&style=none&taskId=ufd914241-d133-43ab-b845-e08191199df&title=)
+
+小灰灰用的是 butterFly 主题，加的位置在：
+\themes\butterfly\layout\includes\head.pug 文件：
+大概在第 21 行左右添加：
+
+```
+meta(name="referrer" content="no-referrer")
+```
+
+如图：
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649404444453-83f94c26-230f-4b93-9c7f-e61c431c7e58.png#clientId=u68da2bd8-69aa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=648&id=u1b5b51b0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=716&originWidth=1304&originalType=binary∶=1&rotation=0&showTitle=false&size=157032&status=done&style=none&taskId=u8c1db6a4-ac8b-479d-98ab-4e551c21ed3&title=&width=1180.9811745762797)
+
 # **三、github actions 自动更新**
 
 在 github 上创建一个私有仓库（因为会涉及到一些 token 啥的）仓库名字无所谓**（用来存放 hexo 源码）**
