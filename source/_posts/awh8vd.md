@@ -1,7 +1,7 @@
 ---
 title: Github Action 使用云函数调度服务
 urlname: awh8vd
-date: '2022-04-08 03:49:09 +0000'
+date: '2022-04-08 11:49:09 +0800'
 categories:
   - 学无止境
 tags:
@@ -9,6 +9,7 @@ tags:
   - action
   - 云函数
   - 调度
+abbrlink: 3c85ac91
 ---
 
 ## 如何开启 GitHubAction 的 workflow_dispatch 触发器
@@ -144,7 +145,9 @@ response = requests.post('https://api.github.com/repos/你的用户名/你的项
 ```
 
 9. 具体填写如下图所示：
-   ![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649390118228-7c4c4231-6e5b-4727-a768-ecc1e68588bd.png#clientId=u382e8e49-5c96-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u0052985a&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1204&originWidth=1642&originalType=url∶=1&rotation=0&showTitle=false&size=156866&status=done&style=none&taskId=u5fd11baf-c342-4725-9049-37ed3b9096a&title=)
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649401818211-43e43680-9183-420c-af31-9011030b7073.png#clientId=ufda8d8b7-9673-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u6ebd4bae&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1204&originWidth=1642&originalType=binary∶=1&rotation=0&showTitle=false&size=156866&status=done&style=none&taskId=uf157aaf6-4213-4b8f-a03f-0a14cc3be20&title=)
+
 10. 在高级配置中，将执行超过时间设置为合适的时间，这里我设置为最大值**900**秒：
 
 ![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649390134784-9f7e3870-5676-4dab-b85e-fffd90989239.png#clientId=u382e8e49-5c96-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ua156c086&margin=%5Bobject%20Object%5D&name=image.png&originHeight=424&originWidth=527&originalType=url∶=1&rotation=0&showTitle=false&size=37309&status=done&style=none&taskId=u1a87cab6-45c8-4639-900e-a9517e8d1a8&title=)

@@ -1,7 +1,7 @@
 ---
 title: 语雀+Hexo+serverless云函数自动同步
 urlname: vibciy
-date: '2022-04-08 05:37:45 +0000'
+date: '2022-04-08 13:37:45 +0800'
 tags:
   - 语雀
   - 云函数
@@ -9,6 +9,7 @@ tags:
   - hexo
 categories:
   - 学无止境
+abbrlink: ec39ff9
 ---
 
 # 一、搭建 Hexo 博客
