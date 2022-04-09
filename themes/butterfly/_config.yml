@@ -228,12 +228,12 @@ post_pagination: 1
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
-  enable: false
+  enable: true
   style: flat # style: simple/flat
   limit_day: 500 # When will it be shown
   position: top # position: top/bottom
-  message_prev: It has been
-  message_next: days since the last update, the content of the article may be outdated.
+  message_prev: 该文章已经发布
+  message_next: 天了，自从上次更新以来，文章的内容可能已经过时了。
 
 # Share System (分享功能)
 # --------------------------------------
@@ -628,10 +628,10 @@ aside:
       enable: true
       icon: fab fa-gitee
       text: Follow Me
-      link: https://gitee.com/xianrenqh/huihui-blog-hexo
+      link: https://www.xiaohuihui.net.cn
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: Welcome To My Blog
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -671,7 +671,7 @@ busuanzi:
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
-  publish_date:
+  publish_date: 2022-04-07 12:00:00
 
 # Aside widget - Newest Comments
 newest_comments:
