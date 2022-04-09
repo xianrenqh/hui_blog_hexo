@@ -278,3 +278,34 @@ jobs:
 # 五、发布博文到服务器（vps）上
 
 小灰灰使用的是 webhooks 的功能同步推送到服务器上的
+
+# ⑥、PS：
+
+小灰灰的 Hexo 博客地址：
+https://www.xiaohuihui.net
+
+听说使用 github action 执行 ssh 可能会出现封号的情况，所以小灰灰的博客代码直接使用自己的服务器搭建的，然后加个 webhook 到语雀上，这样语雀更新之后请求 webhook 执行命令直接在服务器上更新了。
+宝塔的 webhook 代码：
+
+```
+#!/bin/bash
+echo ""
+#输出当前时间
+date --date='0 days ago' "+%Y-%m-%d %H:%M:%S"
+echo "Start"
+cd "/www/wwwroot/你的hexo源码地址"
+
+echo "清除缓存"
+#npx hexo clean
+
+echo "开始下载语雀文章....."
+npx yuque-hexo sync
+
+echo "创建文章"
+npx hexo g
+
+
+echo "完成"
+exit
+fi
+```

@@ -9,6 +9,8 @@ tags:
   - action
   - 云函数
   - 调度
+cover: >-
+  https://tse1-mm.cn.bing.net/th/id/R-C.5660045af32fb6185303af27f36acf0d?rik=8qDr8OVk%2fmSILA&riu=http%3a%2f%2fblog-images.qiniu.wqf31415.xyz%2fgithub_action_3.png&ehk=ZPqfDfyFjW6CUcyKK4prggpXliv5%2f907uHUt%2b371uZ8%3d&risl=&pid=ImgRaw&r=0
 ---
 
 ## 如何开启 GitHubAction 的 workflow_dispatch 触发器
