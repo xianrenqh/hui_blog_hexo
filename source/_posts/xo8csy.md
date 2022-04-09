@@ -8,6 +8,8 @@ tags:
   - 安装
 categories:
   - 学无止境
+cover: >-
+  https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgitee.com%2Fwangbowen97%2FBlogImgs%2Fraw%2Fmaster%2FpostImages%2FHexoCover.jpg&refer=http%3A%2F%2Fgitee.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652059164&t=ac7f746ad7621718ece964ce547ba635
 ---
 
 # 一、安装 node.js
