@@ -372,4 +372,4 @@ show status;
 show processlist;
 ```
 
-> （如果是 root 用户，则查看全部的线程，得到的用户连接数同 show status;里的 Threads_connected 值是相同的）
+> （如果是 root 用户，则查看全部的线程，得到的用户连接数同 show status;里的 Threads_connected 值是相同的）!
