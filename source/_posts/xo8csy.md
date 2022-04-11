@@ -2,16 +2,15 @@
 title: 使用Hexo搭建博客
 urlname: xo8csy
 date: '2022-04-08 05:39:46 +0000'
-tags: []
-categories: []
----
-
-tags: [hexo,博客,安装]
-categories: [学无止境]
-cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgitee.com%2Fwangbowen97%2FBlogImgs%2Fraw%2Fmaster%2FpostImages%2FHexoCover.jpg&refer=http%3A%2F%2Fgitee.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652059164&t=ac7f746ad7621718ece964ce547ba635
-copyright_author_href: https://www.xiaohuihui.net
-copyright_author_href: https://www.xiaohuihui.net
-
+tags:
+  - hexo
+  - 博客
+  - 安装
+categories:
+  - 学无止境
+cover: >-
+  https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgitee.com%2Fwangbowen97%2FBlogImgs%2Fraw%2Fmaster%2FpostImages%2FHexoCover.jpg&refer=http%3A%2F%2Fgitee.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652059164&t=ac7f746ad7621718ece964ce547ba635
+copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
 # 一、安装 node.js
