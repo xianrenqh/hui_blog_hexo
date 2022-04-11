@@ -7,6 +7,7 @@ tags:
   - 宝塔
 categories:
   - 学无止境
+copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
 在宝塔控制面板-》软件商店 找到 webhook，点击安装并编辑如下命令：
