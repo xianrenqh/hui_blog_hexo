@@ -138,14 +138,15 @@ ps.公开的知识库也要设置 Token。
 
 小灰灰用的是 butterFly 主题，加的位置在：
 \themes\butterfly\layout\includes\head.pug 文件：
-大概在第 21 行左右添加：
+大概在第 40 行左右添加：
+（PS：放在这个位置是因为百度统计的 referrer 问题。只能放在统计后面）
 
 ```
 meta(name="referrer" content="no-referrer")
 ```
 
 如图：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649404444453-83f94c26-230f-4b93-9c7f-e61c431c7e58.png#clientId=u68da2bd8-69aa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=648&id=u1b5b51b0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=716&originWidth=1304&originalType=binary∶=1&rotation=0&showTitle=false&size=157032&status=done&style=none&taskId=u8c1db6a4-ac8b-479d-98ab-4e551c21ed3&title=&width=1180.9811745762797)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649641758436-1971a415-4efc-45ff-87b9-1e47f9617353.png#clientId=u6e1ca8df-731b-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=700&id=u651955ce&margin=%5Bobject%20Object%5D&name=image.png&originHeight=773&originWidth=1119&originalType=binary∶=1&rotation=0&showTitle=false&size=134271&status=done&style=none&taskId=u1edc2856-0d56-4f15-9454-c218fcf937a&title=&width=1013.4339987353198)
 
 # **三、github actions 自动更新**
 
