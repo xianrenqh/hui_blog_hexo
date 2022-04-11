@@ -9,6 +9,7 @@ tags:
   - hexo
 categories:
   - 学无止境
+copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
 # 一、搭建 Hexo 博客
