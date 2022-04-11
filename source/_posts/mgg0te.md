@@ -15,7 +15,7 @@ copyright_author_href: 'https://www.xiaohuihui.net'
 
 ### Hello World
 
-**首发镇博~~~**
+**首发镇博~~~!**
 
 上线时间：2022-04-07 12:00:00
 
