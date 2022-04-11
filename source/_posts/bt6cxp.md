@@ -38,7 +38,7 @@ return $str;
 }
 ```
 
-对于数组，通过下面方式 json_encode 调用，一切 ok。
+对于数组，通过下面方式 json_encode 调用，一切 ok ~~~
 
 ```php
 $json_api=json_encode(encodeConvert($json_api,'gb2312','utf-8'));
