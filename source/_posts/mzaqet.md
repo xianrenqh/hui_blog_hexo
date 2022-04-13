@@ -373,3 +373,13 @@ show processlist;
 ```
 
 > （如果是 root 用户，则查看全部的线程，得到的用户连接数同 show status;里的 Threads_connected 值是相同的）!
+
+### 替换字段中的部分数据
+
+> UPDATE 你的表名 SET 你要查找的字段明=REPLACE(你要查找的字段明,'你要替换的字符串','你需要替换成什么');
+
+案例代码：
+
+```sql
+UPDATE cmf_article SET title=REPLACE(title,'hello','你好');
+```

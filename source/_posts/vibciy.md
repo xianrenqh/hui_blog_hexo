@@ -286,7 +286,10 @@ jobs:
 小灰灰的 Hexo 博客地址：
 https://www.xiaohuihui.net
 
-听说使用 github action 执行 ssh 可能会出现封号的情况，所以小灰灰的博客代码直接使用自己的服务器搭建的，然后加个 webhook 到语雀上，这样语雀更新之后请求 webhook 执行命令直接在服务器上更新了。
+PS：
+听说使用 github action 执行 ssh 可能会出现封号的情况。
+另外同步到 github 速度比较慢，
+所以小灰灰的博客代码直接使用自己的服务器搭建的，然后加个 webhook 到语雀上，这样语雀更新之后请求 webhook 执行命令直接在服务器上更新了。
 宝塔的 webhook 代码：
 
 ```
@@ -295,19 +298,31 @@ echo ""
 #输出当前时间
 date --date='0 days ago' "+%Y-%m-%d %H:%M:%S"
 echo "Start"
-cd "/www/wwwroot/你的hexo源码地址"
 
+cd "/www/wwwroot/node_js/你的Hexo博客源码文件夹/"
 echo "清除缓存"
-#npx hexo clean
+npx hexo clean
 
 echo "开始下载语雀文章....."
+npx yuque-hexo clean
 npx yuque-hexo sync
 
 echo "创建文章"
 npx hexo g
 
+gitPath="/www/wwwroot/node_js/你的Hexo博客源码文件夹/public"
+
+if [ -d "$gitPath" ]; then
+  # 需要先编辑文件
+  #vi ~/.bashrc，在alias cp=’cp -i’前加上”#”注释掉这行，:wq! 保存退出，然后重新登陆，使用cp -r -f就可以了
+   cp -r -f /www/wwwroot/node_js/你的Hexo博客源码文件夹/public/* /www/wwwroot/你要运行的静态文件夹
 
 echo "完成"
 exit
 fi
 ```
+
+> 服务器需要改动，要求 copy 命令的时候不要提示询问。改动方法：
+> 执行：vi ~/.bashrc
+> 在 alias cp=’cp -i’前加上”#”注释掉这行，:wq! 保存退出，然后重新登陆。
+> 最后使用 cp -r -f 就可以了
