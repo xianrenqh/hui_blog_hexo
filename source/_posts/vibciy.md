@@ -143,6 +143,8 @@ ps.公开的知识库也要设置 Token。
 
 ```
 meta(name="referrer" content="no-referrer")
+#如果上面不生效，提示 referrer被禁用，可以使用以下代码试试
+meta(name="referrer" content="no-referrer")
 ```
 
 如图：
