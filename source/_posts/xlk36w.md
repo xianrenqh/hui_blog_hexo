@@ -2,8 +2,10 @@
 title: webman使用笔记
 urlname: xlk36w
 date: '2022-04-21 01:15:40 +0000'
-tags: []
-categories: []
+tags:
+  - webman
+categories: 学无止境
+copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
 # 安装 webman

@@ -2,8 +2,11 @@
 title: webman使用Nginx代理
 urlname: lnhoy6
 date: '2022-04-24 08:05:47 +0000'
-tags: []
-categories: []
+tags:
+  - webman
+  - nginx
+categories: 学无止境
+copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
 当 webman 需要直接提供外网访问时，建议在 webman 前增加一个 nginx 代理，这样有以下好处。
