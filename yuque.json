@@ -1,8 +1,8 @@
 [
   {
-    "id": 79782496,
-    "slug": "hiryva",
-    "title": "VsCode下载，使用国内镜像秒下载",
+    "id": 80631872,
+    "slug": "quq4eo",
+    "title": "Env环境变量类库",
     "book_id": 26347916,
     "book": {
       "id": 26347916,
@@ -13,11 +13,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -32,7 +32,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -50,7 +50,86 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
+      "_serializer": "v2.user"
+    },
+    "format": "lake",
+    "body": "tags: [env,环境变量,类库]<br />categories: 学无止境<br />copyright_author_href: https://www.xiaohuihui.net<br />copyright_url: <br />copyright_author: <br />cover:\n\n---\n\n```php\n<?php\n  /**\n  * Created by PhpStorm.\n  * User: 小灰灰\n  * Date: 2022-04-26\n  * Time: 21:53:40\n  * Info:\n  */\n  namespace support\\lib;\nEnv::load();\nclass Env\n{\n  \n  /**\n  * 环境变量数据\n  * @var array\n  */\n  protected static $data = [];\n  \n  /**\n  * 读取环境变量定义文件\n  * @access public\n  *\n  * @param string $file 环境变量定义文件\n  *\n  * @return void\n  */\n  public static function load($file = '.env')\n  {\n    if ( ! is_file($file)) {\n      return;\n    }\n    $env = parse_ini_file($file, true);\n    self::set($env);\n  }\n  \n  /**\n  * 获取环境变量值\n  * @access public\n  *\n  * @param string $name    环境变量名\n  * @param mixed  $default 默认值\n  */\n  public static function get($name = null, $default = null)\n  {\n    if ($name == null) {\n      return self::$data;\n    }\n    $name = strtoupper($name);\n    $name = strtoupper(str_replace('.', '_', $name));\n    if (isset(self::$data[$name])) {\n      return self::$data[$name];\n    }\n    \n    return $default;\n  }\n  \n  /**\n  * 设置环境变量值\n  * @access public\n  *\n  * @param string|array $env   环境变量\n  * @param mixed        $value 值\n  *\n  * @return void\n  */\n  public static function set($env, $value = null)\n  {\n    if (is_array($env)) {\n      $env = array_change_key_case($env, CASE_UPPER);\n      foreach ($env as $key => $val) {\n        if (is_array($val)) {\n          foreach ($val as $k => $v) {\n            self::$data[$key.'_'.strtoupper($k)] = $v;\n          }\n        } else {\n          self::$data[$key] = $val;\n        }\n      }\n    } else {\n      $name              = strtoupper(str_replace('.', '_', $env));\n      self::$data[$name] = $value;\n    }\n  }\n}\n```\n\n使用方法：\n\n```php\nuse support\\lib\\Env;\n\nEnv::get('SQL.DB_DEFAULT', 'mysql')\n```\n\n.env文件：\n\n```\n[SQL]\nDB_DEFAULT = mysql\nHOSTNAME = 127.0.0.1\nDATABASE = database\nDBNAME = root\nDBPASS = 123456\nHOSTPOINT = 3306\nPREFIX = cmf_\n```\n\n\n",
+    "body_draft": "tags: [env,环境变量,类库]<br />categories: 学无止境<br />copyright_author_href: https://www.xiaohuihui.net<br />copyright_url: <br />copyright_author: <br />cover:\n\n---\n\n```php\n<?php\n  /**\n  * Created by PhpStorm.\n  * User: 小灰灰\n  * Date: 2022-04-26\n  * Time: 21:53:40\n  * Info:\n  */\n  namespace support\\lib;\nEnv::load();\nclass Env\n{\n  \n  /**\n  * 环境变量数据\n  * @var array\n  */\n  protected static $data = [];\n  \n  /**\n  * 读取环境变量定义文件\n  * @access public\n  *\n  * @param string $file 环境变量定义文件\n  *\n  * @return void\n  */\n  public static function load($file = '.env')\n  {\n    if ( ! is_file($file)) {\n      return;\n    }\n    $env = parse_ini_file($file, true);\n    self::set($env);\n  }\n  \n  /**\n  * 获取环境变量值\n  * @access public\n  *\n  * @param string $name    环境变量名\n  * @param mixed  $default 默认值\n  */\n  public static function get($name = null, $default = null)\n  {\n    if ($name == null) {\n      return self::$data;\n    }\n    $name = strtoupper($name);\n    $name = strtoupper(str_replace('.', '_', $name));\n    if (isset(self::$data[$name])) {\n      return self::$data[$name];\n    }\n    \n    return $default;\n  }\n  \n  /**\n  * 设置环境变量值\n  * @access public\n  *\n  * @param string|array $env   环境变量\n  * @param mixed        $value 值\n  *\n  * @return void\n  */\n  public static function set($env, $value = null)\n  {\n    if (is_array($env)) {\n      $env = array_change_key_case($env, CASE_UPPER);\n      foreach ($env as $key => $val) {\n        if (is_array($val)) {\n          foreach ($val as $k => $v) {\n            self::$data[$key.'_'.strtoupper($k)] = $v;\n          }\n        } else {\n          self::$data[$key] = $val;\n        }\n      }\n    } else {\n      $name              = strtoupper(str_replace('.', '_', $env));\n      self::$data[$name] = $value;\n    }\n  }\n}\n```\n\n使用方法：\n\n```php\nuse support\\lib\\Env;\n\nEnv::get('SQL.DB_DEFAULT', 'mysql')\n```\n\n.env文件：\n\n```\n[SQL]\nDB_DEFAULT = mysql\nHOSTNAME = 127.0.0.1\nDATABASE = database\nDBNAME = root\nDBPASS = 123456\nHOSTPOINT = 3306\nPREFIX = cmf_\n```\n\n\n",
+    "body_html": "<!doctype html><div class=\"lake-content\" typography=\"classic\"><p id=\"u513517db\" class=\"ne-p\"><span class=\"ne-text\">tags: [env,环境变量,类库]</span></p><p id=\"u2fbf79cc\" class=\"ne-p\"><span class=\"ne-text\">categories: </span><span class=\"ne-text\" style=\"color: rgb(38, 38, 38)\">学无止境</span></p><p id=\"ud59f1d7b\" class=\"ne-p\"><span class=\"ne-text\">copyright_author_href: https://www.xiaohuihui.net</span></p><p id=\"ua0c50dec\" class=\"ne-p\"><span class=\"ne-text\" style=\"color: rgb(38, 38, 38)\">copyright_url: <br /></span><span class=\"ne-text\" style=\"color: rgb(38, 38, 38)\">copyright_author: </span></p><p id=\"ud4e1d1fe\" class=\"ne-p\"><span class=\"ne-text\" style=\"color: rgb(33, 37, 41); font-size: 16px\">cover:</span></p><hr id=\"Q4x7J\" class=\"ne-hr\"><pre data-language=\"php\" id=\"68497ee0\" class=\"ne-codeblock language-php\">&lt;?php\n  /**\n  * Created by PhpStorm.\n  * User: 小灰灰\n  * Date: 2022-04-26\n  * Time: 21:53:40\n  * Info:\n  */\n  namespace support\\lib;\nEnv::load();\nclass Env\n{\n  \n  /**\n  * 环境变量数据\n  * @var array\n  */\n  protected static $data = [];\n  \n  /**\n  * 读取环境变量定义文件\n  * @access public\n  *\n  * @param string $file 环境变量定义文件\n  *\n  * @return void\n  */\n  public static function load($file = '.env')\n  {\n    if ( ! is_file($file)) {\n      return;\n    }\n    $env = parse_ini_file($file, true);\n    self::set($env);\n  }\n  \n  /**\n  * 获取环境变量值\n  * @access public\n  *\n  * @param string $name    环境变量名\n  * @param mixed  $default 默认值\n  */\n  public static function get($name = null, $default = null)\n  {\n    if ($name == null) {\n      return self::$data;\n    }\n    $name = strtoupper($name);\n    $name = strtoupper(str_replace('.', '_', $name));\n    if (isset(self::$data[$name])) {\n      return self::$data[$name];\n    }\n    \n    return $default;\n  }\n  \n  /**\n  * 设置环境变量值\n  * @access public\n  *\n  * @param string|array $env   环境变量\n  * @param mixed        $value 值\n  *\n  * @return void\n  */\n  public static function set($env, $value = null)\n  {\n    if (is_array($env)) {\n      $env = array_change_key_case($env, CASE_UPPER);\n      foreach ($env as $key =&gt; $val) {\n        if (is_array($val)) {\n          foreach ($val as $k =&gt; $v) {\n            self::$data[$key.'_'.strtoupper($k)] = $v;\n          }\n        } else {\n          self::$data[$key] = $val;\n        }\n      }\n    } else {\n      $name              = strtoupper(str_replace('.', '_', $env));\n      self::$data[$name] = $value;\n    }\n  }\n}</pre><p id=\"uacc89832\" class=\"ne-p\"><br></p><p id=\"u5b0a7fba\" class=\"ne-p\"><span class=\"ne-text\">使用方法：</span></p><p id=\"ub5c65ccb\" class=\"ne-p\"><br></p><pre data-language=\"php\" id=\"ef1eb744\" class=\"ne-codeblock language-php\">use support\\lib\\Env;\n\nEnv::get('SQL.DB_DEFAULT', 'mysql')</pre><p id=\"ud9751753\" class=\"ne-p\"><br></p><p id=\"uf4cbe955\" class=\"ne-p\"><span class=\"ne-text\">.env文件：</span></p><p id=\"uf3dc6f8e\" class=\"ne-p\"><br></p><pre data-language=\"plain\" id=\"8ac290ae\" class=\"ne-codeblock language-plain\">[SQL]\nDB_DEFAULT = mysql\nHOSTNAME = 127.0.0.1\nDATABASE = database\nDBNAME = root\nDBPASS = 123456\nHOSTPOINT = 3306\nPREFIX = cmf_</pre><p id=\"u30aad522\" class=\"ne-p\"><span class=\"ne-text\" style=\"color: rgb(51, 51, 51); font-size: 14px\"><br /></span></p></div>",
+    "body_lake": "<!doctype lake><meta name=\"doc-version\" content=\"1\" /><meta name=\"typography\" content=\"classic\" /><meta name=\"viewport\" content=\"fixed\" /><meta name=\"paragraphSpacing\" content=\"relax\" /><p data-lake-id=\"u513517db\" id=\"u513517db\"><span data-lake-id=\"u0a901806\" id=\"u0a901806\">tags: [env,环境变量,类库]</span></p><p data-lake-id=\"u2fbf79cc\" id=\"u2fbf79cc\"><span data-lake-id=\"u1daa6f84\" id=\"u1daa6f84\">categories: </span><span data-lake-id=\"u43283e24\" id=\"u43283e24\" style=\"color: rgb(38, 38, 38)\">学无止境</span></p><p data-lake-id=\"ud59f1d7b\" id=\"ud59f1d7b\"><span data-lake-id=\"u11efc98d\" id=\"u11efc98d\">copyright_author_href: https://www.xiaohuihui.net</span></p><p data-lake-id=\"ua0c50dec\" id=\"ua0c50dec\"><span data-lake-id=\"ua0e54973\" id=\"ua0e54973\" style=\"color: rgb(38, 38, 38)\">copyright_url: <br /></span><span data-lake-id=\"uaebb4464\" id=\"uaebb4464\" style=\"color: rgb(38, 38, 38)\">copyright_author: </span></p><p data-lake-id=\"ud4e1d1fe\" id=\"ud4e1d1fe\"><span data-lake-id=\"u8793279d\" id=\"u8793279d\" class=\"lake-fontsize-12\" style=\"color: rgb(33, 37, 41)\">cover:</span></p><card type=\"block\" name=\"hr\" value=\"data:%7B%22id%22%3A%22Q4x7J%22%7D\"></card><card type=\"inline\" name=\"codeblock\" value=\"data:%7B%22mode%22%3A%22php%22%2C%22code%22%3A%22%3C%3Fphp%5Cn%20%20%2F**%5Cn%20%20*%20Created%20by%20PhpStorm.%5Cn%20%20*%20User%3A%20%E5%B0%8F%E7%81%B0%E7%81%B0%5Cn%20%20*%20Date%3A%202022-04-26%5Cn%20%20*%20Time%3A%2021%3A53%3A40%5Cn%20%20*%20Info%3A%5Cn%20%20*%2F%5Cn%20%20namespace%20support%5C%5Clib%3B%5CnEnv%3A%3Aload()%3B%5Cnclass%20Env%5Cn%7B%5Cn%20%20%5Cn%20%20%2F**%5Cn%20%20*%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%95%B0%E6%8D%AE%5Cn%20%20*%20%40var%20array%5Cn%20%20*%2F%5Cn%20%20protected%20static%20%24data%20%3D%20%5B%5D%3B%5Cn%20%20%5Cn%20%20%2F**%5Cn%20%20*%20%E8%AF%BB%E5%8F%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E6%96%87%E4%BB%B6%5Cn%20%20*%20%40access%20public%5Cn%20%20*%5Cn%20%20*%20%40param%20string%20%24file%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E6%96%87%E4%BB%B6%5Cn%20%20*%5Cn%20%20*%20%40return%20void%5Cn%20%20*%2F%5Cn%20%20public%20static%20function%20load(%24file%20%3D%20'.env')%5Cn%20%20%7B%5Cn%20%20%20%20if%20(%20!%20is_file(%24file))%20%7B%5Cn%20%20%20%20%20%20return%3B%5Cn%20%20%20%20%7D%5Cn%20%20%20%20%24env%20%3D%20parse_ini_file(%24file%2C%20true)%3B%5Cn%20%20%20%20self%3A%3Aset(%24env)%3B%5Cn%20%20%7D%5Cn%20%20%5Cn%20%20%2F**%5Cn%20%20*%20%E8%8E%B7%E5%8F%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%80%BC%5Cn%20%20*%20%40access%20public%5Cn%20%20*%5Cn%20%20*%20%40param%20string%20%24name%20%20%20%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%90%8D%5Cn%20%20*%20%40param%20mixed%20%20%24default%20%E9%BB%98%E8%AE%A4%E5%80%BC%5Cn%20%20*%2F%5Cn%20%20public%20static%20function%20get(%24name%20%3D%20null%2C%20%24default%20%3D%20null)%5Cn%20%20%7B%5Cn%20%20%20%20if%20(%24name%20%3D%3D%20null)%20%7B%5Cn%20%20%20%20%20%20return%20self%3A%3A%24data%3B%5Cn%20%20%20%20%7D%5Cn%20%20%20%20%24name%20%3D%20strtoupper(%24name)%3B%5Cn%20%20%20%20%24name%20%3D%20strtoupper(str_replace('.'%2C%20'_'%2C%20%24name))%3B%5Cn%20%20%20%20if%20(isset(self%3A%3A%24data%5B%24name%5D))%20%7B%5Cn%20%20%20%20%20%20return%20self%3A%3A%24data%5B%24name%5D%3B%5Cn%20%20%20%20%7D%5Cn%20%20%20%20%5Cn%20%20%20%20return%20%24default%3B%5Cn%20%20%7D%5Cn%20%20%5Cn%20%20%2F**%5Cn%20%20*%20%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%80%BC%5Cn%20%20*%20%40access%20public%5Cn%20%20*%5Cn%20%20*%20%40param%20string%7Carray%20%24env%20%20%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%5Cn%20%20*%20%40param%20mixed%20%20%20%20%20%20%20%20%24value%20%E5%80%BC%5Cn%20%20*%5Cn%20%20*%20%40return%20void%5Cn%20%20*%2F%5Cn%20%20public%20static%20function%20set(%24env%2C%20%24value%20%3D%20null)%5Cn%20%20%7B%5Cn%20%20%20%20if%20(is_array(%24env))%20%7B%5Cn%20%20%20%20%20%20%24env%20%3D%20array_change_key_case(%24env%2C%20CASE_UPPER)%3B%5Cn%20%20%20%20%20%20foreach%20(%24env%20as%20%24key%20%3D%3E%20%24val)%20%7B%5Cn%20%20%20%20%20%20%20%20if%20(is_array(%24val))%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20foreach%20(%24val%20as%20%24k%20%3D%3E%20%24v)%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20self%3A%3A%24data%5B%24key.'_'.strtoupper(%24k)%5D%20%3D%20%24v%3B%5Cn%20%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20%7D%20else%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20self%3A%3A%24data%5B%24key%5D%20%3D%20%24val%3B%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%20else%20%7B%5Cn%20%20%20%20%20%20%24name%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3D%20strtoupper(str_replace('.'%2C%20'_'%2C%20%24env))%3B%5Cn%20%20%20%20%20%20self%3A%3A%24data%5B%24name%5D%20%3D%20%24value%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%2268497ee0%22%7D\"></card><p data-lake-id=\"uacc89832\" id=\"uacc89832\"><br></p><p data-lake-id=\"u5b0a7fba\" id=\"u5b0a7fba\"><span data-lake-id=\"u3e7b0d97\" id=\"u3e7b0d97\">使用方法：</span></p><p data-lake-id=\"ub5c65ccb\" id=\"ub5c65ccb\"><br></p><card type=\"inline\" name=\"codeblock\" value=\"data:%7B%22mode%22%3A%22php%22%2C%22code%22%3A%22use%20support%5C%5Clib%5C%5CEnv%3B%5Cn%5CnEnv%3A%3Aget('SQL.DB_DEFAULT'%2C%20'mysql')%22%2C%22autoWrap%22%3Afalse%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22ef1eb744%22%7D\"></card><p data-lake-id=\"ud9751753\" id=\"ud9751753\"><br></p><p data-lake-id=\"uf4cbe955\" id=\"uf4cbe955\"><span data-lake-id=\"u1fc8ff97\" id=\"u1fc8ff97\">.env文件：</span></p><p data-lake-id=\"uf3dc6f8e\" id=\"uf3dc6f8e\"><br></p><card type=\"inline\" name=\"codeblock\" value=\"data:%7B%22mode%22%3A%22plain%22%2C%22code%22%3A%22%5BSQL%5D%5CnDB_DEFAULT%20%3D%20mysql%5CnHOSTNAME%20%3D%20127.0.0.1%5CnDATABASE%20%3D%20database%5CnDBNAME%20%3D%20root%5CnDBPASS%20%3D%20123456%5CnHOSTPOINT%20%3D%203306%5CnPREFIX%20%3D%20cmf_%22%2C%22autoWrap%22%3Afalse%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%228ac290ae%22%7D\"></card><p data-lake-id=\"u30aad522\" id=\"u30aad522\"><span data-lake-id=\"uf9f847dc\" id=\"uf9f847dc\" class=\"lake-fontsize-11\" style=\"color: rgb(51, 51, 51)\"><br /><br /></span></p>",
+    "body_draft_lake": "<!doctype lake><meta name=\"doc-version\" content=\"1\" /><meta name=\"typography\" content=\"classic\" /><meta name=\"viewport\" content=\"fixed\" /><meta name=\"paragraphSpacing\" content=\"relax\" /><p data-lake-id=\"u513517db\" id=\"u513517db\"><span data-lake-id=\"u0a901806\" id=\"u0a901806\">tags: [env,环境变量,类库]</span></p><p data-lake-id=\"u2fbf79cc\" id=\"u2fbf79cc\"><span data-lake-id=\"u1daa6f84\" id=\"u1daa6f84\">categories: </span><span data-lake-id=\"u43283e24\" id=\"u43283e24\" style=\"color: rgb(38, 38, 38)\">学无止境</span></p><p data-lake-id=\"ud59f1d7b\" id=\"ud59f1d7b\"><span data-lake-id=\"u11efc98d\" id=\"u11efc98d\">copyright_author_href: https://www.xiaohuihui.net</span></p><p data-lake-id=\"ua0c50dec\" id=\"ua0c50dec\"><span data-lake-id=\"ua0e54973\" id=\"ua0e54973\" style=\"color: rgb(38, 38, 38)\">copyright_url: <br /></span><span data-lake-id=\"uaebb4464\" id=\"uaebb4464\" style=\"color: rgb(38, 38, 38)\">copyright_author: </span></p><p data-lake-id=\"ud4e1d1fe\" id=\"ud4e1d1fe\"><span data-lake-id=\"u8793279d\" id=\"u8793279d\" class=\"lake-fontsize-12\" style=\"color: rgb(33, 37, 41)\">cover:</span></p><card type=\"block\" name=\"hr\" value=\"data:%7B%22id%22%3A%22Q4x7J%22%7D\"></card><card type=\"inline\" name=\"codeblock\" value=\"data:%7B%22mode%22%3A%22php%22%2C%22code%22%3A%22%3C%3Fphp%5Cn%20%20%2F**%5Cn%20%20*%20Created%20by%20PhpStorm.%5Cn%20%20*%20User%3A%20%E5%B0%8F%E7%81%B0%E7%81%B0%5Cn%20%20*%20Date%3A%202022-04-26%5Cn%20%20*%20Time%3A%2021%3A53%3A40%5Cn%20%20*%20Info%3A%5Cn%20%20*%2F%5Cn%20%20namespace%20support%5C%5Clib%3B%5CnEnv%3A%3Aload()%3B%5Cnclass%20Env%5Cn%7B%5Cn%20%20%5Cn%20%20%2F**%5Cn%20%20*%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%95%B0%E6%8D%AE%5Cn%20%20*%20%40var%20array%5Cn%20%20*%2F%5Cn%20%20protected%20static%20%24data%20%3D%20%5B%5D%3B%5Cn%20%20%5Cn%20%20%2F**%5Cn%20%20*%20%E8%AF%BB%E5%8F%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E6%96%87%E4%BB%B6%5Cn%20%20*%20%40access%20public%5Cn%20%20*%5Cn%20%20*%20%40param%20string%20%24file%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E6%96%87%E4%BB%B6%5Cn%20%20*%5Cn%20%20*%20%40return%20void%5Cn%20%20*%2F%5Cn%20%20public%20static%20function%20load(%24file%20%3D%20'.env')%5Cn%20%20%7B%5Cn%20%20%20%20if%20(%20!%20is_file(%24file))%20%7B%5Cn%20%20%20%20%20%20return%3B%5Cn%20%20%20%20%7D%5Cn%20%20%20%20%24env%20%3D%20parse_ini_file(%24file%2C%20true)%3B%5Cn%20%20%20%20self%3A%3Aset(%24env)%3B%5Cn%20%20%7D%5Cn%20%20%5Cn%20%20%2F**%5Cn%20%20*%20%E8%8E%B7%E5%8F%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%80%BC%5Cn%20%20*%20%40access%20public%5Cn%20%20*%5Cn%20%20*%20%40param%20string%20%24name%20%20%20%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%90%8D%5Cn%20%20*%20%40param%20mixed%20%20%24default%20%E9%BB%98%E8%AE%A4%E5%80%BC%5Cn%20%20*%2F%5Cn%20%20public%20static%20function%20get(%24name%20%3D%20null%2C%20%24default%20%3D%20null)%5Cn%20%20%7B%5Cn%20%20%20%20if%20(%24name%20%3D%3D%20null)%20%7B%5Cn%20%20%20%20%20%20return%20self%3A%3A%24data%3B%5Cn%20%20%20%20%7D%5Cn%20%20%20%20%24name%20%3D%20strtoupper(%24name)%3B%5Cn%20%20%20%20%24name%20%3D%20strtoupper(str_replace('.'%2C%20'_'%2C%20%24name))%3B%5Cn%20%20%20%20if%20(isset(self%3A%3A%24data%5B%24name%5D))%20%7B%5Cn%20%20%20%20%20%20return%20self%3A%3A%24data%5B%24name%5D%3B%5Cn%20%20%20%20%7D%5Cn%20%20%20%20%5Cn%20%20%20%20return%20%24default%3B%5Cn%20%20%7D%5Cn%20%20%5Cn%20%20%2F**%5Cn%20%20*%20%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%80%BC%5Cn%20%20*%20%40access%20public%5Cn%20%20*%5Cn%20%20*%20%40param%20string%7Carray%20%24env%20%20%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%5Cn%20%20*%20%40param%20mixed%20%20%20%20%20%20%20%20%24value%20%E5%80%BC%5Cn%20%20*%5Cn%20%20*%20%40return%20void%5Cn%20%20*%2F%5Cn%20%20public%20static%20function%20set(%24env%2C%20%24value%20%3D%20null)%5Cn%20%20%7B%5Cn%20%20%20%20if%20(is_array(%24env))%20%7B%5Cn%20%20%20%20%20%20%24env%20%3D%20array_change_key_case(%24env%2C%20CASE_UPPER)%3B%5Cn%20%20%20%20%20%20foreach%20(%24env%20as%20%24key%20%3D%3E%20%24val)%20%7B%5Cn%20%20%20%20%20%20%20%20if%20(is_array(%24val))%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20foreach%20(%24val%20as%20%24k%20%3D%3E%20%24v)%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20self%3A%3A%24data%5B%24key.'_'.strtoupper(%24k)%5D%20%3D%20%24v%3B%5Cn%20%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20%7D%20else%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20self%3A%3A%24data%5B%24key%5D%20%3D%20%24val%3B%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%20else%20%7B%5Cn%20%20%20%20%20%20%24name%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3D%20strtoupper(str_replace('.'%2C%20'_'%2C%20%24env))%3B%5Cn%20%20%20%20%20%20self%3A%3A%24data%5B%24name%5D%20%3D%20%24value%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%2268497ee0%22%7D\"></card><p data-lake-id=\"uacc89832\" id=\"uacc89832\"><br></p><p data-lake-id=\"u5b0a7fba\" id=\"u5b0a7fba\"><span data-lake-id=\"u3e7b0d97\" id=\"u3e7b0d97\">使用方法：</span></p><p data-lake-id=\"ub5c65ccb\" id=\"ub5c65ccb\"><br></p><card type=\"inline\" name=\"codeblock\" value=\"data:%7B%22mode%22%3A%22php%22%2C%22code%22%3A%22use%20support%5C%5Clib%5C%5CEnv%3B%5Cn%5CnEnv%3A%3Aget('SQL.DB_DEFAULT'%2C%20'mysql')%22%2C%22autoWrap%22%3Afalse%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22ef1eb744%22%7D\"></card><p data-lake-id=\"ud9751753\" id=\"ud9751753\"><br></p><p data-lake-id=\"uf4cbe955\" id=\"uf4cbe955\"><span data-lake-id=\"u1fc8ff97\" id=\"u1fc8ff97\">.env文件：</span></p><p data-lake-id=\"uf3dc6f8e\" id=\"uf3dc6f8e\"><br></p><card type=\"inline\" name=\"codeblock\" value=\"data:%7B%22mode%22%3A%22plain%22%2C%22code%22%3A%22%5BSQL%5D%5CnDB_DEFAULT%20%3D%20mysql%5CnHOSTNAME%20%3D%20127.0.0.1%5CnDATABASE%20%3D%20database%5CnDBNAME%20%3D%20root%5CnDBPASS%20%3D%20123456%5CnHOSTPOINT%20%3D%203306%5CnPREFIX%20%3D%20cmf_%22%2C%22autoWrap%22%3Afalse%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%228ac290ae%22%7D\"></card><p data-lake-id=\"u30aad522\" id=\"u30aad522\"><span data-lake-id=\"uf9f847dc\" id=\"uf9f847dc\" class=\"lake-fontsize-11\" style=\"color: rgb(51, 51, 51)\"><br /><br /></span></p>",
+    "public": 1,
+    "status": 1,
+    "view_status": 0,
+    "read_status": 1,
+    "likes_count": 0,
+    "comments_count": 0,
+    "content_updated_at": "2022-06-17T01:17:31.000Z",
+    "deleted_at": null,
+    "created_at": "2022-06-17T01:16:25.000Z",
+    "updated_at": "2022-06-17T01:17:31.000Z",
+    "published_at": "2022-06-17T01:17:31.000Z",
+    "first_published_at": "2022-06-17T01:17:31.002Z",
+    "word_count": 305,
+    "cover": null,
+    "description": "tags: [env,环境变量,类库]categories: 学无止境copyright_author_href: https://www.xiaohuihui.netcopyright_url: copyright_author: cover:<?php   /**   * Created ...",
+    "custom_description": null,
+    "hits": 0,
+    "_serializer": "v2.doc_detail"
+  },
+  {
+    "id": 79782496,
+    "slug": "hiryva",
+    "title": "VsCode下载，使用国内镜像秒下载",
+    "book_id": 26347916,
+    "book": {
+      "id": 26347916,
+      "type": "Book",
+      "slug": "kyeqhg",
+      "name": "小灰灰博客",
+      "user_id": 27022430,
+      "description": "小灰灰博客-hexo",
+      "creator_id": 27022430,
+      "public": 1,
+      "items_count": 38,
+      "likes_count": 0,
+      "watches_count": 1,
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
+      "created_at": "2022-04-07T09:06:45.000Z",
+      "namespace": "xianrenqh/kyeqhg",
+      "user": {
+        "id": 27022430,
+        "type": "User",
+        "login": "xianrenqh",
+        "name": "小灰灰",
+        "description": null,
+        "avatar_url": "https://cdn.nlark.com/yuque/0/2022/png/27022430/1651022795959-avatar/b257100b-a64e-4b2e-97f3-81d37888421a.png",
+        "books_count": 2,
+        "public_books_count": 1,
+        "followers_count": 0,
+        "following_count": 0,
+        "created_at": "2022-03-24T03:27:24.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
+        "_serializer": "v2.user"
+      },
+      "_serializer": "v2.book"
+    },
+    "user_id": 27022430,
+    "creator": {
+      "id": 27022430,
+      "type": "User",
+      "login": "xianrenqh",
+      "name": "小灰灰",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2022/png/27022430/1651022795959-avatar/b257100b-a64e-4b2e-97f3-81d37888421a.png",
+      "books_count": 2,
+      "public_books_count": 1,
+      "followers_count": 0,
+      "following_count": 0,
+      "created_at": "2022-03-24T03:27:24.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -92,11 +171,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -111,7 +190,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -129,7 +208,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -171,11 +250,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -190,7 +269,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -208,7 +287,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -250,11 +329,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -269,7 +348,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -287,7 +366,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -329,11 +408,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -348,7 +427,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -366,7 +445,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -408,11 +487,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -427,7 +506,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -445,7 +524,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -487,11 +566,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -506,7 +585,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -524,7 +603,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -566,11 +645,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -585,7 +664,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -603,7 +682,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -645,11 +724,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -664,7 +743,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -682,7 +761,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -724,11 +803,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -743,7 +822,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -761,7 +840,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -803,11 +882,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -822,7 +901,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -840,7 +919,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -882,11 +961,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -901,7 +980,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -919,7 +998,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -961,11 +1040,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -980,7 +1059,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -998,7 +1077,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1040,11 +1119,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1059,7 +1138,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1077,7 +1156,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1119,11 +1198,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1138,7 +1217,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1156,7 +1235,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1198,11 +1277,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1217,7 +1296,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1235,7 +1314,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1277,11 +1356,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1296,7 +1375,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1314,7 +1393,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1356,11 +1435,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1375,7 +1454,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1393,7 +1472,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1435,11 +1514,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1454,7 +1533,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1472,7 +1551,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1514,11 +1593,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1533,7 +1612,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1551,7 +1630,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1593,11 +1672,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1612,7 +1691,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1630,7 +1709,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1672,11 +1751,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1691,7 +1770,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1709,7 +1788,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1751,11 +1830,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1770,7 +1849,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1788,7 +1867,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1830,11 +1909,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1849,7 +1928,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1867,7 +1946,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1909,11 +1988,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -1928,7 +2007,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -1946,7 +2025,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -1988,11 +2067,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2007,7 +2086,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2025,7 +2104,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2067,11 +2146,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2086,7 +2165,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2104,7 +2183,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2146,11 +2225,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2165,7 +2244,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2183,7 +2262,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2225,11 +2304,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2244,7 +2323,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2262,7 +2341,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2304,11 +2383,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2323,7 +2402,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2341,7 +2420,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2383,11 +2462,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2402,7 +2481,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2420,7 +2499,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2462,11 +2541,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2481,7 +2560,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2499,7 +2578,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2541,11 +2620,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2560,7 +2639,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2578,7 +2657,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2620,11 +2699,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2639,7 +2718,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2657,7 +2736,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2699,11 +2778,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2718,7 +2797,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2736,7 +2815,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2778,11 +2857,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2797,7 +2876,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2815,7 +2894,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
@@ -2857,11 +2936,11 @@
       "description": "小灰灰博客-hexo",
       "creator_id": 27022430,
       "public": 1,
-      "items_count": 37,
+      "items_count": 38,
       "likes_count": 0,
       "watches_count": 1,
-      "content_updated_at": "2022-06-08T01:16:26.442Z",
-      "updated_at": "2022-06-08T18:49:38.000Z",
+      "content_updated_at": "2022-06-17T01:17:31.190Z",
+      "updated_at": "2022-06-17T01:17:31.000Z",
       "created_at": "2022-04-07T09:06:45.000Z",
       "namespace": "xianrenqh/kyeqhg",
       "user": {
@@ -2876,7 +2955,7 @@
         "followers_count": 0,
         "following_count": 0,
         "created_at": "2022-03-24T03:27:24.000Z",
-        "updated_at": "2022-06-08T01:12:40.000Z",
+        "updated_at": "2022-06-17T01:16:26.000Z",
         "_serializer": "v2.user"
       },
       "_serializer": "v2.book"
@@ -2894,7 +2973,7 @@
       "followers_count": 0,
       "following_count": 0,
       "created_at": "2022-03-24T03:27:24.000Z",
-      "updated_at": "2022-06-08T01:12:40.000Z",
+      "updated_at": "2022-06-17T01:16:26.000Z",
       "_serializer": "v2.user"
     },
     "format": "lake",
