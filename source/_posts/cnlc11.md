@@ -18,9 +18,9 @@ cover:
 # 1、环境
 
 1. php 8.0
-1. elasticsearch 8.4.1 [下载](https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.4.1-windows-x86_64.zip)
-1. thinkphp6.0
-1. php elasticsearch 8.4
+2. elasticsearch 8.4.1 [下载](https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.4.1-windows-x86_64.zip)
+3. thinkphp6.0
+4. php elasticsearch 8.4
 
 # 2、安装【windows】
 
@@ -378,14 +378,14 @@ sentence，fvh highlighter 使用 chars。
 用来设置搜索和确定单词边界的本地化设置
 
 1. 可以通过https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-获得更多语言标签
-1. 默认参数为[Locale.ROOT]{https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#ROOT}
+2. 默认参数为[Locale.ROOT]{https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#ROOT}
 
 ### fragmenter
 
 指定文本应如何在突出显示片段中拆分。只适用于 plain highlighter。默认为 span。
 
 1. simple:将文本分割成相同大小的片段
-1. span:将文本分割为大小相同的片段，但尽量避免在突出显示的术语之间分割文本。这在查询短语时很有用
+2. span:将文本分割为大小相同的片段，但尽量避免在突出显示的术语之间分割文本。这在查询短语时很有用
 
 ### type
 
@@ -588,6 +588,6 @@ GET article/_search
 为了从查询的词汇中获得搜索片段位置，高亮策略显示需要知道原始文本中每个单词的起始和结束字符偏移量。目前根据模式不同获取这些数据途径不同
 
 1. 检索列表，如果在映射中 index_options 设置了 offsets，unified 会将其中数据应用在文档中，而不会重新分析文本。它直接对文档进行原始查询，并从索引中提取匹配的偏移数据。在字段内容很大的时候，使用此配置很重要，因为它不需要重新分析文本内容。和 term_vectors 相比，它还需要更少的磁盘空间。
-1. 术语向量，如果在映射中 term_vector 设置为 with_positions_offsets 则 unified highlighter 使用 term_vector 来突出显示字段。对于大字段（大于 1MB）和多术语查询它的速度会比较快。而 fvh highlighter 总是使用 term_vector。
-1. 普通的高亮策略（
+2. 术语向量，如果在映射中 term_vector 设置为 with_positions_offsets 则 unified highlighter 使用 term_vector 来突出显示字段。对于大字段（大于 1MB）和多术语查询它的速度会比较快。而 fvh highlighter 总是使用 term_vector。
+3. 普通的高亮策略（
    Plain highlighting），当没有其他选择的时候，unified highlighter 使用此模式，他在内存中创建一个小的索引（index），通过运行 Lucene 的查询执行计划来访问文档的匹配信息，对需要高亮显示的每个字段和每个文档进行处理。plain highlighter 总是使用此策略。注意此方式在大型文本上可能需要大量的时间和内存。在使用此策略时候可以设置分析的文本字符的最大数量限制为 1000000。这个数值可以通过修改索引的 index.highlight.max_analyzed_offset 参数来改变。

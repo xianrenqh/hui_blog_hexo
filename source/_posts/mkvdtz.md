@@ -94,8 +94,8 @@ solr stop –p 端口号 #关闭solr服务
 ## 0、环境
 
 1. 操作系统：Windows10
-1. solr: 8.9.0
-1. php：7.3 （nts）
+2. solr: 8.9.0
+3. php：7.3 （nts）
 
 ## 1、扩展说明
 
@@ -118,7 +118,7 @@ Non Thread Safe (NTS) x64 / Thread Safe (TS) x64
 下载成功后，解压获取：
 
 1. php_solr.dll
-1. php_solr.pdb
+2. php_solr.pdb
 
 将压缩包的 php_solr.dll、php_solr.pdb 放到你的 php 扩展目录下 php/ext/ 下。
 php.ini 中加入 extension=php_solr.dll
