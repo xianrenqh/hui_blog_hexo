@@ -24,7 +24,7 @@
     "onlyPublic": true
   },
   "devDependencies": {
-    "yuque-hexo": "^1.6.0"
+    "yuque-hexo": "^1.9.5"
   },
   "hexo": {
     "version": "6.1.0"
