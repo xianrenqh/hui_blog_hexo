@@ -10,7 +10,7 @@ cover: >-
   https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900825959-5cd5db54-330c-4de3-9808-ca353657f745.png#clientId=ueab694e8-573a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc0c2e85d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=600&originWidth=900&originalType=url%E2%88%B6=1&rotation=0&showTitle=false&size=86685&status=done&style=none&taskId=ufbff039f-63f5-41a3-9b92-38d4e0c7f8b&title=
 ---
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900825959-5cd5db54-330c-4de3-9808-ca353657f745.png#clientId=ueab694e8-573a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc0c2e85d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=600&originWidth=900&originalType=url∶=1&rotation=0&showTitle=false&size=86685&status=done&style=none&taskId=ufbff039f-63f5-41a3-9b92-38d4e0c7f8b&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900825959-5cd5db54-330c-4de3-9808-ca353657f745.png#clientId=ueab694e8-573a-4&from=paste&id=uc0c2e85d&name=image.png&originHeight=600&originWidth=900&originalType=url∶=1&rotation=0&showTitle=false&size=86685&status=done&style=none&taskId=ufbff039f-63f5-41a3-9b92-38d4e0c7f8b&title=)
 
 # 什么是 Git
 
@@ -66,9 +66,9 @@ git status
 ```
 
 来看现在的状态，如下图是添加之前的：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900978641-272da7c2-b01b-4f6a-b5a9-4070fb738057.png#clientId=ueab694e8-573a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u26c9e243&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=1082&originalType=url∶=1&rotation=0&showTitle=false&size=111634&status=done&style=none&taskId=ufa7ab167-5193-4489-84f7-d42e10ceda1&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900978641-272da7c2-b01b-4f6a-b5a9-4070fb738057.png#clientId=ueab694e8-573a-4&from=paste&id=u26c9e243&name=image.png&originHeight=470&originWidth=1082&originalType=url∶=1&rotation=0&showTitle=false&size=111634&status=done&style=none&taskId=ufa7ab167-5193-4489-84f7-d42e10ceda1&title=)
 下面是添加之后 的
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900992662-de020754-c112-42e2-a2e8-ceabaa234271.png#clientId=ueab694e8-573a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u7c4df1b6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=406&originWidth=1244&originalType=url∶=1&rotation=0&showTitle=false&size=94662&status=done&style=none&taskId=u8b110088-73b0-4ed7-8bcb-52b0ed37169&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900992662-de020754-c112-42e2-a2e8-ceabaa234271.png#clientId=ueab694e8-573a-4&from=paste&id=u7c4df1b6&name=image.png&originHeight=406&originWidth=1244&originalType=url∶=1&rotation=0&showTitle=false&size=94662&status=done&style=none&taskId=u8b110088-73b0-4ed7-8bcb-52b0ed37169&title=)
 
 可以看到状态的变化是从黄色到绿色，即 unstage 到 add。
 
@@ -94,7 +94,7 @@ git status
 
 SourceTree 方便用来查看一些项目，寻找其中的一些问题。
 gitflow 分支合并、查看
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649903156572-5d9828a7-61df-404e-8ae8-cb35c44c70f0.png#clientId=u2837663f-9cd5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ue6bd8f05&margin=%5Bobject%20Object%5D&name=image.png&originHeight=681&originWidth=1023&originalType=url∶=1&rotation=0&showTitle=false&size=503264&status=done&style=none&taskId=u89ff8403-c63e-4fb3-9d0e-2ead9efe57a&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649903156572-5d9828a7-61df-404e-8ae8-cb35c44c70f0.png#clientId=u2837663f-9cd5-4&from=paste&id=ue6bd8f05&name=image.png&originHeight=681&originWidth=1023&originalType=url∶=1&rotation=0&showTitle=false&size=503264&status=done&style=none&taskId=u89ff8403-c63e-4fb3-9d0e-2ead9efe57a&title=)
 
 来源：《GitHub 漫游指南》
 [https://github.phodal.com/](https://github.phodal.com/)

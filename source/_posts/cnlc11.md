@@ -28,7 +28,7 @@ cover:
 2、ES 自带 jdk 的，所以可以不用安装 java 组件
 3、打开 bin 文件夹，直接双击 elasticsearch.bat 运行
 4、访问：http://127.0.0.1:9200/，如果出现如下数据，那启动正常
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663309015056-cf880cb3-6a8b-4da8-aeb4-1920932fcec4.png#averageHue=%23fefefe&clientId=ueeadb8ff-7c2c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=406&id=u405df5a0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=448&originWidth=757&originalType=binary∶=1&rotation=0&showTitle=false&size=14886&status=done&style=none&taskId=u7cbbb0cd-7e96-4319-89b8-1b83b631a46&title=&width=685.5849303330091)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663309015056-cf880cb3-6a8b-4da8-aeb4-1920932fcec4.png#averageHue=%23fefefe&clientId=ueeadb8ff-7c2c-4&from=paste&height=406&id=u405df5a0&name=image.png&originHeight=448&originWidth=757&originalType=binary∶=1&rotation=0&showTitle=false&size=14886&status=done&style=none&taskId=u7cbbb0cd-7e96-4319-89b8-1b83b631a46&title=&width=685.5849303330091)
 
 # 3、安装【Linux】
 
@@ -43,14 +43,14 @@ cover:
 ## 1、kibana【官方】
 
 Kibana 是为 Elasticsearch 设计的开源分析和可视化平台。你可以使用 Kibana 来搜索，查看存储在 Elasticsearch 索引中的数据并与之交互。你可以很容易实现高级的数据分析和可视化，以图表的形式展现出来。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663310319574-4f3c7fed-0696-4c7a-914c-8fcc6c69bbc4.png#averageHue=%23ebf1f3&clientId=ueeadb8ff-7c2c-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u732fbabb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1536&originWidth=2864&originalType=url∶=1&rotation=0&showTitle=false&size=576152&status=done&style=none&taskId=u5766e684-ce19-4424-8889-d9863a09ac8&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663310319574-4f3c7fed-0696-4c7a-914c-8fcc6c69bbc4.png#averageHue=%23ebf1f3&clientId=ueeadb8ff-7c2c-4&from=paste&id=u732fbabb&name=image.png&originHeight=1536&originWidth=2864&originalType=url∶=1&rotation=0&showTitle=false&size=576152&status=done&style=none&taskId=u5766e684-ce19-4424-8889-d9863a09ac8&title=)
 安装参考：[https://www.cnblogs.com/chenqionghe/p/12503181.html](https://www.cnblogs.com/chenqionghe/p/12503181.html)
 
 ## 2、elasticsearch-head 插件
 
 > elasticsearch-head 是 Web 前端，用于浏览和与 Elastic Search 集群进行交互，可用于集群管理、数据可视化、增删改查工具 Elasticsearch 语句可视化等。
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663309790115-5a0c385b-f905-42e9-8942-68c84db9555c.png#averageHue=%23f7f6f2&clientId=ueeadb8ff-7c2c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=497&id=u0679ac24&margin=%5Bobject%20Object%5D&name=image.png&originHeight=549&originWidth=997&originalType=binary∶=1&rotation=0&showTitle=false&size=53958&status=done&style=none&taskId=u3eea04e0-5ed1-4c03-a145-e41113998dc&title=&width=902.9434287212814)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663309790115-5a0c385b-f905-42e9-8942-68c84db9555c.png#averageHue=%23f7f6f2&clientId=ueeadb8ff-7c2c-4&from=paste&height=497&id=u0679ac24&name=image.png&originHeight=549&originWidth=997&originalType=binary∶=1&rotation=0&showTitle=false&size=53958&status=done&style=none&taskId=u3eea04e0-5ed1-4c03-a145-e41113998dc&title=&width=902.9434287212814)
 
 elasticsearch-head github 源码地址：
 [https://github.com/mobz/elasticsearch-head](https://github.com/mobz/elasticsearch-head)
@@ -117,7 +117,7 @@ http.cors.allow-origin: "*"
 打开谷歌浏览器应用插件网址：
 [https://chrome.google.com/webstore/category/extensions?hl=zh-CN](https://chrome.google.com/webstore/category/extensions?hl=zh-CN)
 搜索：elasticsearch-head
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663309964980-79cba546-1a82-4d28-8be4-b3602b1f70b9.png#averageHue=%23faf9f8&clientId=ueeadb8ff-7c2c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=638&id=u5fb66667&margin=%5Bobject%20Object%5D&name=image.png&originHeight=704&originWidth=1367&originalType=binary∶=1&rotation=0&showTitle=false&size=57811&status=done&style=none&taskId=u1d042b99-7935-40d3-80e6-75b949bf195&title=&width=1238.0377804032012)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663309964980-79cba546-1a82-4d28-8be4-b3602b1f70b9.png#averageHue=%23faf9f8&clientId=ueeadb8ff-7c2c-4&from=paste&height=638&id=u5fb66667&name=image.png&originHeight=704&originWidth=1367&originalType=binary∶=1&rotation=0&showTitle=false&size=57811&status=done&style=none&taskId=u1d042b99-7935-40d3-80e6-75b949bf195&title=&width=1238.0377804032012)
 直接进入后点击下载【安装】，即可在浏览器上安装成功此插件。
 直接打开插件即可。
 
@@ -305,7 +305,7 @@ class ElasticsearchService
 
 ## 高亮
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663314887045-ef45f493-be27-4510-a3f0-f66cf20e896a.png#averageHue=%23f9f8f8&clientId=ueeadb8ff-7c2c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=791&id=u5ec28e31&margin=%5Bobject%20Object%5D&name=image.png&originHeight=873&originWidth=1549&originalType=binary∶=1&rotation=0&showTitle=false&size=34491&status=done&style=none&taskId=ub5fad4ff-be34-457f-9c19-e3bbf826f41&title=&width=1402.8679750143078)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1663314887045-ef45f493-be27-4510-a3f0-f66cf20e896a.png#averageHue=%23f9f8f8&clientId=ueeadb8ff-7c2c-4&from=paste&height=791&id=u5ec28e31&name=image.png&originHeight=873&originWidth=1549&originalType=binary∶=1&rotation=0&showTitle=false&size=34491&status=done&style=none&taskId=ub5fad4ff-be34-457f-9c19-e3bbf826f41&title=&width=1402.8679750143078)
 
 ### 高亮参数
 

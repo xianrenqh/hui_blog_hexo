@@ -31,7 +31,7 @@ jobs:
 ```
 
 开启 workflow_dispatch 后，你的工作流中会出现运行工作流的按钮,手动点击 Run workflow 按钮，将会执行一次工作流：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649390027837-ee2a2970-3e9f-4557-984b-a7c403e9693c.png#clientId=u382e8e49-5c96-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u5a24dfb6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=266&originWidth=1253&originalType=url∶=1&rotation=0&showTitle=false&size=40929&status=done&style=none&taskId=u8795a4a8-3e99-4e80-8dcd-61142d8fc6c&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649390027837-ee2a2970-3e9f-4557-984b-a7c403e9693c.png#clientId=u382e8e49-5c96-4&from=paste&id=u5a24dfb6&name=image.png&originHeight=266&originWidth=1253&originalType=url∶=1&rotation=0&showTitle=false&size=40929&status=done&style=none&taskId=u8795a4a8-3e99-4e80-8dcd-61142d8fc6c&title=)
 
 现在可以进入下一步，使用 **cron** 调度触发工作流的手动执行。
 
@@ -148,16 +148,16 @@ response = requests.post('https://api.github.com/repos/你的用户名/你的项
 
 9. 具体填写如下图所示：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649401818211-43e43680-9183-420c-af31-9011030b7073.png#clientId=ufda8d8b7-9673-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u6ebd4bae&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1204&originWidth=1642&originalType=binary∶=1&rotation=0&showTitle=false&size=156866&status=done&style=none&taskId=uf157aaf6-4213-4b8f-a03f-0a14cc3be20&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649401818211-43e43680-9183-420c-af31-9011030b7073.png#clientId=ufda8d8b7-9673-4&from=ui&id=u6ebd4bae&name=image.png&originHeight=1204&originWidth=1642&originalType=binary∶=1&rotation=0&showTitle=false&size=156866&status=done&style=none&taskId=uf157aaf6-4213-4b8f-a03f-0a14cc3be20&title=)
 
 10. 在高级配置中，将执行超过时间设置为合适的时间，这里我设置为最大值**900**秒：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649390134784-9f7e3870-5676-4dab-b85e-fffd90989239.png#clientId=u382e8e49-5c96-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ua156c086&margin=%5Bobject%20Object%5D&name=image.png&originHeight=424&originWidth=527&originalType=url∶=1&rotation=0&showTitle=false&size=37309&status=done&style=none&taskId=u1a87cab6-45c8-4639-900e-a9517e8d1a8&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649390134784-9f7e3870-5676-4dab-b85e-fffd90989239.png#clientId=u382e8e49-5c96-4&from=paste&id=ua156c086&name=image.png&originHeight=424&originWidth=527&originalType=url∶=1&rotation=0&showTitle=false&size=37309&status=done&style=none&taskId=u1a87cab6-45c8-4639-900e-a9517e8d1a8&title=)
 
 11. 触发器配置选择默认流量 - 定时触发 - 自定义触发周期，并填入合适的 Cron 表达式，这里的**Cron**当前以 UTC +8 中国标准时间 （China Standard Time）运行，即北京时间。我输入的：
     > 0 0 16 \* \* \* \*
 
 表示了每天 16 点执行 1 次。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649390185893-a04dcb9c-cb6d-4c29-825e-91b9c250b807.png#clientId=u382e8e49-5c96-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ud642effb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=517&originWidth=576&originalType=url∶=1&rotation=0&showTitle=false&size=50170&status=done&style=none&taskId=u81d4f3b3-5f0e-4f8c-a2a4-7ca54a07540&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649390185893-a04dcb9c-cb6d-4c29-825e-91b9c250b807.png#clientId=u382e8e49-5c96-4&from=paste&id=ud642effb&name=image.png&originHeight=517&originWidth=576&originalType=url∶=1&rotation=0&showTitle=false&size=50170&status=done&style=none&taskId=u81d4f3b3-5f0e-4f8c-a2a4-7ca54a07540&title=)
 
 触发器也可以选择 api 调用，创建好后会生成一个 api url （webhook 地址）。粘贴到对应的位置调用即可。

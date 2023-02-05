@@ -46,7 +46,7 @@ ab -help
 ab -c 5000 -n 200000 http://192.168.222.101:80/index.html
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1656901686719-232b21a9-be96-433a-9922-d3da97cd4a03.png#clientId=u8461f789-44d5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ue14b4672&margin=%5Bobject%20Object%5D&originHeight=832&originWidth=815&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=uc30e4186-cd48-450c-adeb-180f209b095&title=)![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1656901712665-f366e7d2-1b3a-4c35-9f3f-07c9558c4cea.png#clientId=u8461f789-44d5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ue01e64ee&margin=%5Bobject%20Object%5D&originHeight=349&originWidth=837&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u374982e4-aa74-452c-b51b-1ceee80aff1&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1656901686719-232b21a9-be96-433a-9922-d3da97cd4a03.png#clientId=u8461f789-44d5-4&from=paste&id=ue14b4672&originHeight=832&originWidth=815&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=uc30e4186-cd48-450c-adeb-180f209b095&title=)![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1656901712665-f366e7d2-1b3a-4c35-9f3f-07c9558c4cea.png#clientId=u8461f789-44d5-4&from=paste&id=ue01e64ee&originHeight=349&originWidth=837&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u374982e4-aa74-452c-b51b-1ceee80aff1&title=)
 
 ## 优化思路
 

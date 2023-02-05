@@ -13,7 +13,7 @@ cover: >-
   https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png#clientId=u81110d56-3058-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uc10ad34f&margin=%5Bobject%20Object%5D&name=%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220824161836.png&originHeight=393&originWidth=666&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=84791&status=done&style=none&taskId=ud1e4e7a9-8543-465f-b83c-ba4d1551b6f&title=
 ---
 
-- [ ] ![微信截图_20220824161836.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png#clientId=u81110d56-3058-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uc10ad34f&margin=%5Bobject%20Object%5D&name=%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220824161836.png&originHeight=393&originWidth=666&originalType=binary∶=1&rotation=0&showTitle=false&size=84791&status=done&style=none&taskId=ud1e4e7a9-8543-465f-b83c-ba4d1551b6f&title=)
+- [ ] ![微信截图_20220824161836.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png#clientId=u81110d56-3058-4&from=ui&id=uc10ad34f&name=%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220824161836.png&originHeight=393&originWidth=666&originalType=binary∶=1&rotation=0&showTitle=false&size=84791&status=done&style=none&taskId=ud1e4e7a9-8543-465f-b83c-ba4d1551b6f&title=)
 
 > 环境为 CentOS 7。 nginx 版本 1.21
 
@@ -755,7 +755,7 @@ listen 443 ssl http2;
 
 请求 juejin.cn/b 与 juejin.cn/b/ 有什么区别吗？ nginx 解析起来区别就大了。
 不加斜杠,如果存在 b 文件,返回 文件 b 如果不存在文件 b，但有文件夹 b， 301 到 b/,在浏览器中看到的现象是发了两个请求.如果 b 下面没有 index.html,返回 403,如果有，返回内容。
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1661328357339-bd37763d-61ff-4a2c-90bb-ea75d04549e8.webp#clientId=u81110d56-3058-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u40f1913b&margin=%5Bobject%20Object%5D&originHeight=160&originWidth=1084&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=ue5f6264f-e021-4309-8236-61b09768564&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1661328357339-bd37763d-61ff-4a2c-90bb-ea75d04549e8.webp#clientId=u81110d56-3058-4&from=paste&id=u40f1913b&originHeight=160&originWidth=1084&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=ue5f6264f-e021-4309-8236-61b09768564&title=)
 如果没有 index.html，为什么是返回 403 而不是 404 呢？
 这是因为 nginx 如果找不到 index.html，会尝试浏览目录，默认是不允许的。autoindex off;
 如果既没有文件夹 b 也没有文件 b 返回 404
@@ -765,7 +765,7 @@ nginx 默默做了这么多，就是为了让我们用起来方便。如果从�
 ## 请求头信息对应的 nginx 变量
 
 nginx 中的有些变量有是规律，按规律可以方便记忆。
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1661328357557-6afd3ab9-9044-40f9-83e3-1cb19d8bc7d4.webp#clientId=u81110d56-3058-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u62627197&margin=%5Bobject%20Object%5D&originHeight=266&originWidth=612&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u45c731cd-b9f3-404e-bfde-5a9a76ba630&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1661328357557-6afd3ab9-9044-40f9-83e3-1cb19d8bc7d4.webp#clientId=u81110d56-3058-4&from=paste&id=u62627197&originHeight=266&originWidth=612&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u45c731cd-b9f3-404e-bfde-5a9a76ba630&title=)
 **对每一个请求标头,都对应一个变量**
 大小写不敏感，以 http* 开头， - 改为 * 。
 
@@ -822,7 +822,7 @@ gzip 指令默认是 off,设置为 on 打开 gzip。如果只设置 gzip on gzip
 Content-Encoding:gzip 内容的格式为 gzip,告诉浏览器，需要 gzip 解压再展示。
 Transfer-Encoding:chunked 数据是通过一系列块来传输的，省略 Content-Length ，为了得到内容大小，需要把每个 chunk 的大小 加起来。
 为什么打开 gzip 后 content-length 信息没有了呢？ 这是因为 nginx 的压缩是异步的，发送头的时候，nginx 可能正在压缩，不知道压缩完成的文件大小。
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1661328357432-91891d18-8f05-4c09-be78-b5e9cd1abc17.webp#clientId=u81110d56-3058-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u16f6e592&margin=%5Bobject%20Object%5D&originHeight=398&originWidth=666&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=uf9f5fd84-868f-492b-a829-fbb52fd1bc1&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1661328357432-91891d18-8f05-4c09-be78-b5e9cd1abc17.webp#clientId=u81110d56-3058-4&from=paste&id=u16f6e592&originHeight=398&originWidth=666&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=uf9f5fd84-868f-492b-a829-fbb52fd1bc1&title=)
 
 ### 指定需要 gzip 的文件
 

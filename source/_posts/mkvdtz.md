@@ -28,7 +28,7 @@ JRE 安装请参考《JRE 安装指南》。
 ## 下载 solr
 
 [下载地址](https://solr.apache.org/downloads.html)：https://solr.apache.org/downloads.html ，如图所示：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127114583-33d0d408-62e0-482f-b7b6-cc5306a5be60.png#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=680&id=u909eb52e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=751&originWidth=1151&originalType=binary∶=1&rotation=0&showTitle=false&size=68403&status=done&style=none&taskId=u1ee3913b-ec2f-4836-8a4e-9e37e94bca2&title=&width=1042.415131853756)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127114583-33d0d408-62e0-482f-b7b6-cc5306a5be60.png#clientId=u591e7470-37f3-4&from=paste&height=680&id=u909eb52e&name=image.png&originHeight=751&originWidth=1151&originalType=binary∶=1&rotation=0&showTitle=false&size=68403&status=done&style=none&taskId=u1ee3913b-ec2f-4836-8a4e-9e37e94bca2&title=&width=1042.415131853756)
 
 或者：
 [http://archive.apache.org/dist/lucene/solr/](http://archive.apache.org/dist/lucene/solr/)
@@ -114,7 +114,7 @@ Non Thread Safe (NTS) x64 / Thread Safe (TS) x64
 选择版本后面的 dll 文件（我用的是 2.5.1 版本的 dll）
 [https://windows.php.net/downloads/pecl/releases/solr/2.5.1/php_solr-2.5.1-7.3-nts-vc15-x64.zip](https://windows.php.net/downloads/pecl/releases/solr/2.5.1/php_solr-2.5.1-7.3-nts-vc15-x64.zip)
 并点击下载。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108004278-e1ac5886-8688-4801-a581-e5ebf234ea61.png#clientId=u7953d6aa-a114-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=552&id=u01c49dde&margin=%5Bobject%20Object%5D&name=image.png&originHeight=610&originWidth=1247&originalType=binary∶=1&rotation=0&showTitle=false&size=83774&status=done&style=none&taskId=u3ed7378b-9369-4a50-84ca-29b7e037cd1&title=&width=1129.3585312090652)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108004278-e1ac5886-8688-4801-a581-e5ebf234ea61.png#clientId=u7953d6aa-a114-4&from=paste&height=552&id=u01c49dde&name=image.png&originHeight=610&originWidth=1247&originalType=binary∶=1&rotation=0&showTitle=false&size=83774&status=done&style=none&taskId=u3ed7378b-9369-4a50-84ca-29b7e037cd1&title=&width=1129.3585312090652)
 下载成功后，解压获取：
 
 1. php_solr.dll
@@ -122,12 +122,12 @@ Non Thread Safe (NTS) x64 / Thread Safe (TS) x64
 
 将压缩包的 php_solr.dll、php_solr.pdb 放到你的 php 扩展目录下 php/ext/ 下。
 php.ini 中加入 extension=php_solr.dll
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108202536-3d93ee60-5d56-4be8-8aa3-91c280883f42.png#clientId=u7953d6aa-a114-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=254&id=ua670e885&margin=%5Bobject%20Object%5D&name=image.png&originHeight=280&originWidth=626&originalType=binary∶=1&rotation=0&showTitle=false&size=42409&status=done&style=none&taskId=u2e04a2ca-59af-471e-ba06-7220993c8c5&title=&width=566.9434166294104)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108202536-3d93ee60-5d56-4be8-8aa3-91c280883f42.png#clientId=u7953d6aa-a114-4&from=paste&height=254&id=ua670e885&name=image.png&originHeight=280&originWidth=626&originalType=binary∶=1&rotation=0&showTitle=false&size=42409&status=done&style=none&taskId=u2e04a2ca-59af-471e-ba06-7220993c8c5&title=&width=566.9434166294104)
 
 我的集成环境位置： D:\phpEnv\php\php-7.3\ext
 重启服务器，查看 phpinfo()，
 是否有显示 solr 扩展加载成功。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108254208-edbc8d29-1a2f-483b-b39e-44219d65f46d.png#clientId=u7953d6aa-a114-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=601&id=u5fe2cd3d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=664&originWidth=1047&originalType=binary∶=1&rotation=0&showTitle=false&size=61684&status=done&style=none&taskId=u449d70c2-4b36-495c-b1b3-6b695283693&title=&width=948.2264492188382)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108254208-edbc8d29-1a2f-483b-b39e-44219d65f46d.png#clientId=u7953d6aa-a114-4&from=paste&height=601&id=u5fe2cd3d&name=image.png&originHeight=664&originWidth=1047&originalType=binary∶=1&rotation=0&showTitle=false&size=61684&status=done&style=none&taskId=u449d70c2-4b36-495c-b1b3-6b695283693&title=&width=948.2264492188382)
 
 # 常用操作
 
@@ -136,11 +136,11 @@ php.ini 中加入 extension=php_solr.dll
 **删除 core，-c 指定删除的 core 名**
 ./solr delete -c test_core1
 
-![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127465096-e38fc348-6514-4fc7-a764-ce946777deb2.png#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ua150db6d&margin=%5Bobject%20Object%5D&originHeight=575&originWidth=1267&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u7817f55c-446d-4bab-8977-7ab117c7e06&title=)
-![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127470711-73c2ff90-c5ed-438a-b040-e14c99ded58a.png#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uddf79326&margin=%5Bobject%20Object%5D&originHeight=228&originWidth=640&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=ua65c7a53-a5a8-4097-a2eb-dcaf0120f7b&title=)
-![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127476667-41a12875-1ffb-4285-bd57-21ce09aa06a6.png#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u801b6d25&margin=%5Bobject%20Object%5D&originHeight=304&originWidth=641&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=ud0110b6f-c137-4eb6-87e2-57ab7dc379c&title=)
-![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127481012-dc1b0ebf-6f3e-49c9-bd52-96e2259dd09e.png#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u17ca993b&margin=%5Bobject%20Object%5D&originHeight=240&originWidth=620&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u8344ee63-3135-4bf6-b002-f9544c51bc8&title=)
-![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127485301-62701194-113b-487c-92be-12289aabb291.png#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u9b3fd6ae&margin=%5Bobject%20Object%5D&originHeight=300&originWidth=446&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=uebc5e4ad-238f-4943-b6bc-4c5eb294d5f&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127465096-e38fc348-6514-4fc7-a764-ce946777deb2.png#clientId=u591e7470-37f3-4&from=paste&id=ua150db6d&originHeight=575&originWidth=1267&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u7817f55c-446d-4bab-8977-7ab117c7e06&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127470711-73c2ff90-c5ed-438a-b040-e14c99ded58a.png#clientId=u591e7470-37f3-4&from=paste&id=uddf79326&originHeight=228&originWidth=640&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=ua65c7a53-a5a8-4097-a2eb-dcaf0120f7b&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127476667-41a12875-1ffb-4285-bd57-21ce09aa06a6.png#clientId=u591e7470-37f3-4&from=paste&id=u801b6d25&originHeight=304&originWidth=641&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=ud0110b6f-c137-4eb6-87e2-57ab7dc379c&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127481012-dc1b0ebf-6f3e-49c9-bd52-96e2259dd09e.png#clientId=u591e7470-37f3-4&from=paste&id=u17ca993b&originHeight=240&originWidth=620&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u8344ee63-3135-4bf6-b002-f9544c51bc8&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127485301-62701194-113b-487c-92be-12289aabb291.png#clientId=u591e7470-37f3-4&from=paste&id=u9b3fd6ae&originHeight=300&originWidth=446&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=uebc5e4ad-238f-4943-b6bc-4c5eb294d5f&title=)
 
 ## 二、创建核心
 
@@ -148,7 +148,7 @@ php.ini 中加入 extension=php_solr.dll
 
 每个核心都是 solr 的一个实例，一个 solr 服务可以创建多个核心，每个核心都可以进行自己独立配置。
 
-- 1.切换至 solr_home\server\solr 目录，例如：E:\solr-8.1.1\server\solr，在该目录下创建一个文件夹，文件夹名称与核心名称相同。 ![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788037-3dd84813-0a7f-456b-a0e1-57e0833147f6.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc850f99b&margin=%5Bobject%20Object%5D&originHeight=300&originWidth=814&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u93f16027-4409-4e7c-ac5d-17010743d21&title=)\_v_images/2019062
+- 1.切换至 solr_home\server\solr 目录，例如：E:\solr-8.1.1\server\solr，在该目录下创建一个文件夹，文件夹名称与核心名称相同。 ![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788037-3dd84813-0a7f-456b-a0e1-57e0833147f6.webp#clientId=u591e7470-37f3-4&from=paste&id=uc850f99b&originHeight=300&originWidth=814&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u93f16027-4409-4e7c-ac5d-17010743d21&title=)\_v_images/2019062
 - 2.将 E:\solr-8.1.1\server\solr\configsets_default 路径下的 conf 文件夹复制到 new_core 目录（E:\solr-8.1.1\server\solr\new_core）下。
 
 ### 2.2 创建核心
@@ -156,7 +156,7 @@ php.ini 中加入 extension=php_solr.dll
 #### 方式一：打开 solr 界面，进行如图顺序操作。
 
 这种方式 需要 在 E:\solr-8.1.1\server\solr 目录下创建 new_core 文件夹
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788016-424a695c-b554-4066-b999-736c33b8b2c3.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u72b236cd&margin=%5Bobject%20Object%5D&originHeight=618&originWidth=1300&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u7c769d2b-f93a-425b-9906-0a60d499df7&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788016-424a695c-b554-4066-b999-736c33b8b2c3.webp#clientId=u591e7470-37f3-4&from=paste&id=u72b236cd&originHeight=618&originWidth=1300&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u7c769d2b-f93a-425b-9906-0a60d499df7&title=)
 
 #### 方式二：bin 目录下输入命令：solr create -c new_core （推荐）
 
@@ -190,7 +190,7 @@ php.ini 中加入 extension=php_solr.dll
 - 1.下载中文分词器 IKAnalyzer，[下载地址](https://link.juejin.cn?target=https%3A%2F%2Fpan.baidu.com%2Fs%2F19_nVrOrUrj00rlu13OGOkg)，密码：igt9。
 - 2.解压压缩包包，目录如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788037-71d0ec37-c053-45ac-a19b-1f4495e4ee58.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u93455122&margin=%5Bobject%20Object%5D&originHeight=138&originWidth=518&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2185b132-c94c-49dd-af88-fd0f403e627&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788037-71d0ec37-c053-45ac-a19b-1f4495e4ee58.webp#clientId=u591e7470-37f3-4&from=paste&id=u93455122&originHeight=138&originWidth=518&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2185b132-c94c-49dd-af88-fd0f403e627&title=)
 
 - 3.将两个 jar 包复制到该路径下：E:\solr-8.1.1\server\solr-webapp\webapp\WEB-INF\lib。
 - 4.另外将三个配置文件复制到该路径下：E:\solr-8.1.1\server\solr-webapp\webapp\WEB-INF\classes。如果没有 classes 文件夹就新建一个。
@@ -214,13 +214,13 @@ php.ini 中加入 extension=php_solr.dll
 - 需要重启 solr
 
 效果如下：
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788089-a128751b-080b-4cb5-8903-2951345cf1f8.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u64162da3&margin=%5Bobject%20Object%5D&originHeight=699&originWidth=1358&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u40384c2d-3fcf-4d16-8162-bbc5c27fa9c&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788089-a128751b-080b-4cb5-8903-2951345cf1f8.webp#clientId=u591e7470-37f3-4&from=paste&id=u64162da3&originHeight=699&originWidth=1358&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u40384c2d-3fcf-4d16-8162-bbc5c27fa9c&title=)
 
 ## 四、导入索引数据（mysql 数据为例）
 
 - 1.创建 mysql 数据库
 
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788040-b8b6f2fa-b4f0-4559-a787-1a52871abc8c.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u59084290&margin=%5Bobject%20Object%5D&originHeight=236&originWidth=692&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u42bbddfe-6bf1-4bc2-9055-a0ea4b5a550&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127788040-b8b6f2fa-b4f0-4559-a787-1a52871abc8c.webp#clientId=u591e7470-37f3-4&from=paste&id=u59084290&originHeight=236&originWidth=692&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u42bbddfe-6bf1-4bc2-9055-a0ea4b5a550&title=)
 
 - 2.在该路径下 solr_home\server\solr\new_core\conf（E:\solr-8.1.1\server\solr\core_issuer\conf）下新建 my-data-config.xml 文件
 
@@ -254,7 +254,7 @@ php.ini 中加入 extension=php_solr.dll
 
 - 4.打开该路径下文件：solr_home\server\solr\new_core\conf\solrconfig.xml（E:\solr-8.1.1\server\solr\core_issuer\conf\solrconfig.xml），随便找一个与 requestHandler 同级节点上添加以下配置。如图：
 
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789705-05706f41-625e-4027-a4d1-1cb9a19bb621.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u450b1c77&margin=%5Bobject%20Object%5D&originHeight=236&originWidth=934&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u46162f86-3d9e-4302-97bd-de0e839379b&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789705-05706f41-625e-4027-a4d1-1cb9a19bb621.webp#clientId=u591e7470-37f3-4&from=paste&id=u450b1c77&originHeight=236&originWidth=934&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u46162f86-3d9e-4302-97bd-de0e839379b&title=)
 
 ```shell
 <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
@@ -270,18 +270,18 @@ php.ini 中加入 extension=php_solr.dll
 - 6.重启 solr 服务。
 - 7.打开 solr 页面，进行下面操作。
 
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789821-cd1c7622-59de-4e9a-b69c-c9ce68fdef58.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uae005891&margin=%5Bobject%20Object%5D&originHeight=664&originWidth=1209&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2cc0c352-2afe-4061-944a-cee608cb397&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789821-cd1c7622-59de-4e9a-b69c-c9ce68fdef58.webp#clientId=u591e7470-37f3-4&from=paste&id=uae005891&originHeight=664&originWidth=1209&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2cc0c352-2afe-4061-944a-cee608cb397&title=)
 
 - 8.检测数据是否导入成功
 
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789862-dbbacbb7-e01b-46be-bcd7-80aad8c48a24.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u6a98f6db&margin=%5Bobject%20Object%5D&originHeight=704&originWidth=933&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u0a7e4698-424e-449d-9eaa-47f921414b1&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789862-dbbacbb7-e01b-46be-bcd7-80aad8c48a24.webp#clientId=u591e7470-37f3-4&from=paste&id=u6a98f6db&originHeight=704&originWidth=933&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u0a7e4698-424e-449d-9eaa-47f921414b1&title=)
 
 ### 如果对索引字段进行中文分词
 
 添加对索引字段时，fileType ：选择 text_ik
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789803-bc546502-4fcb-43cf-a968-b9fda978fe7b.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u4e01f864&margin=%5Bobject%20Object%5D&originHeight=721&originWidth=974&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u6b78e123-0319-4dda-9b2c-1c44ee53a2a&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789803-bc546502-4fcb-43cf-a968-b9fda978fe7b.webp#clientId=u591e7470-37f3-4&from=paste&id=u4e01f864&originHeight=721&originWidth=974&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u6b78e123-0319-4dda-9b2c-1c44ee53a2a&title=)
 效果如图： 查询 **鲁西化工** 的结果
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789921-c9625e48-e98f-4529-83f4-57a6a48b77fc.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ub8eb0e9d&margin=%5Bobject%20Object%5D&originHeight=854&originWidth=1369&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=ua8e921d1-371b-47bf-a129-19bd9fc6cba&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127789921-c9625e48-e98f-4529-83f4-57a6a48b77fc.webp#clientId=u591e7470-37f3-4&from=paste&id=ub8eb0e9d&originHeight=854&originWidth=1369&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=ua8e921d1-371b-47bf-a129-19bd9fc6cba&title=)
 
 ##
 
@@ -289,4 +289,4 @@ php.ini 中加入 extension=php_solr.dll
 
 - 1.删除索引库所有数据的方法一：直接用 solr 可视化界面删除
 
-![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127790457-5b348534-e2ba-4b26-960f-80171f49d3e4.webp#clientId=u591e7470-37f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u00b14a0e&margin=%5Bobject%20Object%5D&originHeight=513&originWidth=813&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u3e1c5470-5f3a-448f-8f88-556681399a8&title=)
+![](https://cdn.nlark.com/yuque/0/2022/webp/27022430/1658127790457-5b348534-e2ba-4b26-960f-80171f49d3e4.webp#clientId=u591e7470-37f3-4&from=paste&id=u00b14a0e&originHeight=513&originWidth=813&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u3e1c5470-5f3a-448f-8f88-556681399a8&title=)

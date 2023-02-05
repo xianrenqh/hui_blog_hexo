@@ -50,7 +50,7 @@ Git 和 SVN 都是版本管理系统，但是他们
 4.git 没有一个全局的版本号，svn 有；
 5.git 内容存贮是使用 SHA-1 哈希算法，能确保代码完整性;
 6.git 有工作区，暂存区，远程仓库，git add 将代码提交到暂存区， commit 提交到本地版本库，push 推送到远程版本库。svn 是 add 提交到暂存，commit 是提交到远程版本库。
-![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1650362992187-7a03197b-6c8e-4a6e-a3c5-e1f3c71e5423.png#clientId=u628dacaa-ae7d-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u9bf41b5f&margin=%5Bobject%20Object%5D&originHeight=261&originWidth=732&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u16605eef-3685-427f-9af3-30ce347df4a&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1650362992187-7a03197b-6c8e-4a6e-a3c5-e1f3c71e5423.png#clientId=u628dacaa-ae7d-4&from=paste&id=u9bf41b5f&originHeight=261&originWidth=732&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u16605eef-3685-427f-9af3-30ce347df4a&title=)
 所以可以很清楚的看出因为原型图和高保真都是以单个文件为单位，所以适合用 SVN 管理，而我们代码时以行数为单位，适合 Git
 
 ## 2.文件.svn 和.git 区别
@@ -246,7 +246,7 @@ ed/fd7e90 是一个 commit 对象，tree 属性指向了 26/ef8e8，纪录了文
 26/ef8e8 是一个 tree 对象，blob 属性指向了 blob 对象 61/de0edf，纪录了文件名；
 61/de0edf 是一个 blob 对象，纪录了文件内容。
 三个文件关系：
-![](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1650362992194-a4905996-c53d-4ff4-a58f-9052a6f76764.jpeg#clientId=u628dacaa-ae7d-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uba2d9c63&margin=%5Bobject%20Object%5D&originHeight=142&originWidth=732&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u9a9a7836-6925-41ce-8dd0-adfa2f12349&title=)
+![](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1650362992194-a4905996-c53d-4ff4-a58f-9052a6f76764.jpeg#clientId=u628dacaa-ae7d-4&from=paste&id=uba2d9c63&originHeight=142&originWidth=732&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u9a9a7836-6925-41ce-8dd0-adfa2f12349&title=)
 所以现在知道为什么 object 文件会很大的吧
 
 ### 3.3 branch
