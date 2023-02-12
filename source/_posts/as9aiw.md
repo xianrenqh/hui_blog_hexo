@@ -12,6 +12,7 @@ copyright_author:
 cover:
 ---
 
+abcdefg
 下载 app 后登录成功后， 绑定第三方，比如微信，
 绑定好后可以运行源码，
 手机号、密码、等
