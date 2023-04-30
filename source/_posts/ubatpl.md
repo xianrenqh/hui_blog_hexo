@@ -34,16 +34,16 @@ copyright_url:
 （可访问）[https://justmysocks5.net/members/aff.php?aff=23022](https://justmysocks5.net/members/aff.php?aff=23022)
 
 打开”[官网](https://www.itblogcn.com/jms)“，点击右上角的”register” 或 ”註冊”，进入注册页面
-![post-1012-60377a705d58d_.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299488553-242e49af-1988-415c-9dbf-6bf1a89a3995.jpeg#clientId=u071a093a-ee26-4&from=ui&id=u706c11bf&name=post-1012-60377a705d58d_.jpg&originHeight=931&originWidth=1159&originalType=binary∶=1&rotation=0&showTitle=false&size=90059&status=done&style=none&taskId=ua7102e6c-f24b-44db-8ba7-4b355983670&title=)
+![post-1012-60377a705d58d_.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299488553-242e49af-1988-415c-9dbf-6bf1a89a3995.jpeg#clientId=u071a093a-ee26-4&from=ui&id=u706c11bf&originHeight=931&originWidth=1159&originalType=binary∶=1&rotation=0&showTitle=false&size=90059&status=done&style=none&taskId=ua7102e6c-f24b-44db-8ba7-4b355983670&title=)
 
 **验证账号**
 注册后会收到验证邮件，直接点击图中链接进行验证。
-![post-1012-60377a71c59d7_.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299525861-f62b2708-3e13-416f-9981-6b227cee4315.jpeg#clientId=u071a093a-ee26-4&from=ui&id=u7a199c34&name=post-1012-60377a71c59d7_.jpg&originHeight=693&originWidth=637&originalType=binary∶=1&rotation=0&showTitle=false&size=56671&status=done&style=none&taskId=u0ad7ce35-7375-46ae-adfa-4be2c97af36&title=)
+![post-1012-60377a71c59d7_.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299525861-f62b2708-3e13-416f-9981-6b227cee4315.jpeg#clientId=u071a093a-ee26-4&from=ui&id=u7a199c34&originHeight=693&originWidth=637&originalType=binary∶=1&rotation=0&showTitle=false&size=56671&status=done&style=none&taskId=u0ad7ce35-7375-46ae-adfa-4be2c97af36&title=)
 
 **未验证账号会提示：**
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299546939-e1590290-9688-43cf-aa15-b1f5f47db06f.png#clientId=u071a093a-ee26-4&from=paste&height=197&id=uc8849e75&name=image.png&originHeight=218&originWidth=1235&originalType=binary∶=1&rotation=0&showTitle=false&size=174045&status=done&style=none&taskId=u46463d97-ec48-4de9-b8b2-9c7b03107d8&title=&width=1118.4906062896514)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299546939-e1590290-9688-43cf-aa15-b1f5f47db06f.png#clientId=u071a093a-ee26-4&from=paste&height=197&id=uc8849e75&originHeight=218&originWidth=1235&originalType=binary∶=1&rotation=0&showTitle=false&size=174045&status=done&style=none&taskId=u46463d97-ec48-4de9-b8b2-9c7b03107d8&title=&width=1118.4906062896514)
 **验证成功提示：**
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299569705-4cbfb819-51d0-4f88-8029-b58748bdcdb0.png#clientId=u071a093a-ee26-4&from=paste&height=143&id=uab35c97e&name=image.png&originHeight=158&originWidth=1204&originalType=binary∶=1&rotation=0&showTitle=false&size=117984&status=done&style=none&taskId=uacb7b71a-77a1-4b27-abe6-a2876228faa&title=&width=1090.4151335811664)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299569705-4cbfb819-51d0-4f88-8029-b58748bdcdb0.png#clientId=u071a093a-ee26-4&from=paste&height=143&id=uab35c97e&originHeight=158&originWidth=1204&originalType=binary∶=1&rotation=0&showTitle=false&size=117984&status=done&style=none&taskId=uacb7b71a-77a1-4b27-abe6-a2876228faa&title=&width=1090.4151335811664)
 
 ### 购买 Just My Socks 套餐
 
@@ -80,16 +80,16 @@ copyright_url:
 (香港 IPLC 直连线路速度最快) | 100GB/月 | 100 Mbps | $21/月，$199/年 | 支持 3 个设备 | [立即购买](http://justmysocks3.net/members/aff.php?aff=23022&pid=9) |
 
 **选择购买时间，月，季，或者年(经常使用的话年付费更合算，不满意 7 天内可申请退款)**
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299602073-7e612cbe-aa28-4409-822a-89837e7525e2.png#clientId=u071a093a-ee26-4&from=paste&height=501&id=u39062ef3&name=image.png&originHeight=553&originWidth=1373&originalType=binary∶=1&rotation=0&showTitle=false&size=291407&status=done&style=none&taskId=ue4ffc013-d615-4924-b067-3635ca38f4e&title=&width=1243.471742862908)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299602073-7e612cbe-aa28-4409-822a-89837e7525e2.png#clientId=u071a093a-ee26-4&from=paste&height=501&id=u39062ef3&originHeight=553&originWidth=1373&originalType=binary∶=1&rotation=0&showTitle=false&size=291407&status=done&style=none&taskId=ue4ffc013-d615-4924-b067-3635ca38f4e&title=&width=1243.471742862908)
 
 **输入优惠码优惠码：JMS9272283**
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299725369-c92972a2-0fe1-4249-8589-f615f783f283.png#clientId=u071a093a-ee26-4&from=paste&height=523&id=u4bf7904c&name=image.png&originHeight=577&originWidth=1332&originalType=binary∶=1&rotation=0&showTitle=false&size=313396&status=done&style=none&taskId=u1106d820-b83b-44f6-b1eb-cb6f04b2e32&title=&width=1206.3396660549115)
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299734748-84abb38d-e527-4129-a0ea-f9b78831da6d.png#clientId=u071a093a-ee26-4&from=paste&height=784&id=u2f893c19&name=image.png&originHeight=866&originWidth=1473&originalType=binary∶=1&rotation=0&showTitle=false&size=378825&status=done&style=none&taskId=u01f3f514-3abc-4647-b595-f45643a0d61&title=&width=1334.0377838580216)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299725369-c92972a2-0fe1-4249-8589-f615f783f283.png#clientId=u071a093a-ee26-4&from=paste&height=523&id=u4bf7904c&originHeight=577&originWidth=1332&originalType=binary∶=1&rotation=0&showTitle=false&size=313396&status=done&style=none&taskId=u1106d820-b83b-44f6-b1eb-cb6f04b2e32&title=&width=1206.3396660549115)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299734748-84abb38d-e527-4129-a0ea-f9b78831da6d.png#clientId=u071a093a-ee26-4&from=paste&height=784&id=u2f893c19&originHeight=866&originWidth=1473&originalType=binary∶=1&rotation=0&showTitle=false&size=378825&status=done&style=none&taskId=u01f3f514-3abc-4647-b595-f45643a0d61&title=&width=1334.0377838580216)
 付款完成之后，就可以看到 购买的 Just My Socks 账号资料了。会给出 SS 和 V2Ray 账号密码，加密方式，流量情况等等。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299751260-35bf1327-b590-4586-a3e2-6d31f5eb5c64.png#clientId=u071a093a-ee26-4&from=paste&height=552&id=uc2d1f73e&name=image.png&originHeight=610&originWidth=1292&originalType=binary∶=1&rotation=0&showTitle=false&size=325020&status=done&style=none&taskId=ud0352817-cdd0-4722-9990-c9751c0d0f4&title=&width=1170.1132496568662)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299751260-35bf1327-b590-4586-a3e2-6d31f5eb5c64.png#clientId=u071a093a-ee26-4&from=paste&height=552&id=uc2d1f73e&originHeight=610&originWidth=1292&originalType=binary∶=1&rotation=0&showTitle=false&size=325020&status=done&style=none&taskId=ud0352817-cdd0-4722-9990-c9751c0d0f4&title=&width=1170.1132496568662)
 我应该使用哪个服务器 IP 进行链接？看图：
 **新页面：**
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299767170-83c42d61-e6b9-4e01-a9b4-f5f4b5fca277.png#clientId=u071a093a-ee26-4&from=paste&id=u6bef1086&name=image.png&originHeight=789&originWidth=1206&originalType=url∶=1&rotation=0&showTitle=false&size=189558&status=done&style=none&taskId=ucbcdd89e-3fc3-4e1f-897c-400115674e0&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299767170-83c42d61-e6b9-4e01-a9b4-f5f4b5fca277.png#clientId=u071a093a-ee26-4&from=paste&id=u6bef1086&originHeight=789&originWidth=1206&originalType=url∶=1&rotation=0&showTitle=false&size=189558&status=done&style=none&taskId=ucbcdd89e-3fc3-4e1f-897c-400115674e0&title=)
 **订阅链接调整：**
 要排除 ss 服务器，请在链接末尾添加&noss=1
 要排除 Vmess 服务器，请在链接末尾添加&novmess=1
@@ -97,7 +97,7 @@ copyright_url:
 可以组合多个参数，只需在链接末尾添加它们（以任何顺序）。
 **旧页面：**
 JMS 用域名代替了 IP（Server IP），链接时 IP 栏填域名即可！c30s3.jamjams.net 等 6 个域名……
-![1.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299805277-e2e8dded-88c3-4599-8a7d-f633f845fa07.jpeg#clientId=u071a093a-ee26-4&from=ui&id=ud3cf0d33&name=1.jpg&originHeight=880&originWidth=905&originalType=binary∶=1&rotation=0&showTitle=false&size=117270&status=done&style=none&taskId=u35c24e5f-355e-4b1c-9626-678289602bd&title=)
+![1.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299805277-e2e8dded-88c3-4599-8a7d-f633f845fa07.jpeg#clientId=u071a093a-ee26-4&from=ui&id=ud3cf0d33&originHeight=880&originWidth=905&originalType=binary∶=1&rotation=0&showTitle=false&size=117270&status=done&style=none&taskId=u35c24e5f-355e-4b1c-9626-678289602bd&title=)
 
 ## 客户端链接 V2Ray
 
@@ -125,16 +125,16 @@ cmd 执行命令 ipconfig /flushdns 清除本地 DNS 缓存
 **进行配置:**
 客户端的配置需要根据你的服务端进行相应的配置，因为你的服务端协议可能是 vmess 等。
 如果你的服务端配置是协议 vmess，则配置如下：（JMS 用域名代替了 IP（Server IP），链接时 IP address 栏填域名即可！c30s3.jamjams.net 等 6 个域名……）
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299866839-b7eab513-9901-4eae-a67d-7fe1f50c23e4.png#clientId=u071a093a-ee26-4&from=paste&id=ufb6e6e05&name=image.png&originHeight=607&originWidth=745&originalType=url∶=1&rotation=0&showTitle=false&size=91983&status=done&style=none&taskId=u6d94e3b4-6c70-468d-a147-a663d47574d&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299866839-b7eab513-9901-4eae-a67d-7fe1f50c23e4.png#clientId=u071a093a-ee26-4&from=paste&id=ufb6e6e05&originHeight=607&originWidth=745&originalType=url∶=1&rotation=0&showTitle=false&size=91983&status=done&style=none&taskId=u6d94e3b4-6c70-468d-a147-a663d47574d&title=)
 
 **推荐使用订阅方式**
 要排除 ss 服务器，请在链接末尾添加&noss=1
 要排除 Vmess 服务器，请在链接末尾添加&novmess=1
 **建议：** 使用服务器域名而不是 IP，请在订阅链接末尾添加 &usedomains=1。
 可以组合多个参数，只需在链接末尾添加它们（以任何顺序）。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299882321-59d252b9-e6df-4e9c-be43-1a0c1cdcdf4f.png#clientId=u071a093a-ee26-4&from=paste&id=ud5938ebf&name=image.png&originHeight=130&originWidth=372&originalType=url∶=1&rotation=0&showTitle=false&size=70606&status=done&style=none&taskId=u8fdb5464-eff2-4ae5-9e0a-8fb7f02eeaf&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299882321-59d252b9-e6df-4e9c-be43-1a0c1cdcdf4f.png#clientId=u071a093a-ee26-4&from=paste&id=ud5938ebf&originHeight=130&originWidth=372&originalType=url∶=1&rotation=0&showTitle=false&size=70606&status=done&style=none&taskId=u8fdb5464-eff2-4ae5-9e0a-8fb7f02eeaf&title=)
 保存后，右键电脑右下角 V 图标
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299882440-1aff0aeb-0b8b-40f3-bf8d-cbbdb2af5ff2.png#clientId=u071a093a-ee26-4&from=paste&id=ucc637649&name=image.png&originHeight=199&originWidth=747&originalType=url∶=1&rotation=0&showTitle=false&size=136410&status=done&style=none&taskId=u7dc2ce00-e161-4118-ba9f-535b94b0264&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299882440-1aff0aeb-0b8b-40f3-bf8d-cbbdb2af5ff2.png#clientId=u071a093a-ee26-4&from=paste&id=ucc637649&originHeight=199&originWidth=747&originalType=url∶=1&rotation=0&showTitle=false&size=136410&status=done&style=none&taskId=u7dc2ce00-e161-4118-ba9f-535b94b0264&title=)
 **(✪ω✪)**
 
 ### Android v2ray 客户端：
@@ -168,4 +168,4 @@ Debian、Ubantu、CentOS 等电脑桌面发行版（不能完全通用，可以�
 ## 测试
 
 打开浏览器，访问www.google.com，如下：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299882352-092af025-f0d8-45f4-b22e-4b88739fd5ef.png#clientId=u071a093a-ee26-4&from=paste&height=195&id=u44e89405&name=image.png&originHeight=154&originWidth=300&originalType=url∶=1&rotation=0&showTitle=false&size=21349&status=done&style=none&taskId=u2f0808a8-83e5-4ff8-a013-0478a0e89ba&title=&width=379.99530029296875)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299882352-092af025-f0d8-45f4-b22e-4b88739fd5ef.png#clientId=u071a093a-ee26-4&from=paste&height=195&id=u44e89405&originHeight=154&originWidth=300&originalType=url∶=1&rotation=0&showTitle=false&size=21349&status=done&style=none&taskId=u2f0808a8-83e5-4ff8-a013-0478a0e89ba&title=&width=379.99530029296875)

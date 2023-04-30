@@ -25,7 +25,7 @@ composer require fzaninotto/faker
 ```
 
 运行以后会在 vendor 文件夹下生成：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1650013870646-a6ba9653-b5ac-4919-b345-5745aed19374.png#clientId=u7ddbe57f-a192-4&from=paste&id=u7c034536&name=image.png&originHeight=184&originWidth=507&originalType=url∶=1&rotation=0&showTitle=false&size=12116&status=done&style=none&taskId=ud741bed8-b7a5-470a-8cfb-f31e12aff33&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1650013870646-a6ba9653-b5ac-4919-b345-5745aed19374.png#clientId=u7ddbe57f-a192-4&from=paste&id=u7c034536&originHeight=184&originWidth=507&originalType=url∶=1&rotation=0&showTitle=false&size=12116&status=done&style=none&taskId=ud741bed8-b7a5-470a-8cfb-f31e12aff33&title=)
 
 # 实际使用
 

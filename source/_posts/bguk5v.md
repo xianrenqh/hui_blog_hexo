@@ -13,7 +13,7 @@ cover: >-
   https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png#clientId=u81110d56-3058-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uc10ad34f&margin=%5Bobject%20Object%5D&name=%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220824161836.png&originHeight=393&originWidth=666&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=84791&status=done&style=none&taskId=ud1e4e7a9-8543-465f-b83c-ba4d1551b6f&title=
 ---
 
-- [ ] ![微信截图_20220824161836.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png#clientId=u81110d56-3058-4&from=ui&id=uc10ad34f&name=%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220824161836.png&originHeight=393&originWidth=666&originalType=binary∶=1&rotation=0&showTitle=false&size=84791&status=done&style=none&taskId=ud1e4e7a9-8543-465f-b83c-ba4d1551b6f&title=)
+- [ ] ![微信截图_20220824161836.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png#clientId=u81110d56-3058-4&from=ui&id=uc10ad34f&originHeight=393&originWidth=666&originalType=binary∶=1&rotation=0&showTitle=false&size=84791&status=done&style=none&taskId=ud1e4e7a9-8543-465f-b83c-ba4d1551b6f&title=)
 
 > 环境为 CentOS 7。 nginx 版本 1.21
 

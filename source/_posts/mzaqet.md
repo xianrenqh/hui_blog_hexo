@@ -14,7 +14,7 @@ cover: >-
   https://www.sxkawzp.cn/upload/2020/2/mysql1-12a849f2afe54669a6cc3259e9d380ac.jpg
 ---
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649645235333-50c0c21c-f619-40d2-a2cc-04e39d484716.png#clientId=u78daabba-49db-4&from=paste&height=503&id=u9de5a5e2&name=image.png&originHeight=555&originWidth=900&originalType=binary∶=1&rotation=0&showTitle=false&size=116531&status=done&style=none&taskId=uff38ef90-5ac3-4ff7-ad55-dfe5c18811b&title=&width=815.0943689560213)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649645235333-50c0c21c-f619-40d2-a2cc-04e39d484716.png#clientId=u78daabba-49db-4&from=paste&height=503&id=u9de5a5e2&originHeight=555&originWidth=900&originalType=binary∶=1&rotation=0&showTitle=false&size=116531&status=done&style=none&taskId=uff38ef90-5ac3-4ff7-ad55-dfe5c18811b&title=&width=815.0943689560213)
 
 ## 常用的语句
 

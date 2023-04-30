@@ -11,7 +11,7 @@ copyright_author_href: 'https://www.xiaohuihui.net'
 
 > 区别：前后端不分离中，前端页面看到的效果都是由后端控制，由后端渲染页面或重定向，即后端需要控制前端的展示，前端与后端的耦合度很高。前后端分离中，后端仅返回前端所需的数据，不再渲染 HTML 页面，不再控制前端的效果，前端与后端的耦合度相对较低。
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1650871464824-462304b8-4353-4b00-8840-0d3fba42a74c.png#clientId=u030f04bb-aefb-4&from=paste&id=ue08c53c1&name=image.png&originHeight=320&originWidth=800&originalType=url∶=1&rotation=0&showTitle=false&size=78669&status=done&style=none&taskId=ufd5f35a7-b659-412c-85ba-d7c04c4bbac&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1650871464824-462304b8-4353-4b00-8840-0d3fba42a74c.png#clientId=u030f04bb-aefb-4&from=paste&id=ue08c53c1&originHeight=320&originWidth=800&originalType=url∶=1&rotation=0&showTitle=false&size=78669&status=done&style=none&taskId=ufd5f35a7-b659-412c-85ba-d7c04c4bbac&title=)
 
 # 一、前后端分离的概念
 

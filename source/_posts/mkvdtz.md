@@ -28,7 +28,7 @@ JRE 安装请参考《JRE 安装指南》。
 ## 下载 solr
 
 [下载地址](https://solr.apache.org/downloads.html)：https://solr.apache.org/downloads.html ，如图所示：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127114583-33d0d408-62e0-482f-b7b6-cc5306a5be60.png#clientId=u591e7470-37f3-4&from=paste&height=680&id=u909eb52e&name=image.png&originHeight=751&originWidth=1151&originalType=binary∶=1&rotation=0&showTitle=false&size=68403&status=done&style=none&taskId=u1ee3913b-ec2f-4836-8a4e-9e37e94bca2&title=&width=1042.415131853756)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658127114583-33d0d408-62e0-482f-b7b6-cc5306a5be60.png#clientId=u591e7470-37f3-4&from=paste&height=680&id=u909eb52e&originHeight=751&originWidth=1151&originalType=binary∶=1&rotation=0&showTitle=false&size=68403&status=done&style=none&taskId=u1ee3913b-ec2f-4836-8a4e-9e37e94bca2&title=&width=1042.415131853756)
 
 或者：
 [http://archive.apache.org/dist/lucene/solr/](http://archive.apache.org/dist/lucene/solr/)
@@ -114,7 +114,7 @@ Non Thread Safe (NTS) x64 / Thread Safe (TS) x64
 选择版本后面的 dll 文件（我用的是 2.5.1 版本的 dll）
 [https://windows.php.net/downloads/pecl/releases/solr/2.5.1/php_solr-2.5.1-7.3-nts-vc15-x64.zip](https://windows.php.net/downloads/pecl/releases/solr/2.5.1/php_solr-2.5.1-7.3-nts-vc15-x64.zip)
 并点击下载。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108004278-e1ac5886-8688-4801-a581-e5ebf234ea61.png#clientId=u7953d6aa-a114-4&from=paste&height=552&id=u01c49dde&name=image.png&originHeight=610&originWidth=1247&originalType=binary∶=1&rotation=0&showTitle=false&size=83774&status=done&style=none&taskId=u3ed7378b-9369-4a50-84ca-29b7e037cd1&title=&width=1129.3585312090652)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108004278-e1ac5886-8688-4801-a581-e5ebf234ea61.png#clientId=u7953d6aa-a114-4&from=paste&height=552&id=u01c49dde&originHeight=610&originWidth=1247&originalType=binary∶=1&rotation=0&showTitle=false&size=83774&status=done&style=none&taskId=u3ed7378b-9369-4a50-84ca-29b7e037cd1&title=&width=1129.3585312090652)
 下载成功后，解压获取：
 
 1. php_solr.dll
@@ -122,12 +122,12 @@ Non Thread Safe (NTS) x64 / Thread Safe (TS) x64
 
 将压缩包的 php_solr.dll、php_solr.pdb 放到你的 php 扩展目录下 php/ext/ 下。
 php.ini 中加入 extension=php_solr.dll
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108202536-3d93ee60-5d56-4be8-8aa3-91c280883f42.png#clientId=u7953d6aa-a114-4&from=paste&height=254&id=ua670e885&name=image.png&originHeight=280&originWidth=626&originalType=binary∶=1&rotation=0&showTitle=false&size=42409&status=done&style=none&taskId=u2e04a2ca-59af-471e-ba06-7220993c8c5&title=&width=566.9434166294104)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108202536-3d93ee60-5d56-4be8-8aa3-91c280883f42.png#clientId=u7953d6aa-a114-4&from=paste&height=254&id=ua670e885&originHeight=280&originWidth=626&originalType=binary∶=1&rotation=0&showTitle=false&size=42409&status=done&style=none&taskId=u2e04a2ca-59af-471e-ba06-7220993c8c5&title=&width=566.9434166294104)
 
 我的集成环境位置： D:\phpEnv\php\php-7.3\ext
 重启服务器，查看 phpinfo()，
 是否有显示 solr 扩展加载成功。
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108254208-edbc8d29-1a2f-483b-b39e-44219d65f46d.png#clientId=u7953d6aa-a114-4&from=paste&height=601&id=u5fe2cd3d&name=image.png&originHeight=664&originWidth=1047&originalType=binary∶=1&rotation=0&showTitle=false&size=61684&status=done&style=none&taskId=u449d70c2-4b36-495c-b1b3-6b695283693&title=&width=948.2264492188382)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1658108254208-edbc8d29-1a2f-483b-b39e-44219d65f46d.png#clientId=u7953d6aa-a114-4&from=paste&height=601&id=u5fe2cd3d&originHeight=664&originWidth=1047&originalType=binary∶=1&rotation=0&showTitle=false&size=61684&status=done&style=none&taskId=u449d70c2-4b36-495c-b1b3-6b695283693&title=&width=948.2264492188382)
 
 # 常用操作
 
