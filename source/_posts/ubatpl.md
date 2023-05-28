@@ -1,5 +1,5 @@
 ---
-title: 【2022】【图文】搬瓦工官方机场Just My Socks注册使用教程(内附优惠券)
+title: 【2023】【图文】搬瓦工官方机场Just My Socks注册使用教程(内附优惠券)
 urlname: ubatpl
 date: '2022-10-09 07:06:41 +0000'
 tags:
@@ -34,11 +34,11 @@ copyright_url:
 （可访问）[https://justmysocks5.net/members/aff.php?aff=23022](https://justmysocks5.net/members/aff.php?aff=23022)
 
 打开”[官网](https://www.itblogcn.com/jms)“，点击右上角的”register” 或 ”註冊”，进入注册页面
-![post-1012-60377a705d58d_.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299488553-242e49af-1988-415c-9dbf-6bf1a89a3995.jpeg#clientId=u071a093a-ee26-4&from=ui&id=u706c11bf&originHeight=931&originWidth=1159&originalType=binary∶=1&rotation=0&showTitle=false&size=90059&status=done&style=none&taskId=ua7102e6c-f24b-44db-8ba7-4b355983670&title=)
+![post-1012-60377a705d58d_.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299488553-242e49af-1988-415c-9dbf-6bf1a89a3995.jpeg#averageHue=%23fbfafa&clientId=u071a093a-ee26-4&from=ui&id=u706c11bf&originHeight=931&originWidth=1159&originalType=binary∶=1&rotation=0&showTitle=false&size=90059&status=done&style=none&taskId=ua7102e6c-f24b-44db-8ba7-4b355983670&title=)
 
 **验证账号**
 注册后会收到验证邮件，直接点击图中链接进行验证。
-![post-1012-60377a71c59d7_.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299525861-f62b2708-3e13-416f-9981-6b227cee4315.jpeg#clientId=u071a093a-ee26-4&from=ui&id=u7a199c34&originHeight=693&originWidth=637&originalType=binary∶=1&rotation=0&showTitle=false&size=56671&status=done&style=none&taskId=u0ad7ce35-7375-46ae-adfa-4be2c97af36&title=)
+![post-1012-60377a71c59d7_.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/27022430/1665299525861-f62b2708-3e13-416f-9981-6b227cee4315.jpeg#averageHue=%23faf9f9&clientId=u071a093a-ee26-4&from=ui&id=u7a199c34&originHeight=693&originWidth=637&originalType=binary∶=1&rotation=0&showTitle=false&size=56671&status=done&style=none&taskId=u0ad7ce35-7375-46ae-adfa-4be2c97af36&title=)
 
 **未验证账号会提示：**
 ![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1665299546939-e1590290-9688-43cf-aa15-b1f5f47db06f.png#clientId=u071a093a-ee26-4&from=paste&height=197&id=uc8849e75&originHeight=218&originWidth=1235&originalType=binary∶=1&rotation=0&showTitle=false&size=174045&status=done&style=none&taskId=u46463d97-ec48-4de9-b8b2-9c7b03107d8&title=&width=1118.4906062896514)

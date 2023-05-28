@@ -20,6 +20,8 @@ copyright_author_href: 'https://www.xiaohuihui.net'
 
 # 二、Hexo 同步语雀内容
 
+> 语雀免费版是无法发布“互联网可见”的文章的，使用语雀发布，需要开通会员 （99/年）
+
 用到了这个项目：
 
 > https://github.com/x-cold/yuque-hexo
@@ -54,7 +56,7 @@ copyright_author_href: 'https://www.xiaohuihui.net'
 这里需要说明：
 baseurl 是固定的
 login 和 repo 是如下图这样对应的，个人界面和团队界面都可以
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396601747-fc1e332a-2b6a-4ad0-bf0b-85b45608f17b.png#clientId=udcfe64c5-982a-4&from=paste&id=u0d64e7b4&originHeight=545&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=189765&status=done&style=none&taskId=u57aea17f-fb57-435f-8a44-af6dbe6c1cc&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396601747-fc1e332a-2b6a-4ad0-bf0b-85b45608f17b.png#averageHue=%23e9e8e8&clientId=udcfe64c5-982a-4&from=paste&id=u0d64e7b4&originHeight=545&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=189765&status=done&style=none&taskId=u57aea17f-fb57-435f-8a44-af6dbe6c1cc&title=)
 
 token 是在右上角头像 -> 账户设置 -> Token 添加的，权限的话只给读取就可以
 ps.公开的知识库也要设置 Token。
