@@ -5,7 +5,7 @@ date: '2022-09-16 06:09:20 +0000'
 tags:
   - elasticsearch
 categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.net'
+copyright_author_href: 'https://www.xiaohuihui.cc'
 copyright_url:
 copyright_author:
 cover:
