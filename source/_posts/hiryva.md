@@ -7,7 +7,7 @@ tags:
   - vscode
   - 下载
 categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.net'
+copyright_author_href: 'https://www.xiaohuihui.cc'
 copyright_url:
 copyright_author:
 cover:

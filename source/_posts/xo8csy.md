@@ -10,14 +10,14 @@ categories:
   - 学无止境
 cover: >-
   https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgitee.com%2Fwangbowen97%2FBlogImgs%2Fraw%2Fmaster%2FpostImages%2FHexoCover.jpg&refer=http%3A%2F%2Fgitee.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652059164&t=ac7f746ad7621718ece964ce547ba635
-copyright_author_href: 'https://www.xiaohuihui.net'
+copyright_author_href: 'https://www.xiaohuihui.cc'
 ---
 
 # 一、安装 node.js
 
 - [node.js 官方下载地址](https://nodejs.org/en/)
 - 从上面的链接下载 node.js，并安装。
-  - 注意：官方链接可能需要**翻墙**
+  - 注意：官方链接可能需要**fanqiang**
   - 注意：我的操作系统是**Windows 7 (64bit)**
 
 ## 设置 npm 淘宝镜像站
