@@ -9,14 +9,14 @@ tags:
   - hexo
 categories:
   - 学无止境
-copyright_author_href: 'https://www.xiaohuihui.net'
+copyright_author_href: 'https://www.xiaohuihui.cc'
 ---
 
 # 一、搭建 Hexo 博客
 
 本文针对已经搭建好 hexo 博客的，如果没有搭好正常的 hexo 博客的可以去看另一篇博文，搭建很方便的。
 使用 hexo 搭建博客地址：
-[https://www.yuque.com/xianrenqh/kyeqhg/xo8csy](https://www.yuque.com/xianrenqh/kyeqhg/xo8csy)
+[使用 Hexo 搭建博客 | 小灰灰的世界](https://xiaohuihui.cc/posts/eb656981.html)
 
 # 二、Hexo 同步语雀内容
 
@@ -136,7 +136,7 @@ ps.公开的知识库也要设置 Token。
 <meta name="referrer" content="no-referrer" />
 ```
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649404362200-7eafd317-d235-4af8-afe9-4f9c54d4dee2.png#clientId=u68da2bd8-69aa-4&from=paste&id=u4d9c66af&originHeight=351&originWidth=841&originalType=url∶=1&rotation=0&showTitle=false&size=46710&status=done&style=none&taskId=ufd914241-d133-43ab-b845-e08191199df&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649404362200-7eafd317-d235-4af8-afe9-4f9c54d4dee2.png#averageHue=%23f1eeec&clientId=u68da2bd8-69aa-4&from=paste&id=u4d9c66af&originHeight=351&originWidth=841&originalType=url∶=1&rotation=0&showTitle=false&size=46710&status=done&style=none&taskId=ufd914241-d133-43ab-b845-e08191199df&title=)
 
 小灰灰用的是 butterFly 主题，加的位置在：
 \themes\butterfly\layout\includes\head.pug 文件：
@@ -150,7 +150,7 @@ meta(name="referrer" content="no-referrer")
 ```
 
 如图：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649641758436-1971a415-4efc-45ff-87b9-1e47f9617353.png#clientId=u6e1ca8df-731b-4&from=paste&height=700&id=u651955ce&originHeight=773&originWidth=1119&originalType=binary∶=1&rotation=0&showTitle=false&size=134271&status=done&style=none&taskId=u1edc2856-0d56-4f15-9454-c218fcf937a&title=&width=1013.4339987353198)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649641758436-1971a415-4efc-45ff-87b9-1e47f9617353.png#averageHue=%232d2a2e&clientId=u6e1ca8df-731b-4&from=paste&height=700&id=u651955ce&originHeight=773&originWidth=1119&originalType=binary∶=1&rotation=0&showTitle=false&size=134271&status=done&style=none&taskId=u1edc2856-0d56-4f15-9454-c218fcf937a&title=&width=1013.4339987353198)
 
 # **三、github actions 自动更新**
 
@@ -168,15 +168,15 @@ git push -u origin master
 ```
 
 去 github 的 settings 创建一个 token （ps:个人中心的设置，非项目的设置）
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396898326-2a09cbe8-9587-4f19-9f13-ead9e3bd6fc1.png#clientId=udcfe64c5-982a-4&from=paste&id=uac4e5e7e&originHeight=390&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=89765&status=done&style=none&taskId=uc2174048-c4a7-45e5-8b7e-a72c318831b&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396898326-2a09cbe8-9587-4f19-9f13-ead9e3bd6fc1.png#averageHue=%23fdfdfc&clientId=udcfe64c5-982a-4&from=paste&id=uac4e5e7e&originHeight=390&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=89765&status=done&style=none&taskId=uc2174048-c4a7-45e5-8b7e-a72c318831b&title=)
 
 只勾上这一个即可：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396909568-f0df156b-9310-4954-9350-da49c64404d2.png#clientId=udcfe64c5-982a-4&from=paste&id=u1e211b98&originHeight=627&originWidth=746&originalType=url∶=1&rotation=0&showTitle=false&size=53298&status=done&style=none&taskId=ua795b964-947a-41ce-bafa-a59b4ecd46b&title=)
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396921676-0e84a878-d94d-44d7-bd5b-0d1490dd65c6.png#clientId=udcfe64c5-982a-4&from=paste&id=u4cbbdb00&originHeight=445&originWidth=1015&originalType=url∶=1&rotation=0&showTitle=false&size=45407&status=done&style=none&taskId=u4adc989a-ec2a-4dcc-9a1d-66a0017e2b1&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396909568-f0df156b-9310-4954-9350-da49c64404d2.png#averageHue=%23fefdfc&clientId=udcfe64c5-982a-4&from=paste&id=u1e211b98&originHeight=627&originWidth=746&originalType=url∶=1&rotation=0&showTitle=false&size=53298&status=done&style=none&taskId=ua795b964-947a-41ce-bafa-a59b4ecd46b&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396921676-0e84a878-d94d-44d7-bd5b-0d1490dd65c6.png#averageHue=%23edf2e3&clientId=udcfe64c5-982a-4&from=paste&id=u4cbbdb00&originHeight=445&originWidth=1015&originalType=url∶=1&rotation=0&showTitle=false&size=45407&status=done&style=none&taskId=u4adc989a-ec2a-4dcc-9a1d-66a0017e2b1&title=)
 
 **生成了 token 之后一定要记下来**，再回来就没法看了
 然后来到刚才创建的私有仓库的 settings
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396944906-f483bf94-9454-4d5b-8fcb-5ad1d02e9003.png#clientId=udcfe64c5-982a-4&from=paste&id=u71d114fa&originHeight=419&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=91140&status=done&style=none&taskId=u2e8da352-5627-4745-98cb-0fad22bf7af&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396944906-f483bf94-9454-4d5b-8fcb-5ad1d02e9003.png#averageHue=%23dbcbb9&clientId=udcfe64c5-982a-4&from=paste&id=u71d114fa&originHeight=419&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=91140&status=done&style=none&taskId=u2e8da352-5627-4745-98cb-0fad22bf7af&title=)
 
 添加三个 secret
 **GH_REF** 是你博客的仓库地址 github.com/**\*\***/**\*\***.github.io
@@ -279,7 +279,7 @@ jobs:
 
 # 四、配置 ServerLess 云函数
 
-[Github Action 使用云函数调度服务](https://www.yuque.com/xianrenqh/kyeqhg/awh8vd?view=doc_embed)
+[Github Action 使用云函数调度服务 | 小灰灰的世界](https://xiaohuihui.cc/posts/3c85ac91.html)
 
 # 五、发布博文到服务器（vps）上
 
@@ -288,7 +288,7 @@ jobs:
 # ⑥、PS：
 
 小灰灰的 Hexo 博客地址：
-https://www.xiaohuihui.net
+[小灰灰的世界 - 小灰灰的世界](https://www.xiaohuihui.cc)
 
 PS：
 听说使用 github action 执行 ssh 可能会出现封号的情况。
