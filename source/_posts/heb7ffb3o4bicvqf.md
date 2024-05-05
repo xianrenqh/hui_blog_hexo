@@ -77,11 +77,22 @@ fclose($file);
 // 合并为一维数组
 $flatData = array_merge(...$data);
 
+// 统计每项数据的数量
+$itemCounts = array_count_values($flatData);
+
+// 打印或处理每个项目的数量
+foreach ($itemCounts as $item => $count) {
+    echo "项目 '{$item}' 出现了 {$count} 次。\n";
+}
+
+/*
 // 去除重复值
 $uniqueFlatData = array_unique($flatData);
 
 // 输出处理后的数组
 print_r($uniqueFlatData);
+*/
+
 
 ```
 
