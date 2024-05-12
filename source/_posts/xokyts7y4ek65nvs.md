@@ -41,7 +41,7 @@ crontab -e #编辑cron任务模式
 
 #常用：https://www.runoob.com/w3cnote/linux-crontab-tasks.html
 #每分钟执行一次
-* * * * * docker exec 5d10ed8889c6 php /www/lease-contract/backend/crontab/artisan schedule:run >>/docker/nginx/www/lease-contract/backend/storage/logs/notice.txt 2>&1
+* * * * * docker exec 2751dfasd8e php /www/hello-world/crontab/gogogo schedule:run >>/docker/nginx/www/hello-world/storage/logs/notice.txt 2>&1
 
 #每小时的第3和第15分钟执行
 3,15 * * * * myCommand
@@ -56,8 +56,8 @@ crontab -e #编辑cron任务模式
 ### 查询端口是否通：
 
 ```shell
-ping 域名或ip 如：ping 10.100.5.157
-telnet 如：telnet 10.100.5.157 80
+ping 域名或ip 如：ping 127.0.0.1
+telnet 如：telnet 127.0.0.1 80
 ```
 
 ### 防火墙开放端口（mysql）
@@ -107,7 +107,7 @@ firewall-cmd --permanent --remove-port=123/tcp
 ### keepalived 的 VIP 问题
 
 ```shell
-firewall-cmd --direct --permanent --add-rule ipv4 filter INPUT 0 --in-interface ens33 --destination 224.0.0.18 --protocol vrrp -j ACCEPT
+firewall-cmd --direct --permanent --add-rule ipv4 filter INPUT 0 --in-interface ens33 --destination 127.0.0.18 --protocol vrrp -j ACCEPT
 ```
 
 ### 加入开机自启动
@@ -161,7 +161,7 @@ reboot
 
 --net diynet 自定义网络在HostConfig.NetworkMode和NetworkSettings.Networks中可以找到
 
---add-host=mirrors.cgws.com:10.168.6.245 docker中的host配置在HostConfig.ExtraHosts
+--add-host=mirrors.test.com:128.0.0.2 docker中的host配置在HostConfig.ExtraHosts
 
 nginx:latest在Config.Image表示镜像名称
 
