@@ -2,20 +2,31 @@
 title: layui流加载 终止flow.load()，执行第二个流加载时禁止上一个流加载执行
 urlname: lnrzuc6fgyw6wcfm
 date: '2024-01-16 03:08:13 +0000'
-tags:
-  - layui
-  - 流加载
-  - flow
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.cc'
-copyright_url:
-copyright_author:
-cover:
+tags: []
+categories: []
 ---
 
-### [layui](https://so.csdn.net/so/search?q=layui&spm=1001.2101.3001.7020)流加载 终止 flow.load()
+tags: [layui,流加载,flow]
 
-思路是当点击事件触发时，把 ul 移除，绑定的事件移除，重新加载 ul，相当于把之前的删除重新加载了[flow](https://so.csdn.net/so/search?q=flow&spm=1001.2101.3001.7020).load。
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
+
+copyright_author_href: https://www.xiaohuihui.cc
+
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+<font style="color:rgb(51, 51, 51);">  
+</font>
+
+### [<font style="color:rgb(51, 51, 51);">layui</font>](https://so.csdn.net/so/search?q=layui&spm=1001.2101.3001.7020)<font style="color:rgb(79, 79, 79);">流加载 终止 flow.load()</font>
+
+<font style="color:rgb(77, 77, 77);">思路是当点击事件触发时，把 ul 移除，绑定的事件移除，重新加载 ul，相当于把之前的删除重新加载了</font>[<font style="color:rgb(51, 51, 51);">flow</font>](https://so.csdn.net/so/search?q=flow&spm=1001.2101.3001.7020)<font style="color:rgb(77, 77, 77);">.load。</font>
+
+<font style="color:rgb(77, 77, 77);"></font>
 
 ```nginx
 主要代码是：

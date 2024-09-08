@@ -9,15 +9,17 @@ categories: 学无止境
 copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
-当 webman 需要直接提供外网访问时，建议在 webman 前增加一个 nginx 代理，这样有以下好处。
+<font style="color:rgb(33, 37, 41);">当 webman 需要直接提供外网访问时，建议在 webman 前增加一个 nginx 代理，这样有以下好处。</font>
 
-- 静态资源由 nginx 处理，让 webman 专注业务逻辑处理
-- 让多个 webman 共用 80、443 端口，通过域名区分不同站点，实现单台服务器部署多个站点
-- 能够实现 php-fpm 与 webman 架构共存
-- nginx 代理 ssl 实现 https，更加简单高效
-- 能够严格过滤外网一些不合法请求
+- <font style="color:rgb(33, 37, 41);">静态资源由 nginx 处理，让 webman 专注业务逻辑处理</font>
+- <font style="color:rgb(33, 37, 41);">让多个 webman 共用 80、443 端口，通过域名区分不同站点，实现单台服务器部署多个站点</font>
+- <font style="color:rgb(33, 37, 41);">能够实现 php-fpm 与 webman 架构共存</font>
+- <font style="color:rgb(33, 37, 41);">nginx 代理 ssl 实现 https，更加简单高效</font>
+- <font style="color:rgb(33, 37, 41);">能够严格过滤外网一些不合法请求</font>
 
-Nginx 示例代码：
+<font style="color:rgb(33, 37, 41);"></font>
+
+<font style="color:rgb(33, 37, 41);">Nginx 示例代码：</font>
 
 ```nginx
 upstream webman {

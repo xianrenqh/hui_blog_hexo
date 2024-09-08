@@ -10,7 +10,7 @@ cover: >-
   https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900825959-5cd5db54-330c-4de3-9808-ca353657f745.png#clientId=ueab694e8-573a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc0c2e85d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=600&originWidth=900&originalType=url%E2%88%B6=1&rotation=0&showTitle=false&size=86685&status=done&style=none&taskId=ufbff039f-63f5-41a3-9b92-38d4e0c7f8b&title=
 ---
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900825959-5cd5db54-330c-4de3-9808-ca353657f745.png#clientId=ueab694e8-573a-4&from=paste&id=uc0c2e85d&originHeight=600&originWidth=900&originalType=url∶=1&rotation=0&showTitle=false&size=86685&status=done&style=none&taskId=ufbff039f-63f5-41a3-9b92-38d4e0c7f8b&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900825959-5cd5db54-330c-4de3-9808-ca353657f745.png)
 
 # 什么是 Git
 
@@ -47,6 +47,7 @@ git clone git@github.com:someone/symfony-docs-chs.git
 ```
 
 你可以修改复制到本地的代码了（symfony-docs-chs 项目里都是 rst 格式的文档）。当你觉得完成了一定的工作量，想做个阶段性的提交：
+
 向这个本地的代码仓库添加当前目录的所有改动：
 
 ```git
@@ -66,9 +67,12 @@ git status
 ```
 
 来看现在的状态，如下图是添加之前的：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900978641-272da7c2-b01b-4f6a-b5a9-4070fb738057.png#clientId=ueab694e8-573a-4&from=paste&id=u26c9e243&originHeight=470&originWidth=1082&originalType=url∶=1&rotation=0&showTitle=false&size=111634&status=done&style=none&taskId=ufa7ab167-5193-4489-84f7-d42e10ceda1&title=)
+
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900978641-272da7c2-b01b-4f6a-b5a9-4070fb738057.png)
+
 下面是添加之后 的
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900992662-de020754-c112-42e2-a2e8-ceabaa234271.png#clientId=ueab694e8-573a-4&from=paste&id=u7c4df1b6&originHeight=406&originWidth=1244&originalType=url∶=1&rotation=0&showTitle=false&size=94662&status=done&style=none&taskId=u8b110088-73b0-4ed7-8bcb-52b0ed37169&title=)
+
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649900992662-de020754-c112-42e2-a2e8-ceabaa234271.png)
 
 可以看到状态的变化是从黄色到绿色，即 unstage 到 add。
 
@@ -81,7 +85,9 @@ git status
 # Git 提交信息及几种不同的规范
 
 在团队协作中，使用版本管理工具 Git、SVN 几乎都是这个行业的标准。当我们提交代码的时候，需要编写提交信息（commit message）。
+
 而提交信息的主要用途是：告诉这个项目的人，这次代码提交里做了些什么。如，我更新了 React Native Elements 的版本，那么它就可以是：[T] upgrade react native elements。对应的我修改的代码就是：package.json 和 yarn.lock 中的文件。一般来说，建议小步提交，即按自己的 Tasking 步骤来的提交，每一小步都有对应的提交信息。这样做的主要目的是：防止一次修改中，修改过多的文件，导致后期修改、维护、撤销等等困难。
+
 而对于不同的团队来说，都会遵循一定的规范，本文主要会介绍以下几种写法：
 
 - 工作写法
@@ -92,9 +98,12 @@ git status
 
 ## SourceTree：
 
-SourceTree 方便用来查看一些项目，寻找其中的一些问题。
-gitflow 分支合并、查看
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649903156572-5d9828a7-61df-404e-8ae8-cb35c44c70f0.png#clientId=u2837663f-9cd5-4&from=paste&id=ue6bd8f05&originHeight=681&originWidth=1023&originalType=url∶=1&rotation=0&showTitle=false&size=503264&status=done&style=none&taskId=u89ff8403-c63e-4fb3-9d0e-2ead9efe57a&title=)
+<font style="color:rgb(52, 73, 94);">SourceTree 方便用来查看一些项目，寻找其中的一些问题。</font>
+
+<font style="color:rgb(52, 73, 94);">gitflow 分支合并、查看</font>
+
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649903156572-5d9828a7-61df-404e-8ae8-cb35c44c70f0.png)
 
 来源：《GitHub 漫游指南》
+
 [https://github.phodal.com/](https://github.phodal.com/)

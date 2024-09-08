@@ -9,35 +9,44 @@ categories: 学无止境
 copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
-如何使用[php](https://xiaohuihui.net.cn/archives/tag/php/)获取当前操作系统类型呢？严格来说这里分两种情况:
-一种情况是获取服务器端的操作系统类型，
-一种是获取客户端的操作系统类型。
-下面作者将对如何使用[php](https://xiaohuihui.net.cn/archives/tag/php/)获取这两种情况下的操作系统类型和大家做一些分享。
-（1）php 获取服务器端的操作系统类型
-这个时候可以使用 php 系统自带的常量 PHP_OS 或者系统函数 php_uname('s')。关于这两者返回的值可能的情况基本有如下几种情况：
+<font style="color:rgb(83, 104, 121);">如何使用</font>[php](https://xiaohuihui.net.cn/archives/tag/php/)<font style="color:rgb(83, 104, 121);">获取当前操作系统类型呢？严格来说这里分两种情况:</font>
 
-- CYGWIN_NT-5.1
-- Darwin
-- FreeBSD
-- HP-UX
-- IRIX64
-- Linux
-- NetBSD
-- OpenBSD
-- SunOS
-- Unix
-- WIN32
-- WINNT
-- Windows
-- CYGWIN_NT-5.1
-- IRIX64
-- SunOS
-- HP-UX
-- OpenBSD
+<font style="color:rgb(83, 104, 121);">一种情况是获取服务器端的操作系统类型，</font>
 
-不过根据具体情况读者还是自行打印出来结果看看最好，也许获得的结果不在上述之列。
-（2）php 获取客户端的操作系统类型，这里分享一个函数，比网上流传的那些判断更加精准，而且没有 bug
-代码如下：
+<font style="color:rgb(83, 104, 121);">一种是获取客户端的操作系统类型。</font>
+
+<font style="color:rgb(83, 104, 121);">下面作者将对如何使用</font>[php](https://xiaohuihui.net.cn/archives/tag/php/)<font style="color:rgb(83, 104, 121);">获取这两种情况下的操作系统类型和大家做一些分享。</font>
+
+<font style="color:rgb(83, 104, 121);">（1）php 获取服务器端的操作系统类型</font>
+
+<font style="color:rgb(83, 104, 121);">这个时候可以使用 php 系统自带的常量 PHP_OS 或者系统函数 php_uname('s')。关于这两者返回的值可能的情况基本有如下几种情况：</font>
+
+- <font style="color:rgb(153, 153, 153);">CYGWIN_NT-5.1</font>
+- <font style="color:rgb(153, 153, 153);">Darwin</font>
+- <font style="color:rgb(153, 153, 153);">FreeBSD</font>
+- <font style="color:rgb(153, 153, 153);">HP-UX</font>
+- <font style="color:rgb(153, 153, 153);">IRIX64</font>
+- <font style="color:rgb(153, 153, 153);">Linux</font>
+- <font style="color:rgb(153, 153, 153);">NetBSD</font>
+- <font style="color:rgb(153, 153, 153);">OpenBSD</font>
+- <font style="color:rgb(153, 153, 153);">SunOS</font>
+- <font style="color:rgb(153, 153, 153);">Unix</font>
+- <font style="color:rgb(153, 153, 153);">WIN32</font>
+- <font style="color:rgb(153, 153, 153);">WINNT</font>
+- <font style="color:rgb(153, 153, 153);">Windows</font>
+- <font style="color:rgb(153, 153, 153);">CYGWIN_NT-5.1</font>
+- <font style="color:rgb(153, 153, 153);">IRIX64</font>
+- <font style="color:rgb(153, 153, 153);">SunOS</font>
+- <font style="color:rgb(153, 153, 153);">HP-UX</font>
+- <font style="color:rgb(153, 153, 153);">OpenBSD</font>
+
+<font style="color:rgb(83, 104, 121);">不过根据具体情况读者还是自行打印出来结果看看最好，也许获得的结果不在上述之列。</font>
+
+<font style="color:rgb(83, 104, 121);">（2）php 获取客户端的操作系统类型，这里分享一个函数，比网上流传的那些判断更加精准，而且没有 bug</font>
+
+<font style="color:rgb(83, 104, 121);">代码如下：</font>
+
+<font style="color:rgb(83, 104, 121);"></font>
 
 ```php
 function get_os(){

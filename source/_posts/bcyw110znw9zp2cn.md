@@ -3,22 +3,34 @@ title: 'InnoDB: Cannot allocate memory for the buffer pool'
 urlname: bcyw110znw9zp2cn
 date: '2023-08-14 08:05:55 +0000'
 tags: []
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.cc'
-copyright_url:
-copyright_author:
-cover:
+categories: []
 ---
 
-综述：这是一次 MySQL 启动失败故障排查的过程。核心报错内容是[ERROR] InnoDB: Cannot allocate memory for the buffer pool ，解决方案是修改 mysql 配置文件里下述参数的值：innodb_buffer_pool_size 、join_buffer_size ，然后重启 mysqld 服务。对应服务器系统是 CentOS 7。
+tags: []
 
-## 1、查看 mysql 配置文件
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
+
+copyright_author_href: https://www.xiaohuihui.cc
+
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+<font style="color:rgb(51, 51, 51);">  
+</font><font style="color:rgb(51, 51, 51);">综述：这是一次MySQL启动失败故障排查的过程。核心报错内容是[ERROR] InnoDB: Cannot allocate memory for the buffer pool ，解决方案是修改mysql配置文件里下述参数的值：innodb_buffer_pool_size 、join_buffer_size ，然后重启mysqld服务。对应服务器系统是CentOS 7。</font>
+
+<font style="color:rgb(51, 51, 51);"></font>
+
+## <font style="color:rgb(51, 51, 51);">1、查看 mysql 配置文件</font>
 
 ```sql
 vi /etc/my.cnf
 ```
 
-得到类似如下的内容：
+<font style="color:rgb(51, 51, 51);">得到类似如下的内容：</font>
 
 ```sql
 # For advice on how to change settings please see
@@ -50,15 +62,15 @@ log-error=/var/log/mysqld.log
 pid-file=/var/run/mysqld/mysqld.pid
 ```
 
-在文件底部可看到 log-error=/var/log/mysqld.log ，说明可通过/var/log/mysqld.log 文件查看 mysql 错误日志。
+<font style="color:rgb(51, 51, 51);">在文件底部可看到 log-error=/var/log/mysqld.log ，说明可通过/var/log/mysqld.log 文件查看 mysql 错误日志。</font>
 
-## 2、查看 mysql 错误日志
+## <font style="color:rgb(51, 51, 51);">2、查看 mysql 错误日志</font>
 
 ```sql
 vi /var/log/mysqld.log
 ```
 
-将日志文件拉到底部查看最新日志，得到如下内容：
+<font style="color:rgb(51, 51, 51);">将日志文件拉到底部查看最新日志，得到如下内容：</font>
 
 ```sql
 2023-08-14 16:02:25 232892 [Note] Plugin ＇FEDERATED＇ is disabled.
@@ -138,7 +150,7 @@ Version: ＇5.6.50-log＇  socket: ＇/tmp/mysql.sock＇  port: 3306  Source dis
 2023-08-14 16:07:32 233060 [Note] /www/server/mysql/bin/mysqld: ready for connections.
 ```
 
-发现：
+<font style="color:rgb(51, 51, 51);">发现：</font>
 
 ```sql
 2023-08-14 16:07:32 233060 0 [Note] InnoDB: Initializing buffer pool, total size = 512M, instances = 1, chunk size = 128M
@@ -146,17 +158,18 @@ Version: ＇5.6.50-log＇  socket: ＇/tmp/mysql.sock＇  port: 3306  Source dis
 2023-08-14 16:07:32 233060 0 [ERROR] InnoDB: Cannot allocate memory for the buffer pool
 ```
 
-应该是内存不够启动 mysql 服务了。
-注意：报错信息里所需内存大小为：137428992 bytes = 137428992 / 1024 / 1024 M = 131.0625 M
+<font style="color:rgb(51, 51, 51);">应该是内存不够启动 mysql 服务了。</font>
 
-## 3、查询内存情况
+<font style="color:rgb(51, 51, 51);">注意：报错信息里所需内存大小为：137428992 bytes = 137428992 / 1024 / 1024 M = 131.0625 M</font>
+
+## <font style="color:rgb(51, 51, 51);">3、查询内存情况</font>
 
 ```sql
 # 以M为单位显示内存情况
 free -m
 ```
 
-得到：
+<font style="color:rgb(51, 51, 51);">得到：</font>
 
 ```sql
 # free -m
@@ -165,32 +178,33 @@ Mem: 1946 1829 16 4 100 70
 Swap: 1023 1001 22
 ```
 
-发现此时服务器相关内存情况为：
+<font style="color:rgb(51, 51, 51);">发现此时服务器相关内存情况为：</font>
 
-- free: 16 M
-- buff/cache: 100 M
-- available: 70 M
+- <font style="color:rgb(51, 51, 51);">free: 16 M</font>
+- <font style="color:rgb(51, 51, 51);">buff/cache: 100 M</font>
+- <font style="color:rgb(51, 51, 51);">available: 70 M</font>
 
-这几个数据量都很可怜了。所以我们可以增大可用内存，停掉一些不用的服务，或者减少 mysql 所需内存。
+<font style="color:rgb(51, 51, 51);">这几个数据量都很可怜了。所以我们可以增大可用内存，停掉一些不用的服务，或者减少 mysql 所需内存。</font>
 
-## 4、修改 mysql 配置文件
+## <font style="color:rgb(51, 51, 51);">4、修改 mysql 配置文件</font>
 
 ```sql
 vi /etc/my.cnf
 ```
 
-然后：
+<font style="color:rgb(51, 51, 51);">然后：</font>
 
-- 将 innodb_buffer_pool_size = 512M 修改为 innodb_buffer_pool_size = 64M
-- 将 join_buffer_size = 512M 改为 join_buffer_size = 64M
+- <font style="color:rgb(51, 51, 51);">将</font><font style="color:rgb(51, 51, 51);">innodb_buffer_pool_size = 512M</font><font style="color:rgb(51, 51, 51);"> 修改为</font><font style="color:rgb(51, 51, 51);">innodb_buffer_pool_size = 64M</font>
+- <font style="color:rgb(51, 51, 51);">将</font><font style="color:rgb(51, 51, 51);">join_buffer_size = 512M</font><font style="color:rgb(51, 51, 51);"> 改为</font><font style="color:rgb(51, 51, 51);">join_buffer_size = 64M</font>
 
-然后，重启 mysql 服务：
+<font style="color:rgb(51, 51, 51);">然后，重启 mysql 服务：</font>
 
 ```sql
 service mysqld restart
 ```
 
-## 5、验证 mysql 服务是否正常
+## <font style="color:rgb(51, 51, 51);">5、验证 mysql 服务是否正常</font>
 
-打开网站，发现数据展示正常
-完毕
+<font style="color:rgb(51, 51, 51);">打开网站，发现数据展示正常</font>
+
+<font style="color:rgb(51, 51, 51);">完毕</font>

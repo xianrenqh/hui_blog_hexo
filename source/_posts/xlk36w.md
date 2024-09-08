@@ -11,9 +11,10 @@ copyright_author_href: 'https://www.xiaohuihui.net'
 # 安装 webman
 
 > 初始备注：
+>
 > 不要使用 php8.0 及以上版本（除非不用 think-cache 缓存插件）think-cache 无法友好的支持 php8.0 及以上版本。
-
-### 目前使用 php7.4
+>
+> ### 目前使用 php7.4
 
 ## composer 安装
 
@@ -24,7 +25,9 @@ composer create-project workerman/webman
 ```
 
 2、运行
+
 进入 webman 目录
+
 debug 方式运行(用于开发调试)
 
 ```shell
@@ -37,10 +40,11 @@ daemon 方式运行(用于正式环境)
 php start.php start -d
 ```
 
-注意
+注意  
 webman 从 1.2.3 版本开始专门为 windows 系统提供了启动脚本(需要为 php 配置好环境变量)，windows 用户请双击 windows.bat 即可启动 webman，或者运行 php windows.php 启动 webman。
 
 3、访问
+
 浏览器访问 http://ip 地址:8787
 
 # 基础功能
@@ -66,7 +70,7 @@ return [
 ];
 ```
 
-> 提示
+> 提示  
 > 其它配置选项通过 options 传入，例如
 
 ```php
@@ -81,6 +85,7 @@ return [
 ```
 
 3、thinkphp 模板的例子
+
 修改配置 config/view.php 为
 
 ```php
@@ -133,6 +138,7 @@ composer -W require webman/think-orm
 ```
 
 经测试实际安装此扩展会报错，所以我们使用手动安装并配置 think-orm。
+
 [webman/think-orm](https://www.workerman.net/plugin/14) 实际上是一个自动化安装 toptink/think-orm 的插件，如果你的 webman 版本低于 1.2 无法使用插件请参考文章[手动安装并配置 think-orm](https://www.workerman.net/a/1289)。
 
 ### 安装 ThinkCache
@@ -142,6 +148,7 @@ composer -W require webman/think-cache
 ```
 
 [webman/think-cache](https://www.workerman.net/plugin/15) 实际上是一个自动化安装 toptink/think-cache 的插件。
+
 暂对 php8.0 及以上不友好，安装后使用会报错。
 
 #### 配置文件
@@ -175,6 +182,7 @@ composer -W require webman/think-cache
 ### 安装 redis 组件
 
 webman 的 redis 组件默认使用的是[illuminate/redis](https://github.com/illuminate/redis)，也就是 laravel 的 redis 库，用法与 laravel 相同。
+
 使用 illuminate/redis 之前必须先给 php-cli 安装 redis 扩展。
 
 > 使用命令 php -m | grep redis 查看 php-cli 是否装了 redis 扩展。注意：即使你在 php-fpm 安装了 redis 扩展，不代表你在 php-cli 可以使用它，因为 php-cli 和 php-fpm 是不同的应用程序，可能使用的是不同的 php.ini 配置。使用命令 php --ini 来查看你的 php-cli 使用的是哪个 php.ini 配置文件。
@@ -261,7 +269,7 @@ class UserValidate extends Validate
 }
 ```
 
-验证器调用代码如下：
+<font style="color:rgb(33, 37, 41);">验证器调用代码如下：</font>
 
 ```php
 $data = [
@@ -276,7 +284,9 @@ if (!$validate->check($data)) {
 }
 ```
 
-更多用法可以参考 6.0 完全开发手册的[验证](https://www.kancloud.cn/manual/thinkphp6_0/1037623)章节
+<font style="color:rgb(33, 37, 41);">更多用法可以参考 6.0 完全开发手册的</font>[验证](https://www.kancloud.cn/manual/thinkphp6_0/1037623)<font style="color:rgb(33, 37, 41);">章节</font>
+
+<font style="color:rgb(33, 37, 41);"></font>
 
 ### 安装验证码
 
@@ -345,7 +355,7 @@ class Login
 }
 ```
 
-**建立模版文件 app/view/login/index.html**
+**<font style="color:rgb(44, 62, 80) !important;">建立模版文件</font>\*\***<font style="color:rgb(0, 0, 0);">app/view/login/index.html</font>\*\*
 
 ```html
 <!DOCTYPE html>
@@ -390,17 +400,19 @@ if ( ! $this->validate->check($param)) {
 
 ###
 
-### webman/casbin 权限控制插件
+### <font style="color:rgb(33, 37, 41);">webman/casbin 权限控制插件</font>
 
 #### 简介
 
-webman casbin 权限控制插件。它基于 [PHP-Casbin](https://github.com/php-casbin/php-casbin), 一个强大的、高效的开源访问控制框架，支持基于 ACL, RBAC, ABAC 等访问控制模型。
+<font style="color:rgb(33, 37, 41);">webman casbin 权限控制插件。它基于 </font>[PHP-Casbin](https://github.com/php-casbin/php-casbin)<font style="color:rgb(33, 37, 41);">, 一个强大的、高效的开源访问控制框架，支持基于</font><font style="color:rgb(0, 0, 0);">ACL</font><font style="color:rgb(33, 37, 41);">, </font><font style="color:rgb(0, 0, 0);">RBAC</font><font style="color:rgb(33, 37, 41);">, </font><font style="color:rgb(0, 0, 0);">ABAC</font><font style="color:rgb(33, 37, 41);">等访问控制模型。</font>
 
 #### 依赖
 
-- [ThinkORM](https://www.workerman.net/doc/webman/db/others.html)（默认）
+- [ThinkORM](https://www.workerman.net/doc/webman/db/others.html)<font style="color:rgb(33, 37, 41);">（默认）</font>
 - [PHP-DI](https://github.com/PHP-DI/PHP-DI)
-- [illuminate/database](https://www.workerman.net/doc/webman/db/tutorial.html)（可选）
+- [illuminate/database](https://www.workerman.net/doc/webman/db/tutorial.html)<font style="color:rgb(33, 37, 41);">（可选）</font>
+
+<font style="color:rgb(33, 37, 41);"></font>
 
 #### 安装
 
@@ -410,7 +422,7 @@ composer require casbin/webman-permission
 
 #### 使用
 
-1. 依赖注入配置
+1. 依赖注入配置  
    修改配置 config/container.php，其最终内容如下：
 
 ```php
@@ -421,15 +433,16 @@ return $builder->build();
 ```
 
 2. 数据库配置
-   > 默认策略存储是使用的 ThinkORM。 如使用 laravel 的数据库 illuminate/database，请按照官方文档按照相应的依赖包：[https://www.workerman.net/doc/webman/db/tutorial.html](https://www.workerman.net/doc/webman/db/tutorial.html)
 
-🚀 (1) 模型配置
+> 默认策略存储是使用的 ThinkORM。 如使用 laravel 的数据库 illuminate/database，请按照官方文档按照相应的依赖包：[https://www.workerman.net/doc/webman/db/tutorial.html](https://www.workerman.net/doc/webman/db/tutorial.html)
+
+🚀 (1) 模型配置  
 📒📒📒 使用 ThinkORM（默认） 📒📒📒
 
-修改数据库 thinkorm.php 配置
+修改数据库 thinkorm.php 配置  
 📕📕📕 使用 laravel 数据库（可选） 📕📕📕
 
-修改数据库 database.php 配置
+修改数据库 database.php 配置  
 修改数据库 permission.php 的 adapter 适配器为 laravel 适配器
 
 (2) 创建 casbin_rule 数据表
@@ -456,6 +469,7 @@ CREATE TABLE `casbin_rule` (
 ```
 
 (3) 配置 config/redis 配置
+
 重启 webman
 
 ```shell
@@ -496,11 +510,12 @@ if (Permission::enforce("eve", "articles", "edit")) {
 #### 具体教程：
 
 [https://github.com/php-casbin/webman-permission](https://github.com/php-casbin/webman-permission)
+
 更多 API 参考 [Casbin API](https://casbin.org/docs/en/management-api) 。
 
 ### 路由自动解析
 
-当 app 目录结构非常复杂，webman 无法自动解析时可以安装 webman 的[自动路由插件](https://www.workerman.net/plugin/17)，它会自动检索所有的控制器并为其自动配置对应的路由，让其通过 url 可以访问。
+<font style="color:rgb(33, 37, 41);">当 app 目录结构非常复杂，webman 无法自动解析时可以安装 webman 的</font>[自动路由插件](https://www.workerman.net/plugin/17)<font style="color:rgb(33, 37, 41);">，它会自动检索所有的控制器并为其自动配置对应的路由，让其通过 url 可以访问。</font>
 
 #### 安装
 
@@ -508,5 +523,5 @@ if (Permission::enforce("eve", "articles", "edit")) {
 composer require webman/auto-route
 ```
 
-> **提示**
-> 你仍然可以在 config/route.php 中手动设置某些路由，自动路由插件会优先使用 config/route.php 里的配置。
+> **<font style="color:rgb(44, 62, 80);background-color:rgb(243, 249, 255);">提示</font>**  
+> <font style="color:rgb(44, 62, 80);background-color:rgb(243, 249, 255);">你仍然可以在</font><font style="color:rgb(0, 0, 0);">config/route.php</font><font style="color:rgb(44, 62, 80);background-color:rgb(243, 249, 255);">中手动设置某些路由，自动路由插件会优先使用</font><font style="color:rgb(0, 0, 0);">config/route.php</font><font style="color:rgb(44, 62, 80);background-color:rgb(243, 249, 255);"> 里的配置。</font>

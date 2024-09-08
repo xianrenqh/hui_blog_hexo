@@ -2,22 +2,29 @@
 title: 快速将Butterfly主题的CDN从jsDelivr切换至自建反向代理源
 urlname: gdwnif
 date: '2022-06-01 07:22:01 +0000'
-tags:
-  - cdn
-  - jsDeliver
-  - butterfly
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.net'
-copyright_url:
-copyright_author:
-cover:
+tags: []
+categories: []
 ---
 
-最新版的 Butterfly 取消了原来设置在\_config.yml 里的默认 CDN，导致不能快速替换掉现在极不稳定的 jsDelivr CDN。本文的默认 Butterfly 版本为 4.1.0。
+tags: [cdn,jsDeliver,butterfly]
 
-# 配置
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
 
-现在的默认 CDN 地址被放在了主题的/scripts/events/config.js 中：
+copyright_author_href: https://www.xiaohuihui.net
+
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+<font style="color:rgb(51, 51, 51);">  
+</font><font style="color:rgb(51, 51, 51);">最新版的Butterfly取消了原来设置在</font><font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">_config.yml</font><font style="color:rgb(51, 51, 51);">里的默认CDN，导致不能快速替换掉现在极不稳定的jsDelivr CDN。本文的默认Butterfly版本为</font><font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">4.1.0</font><font style="color:rgb(51, 51, 51);">。</font>
+
+# <font style="color:rgb(0, 0, 0);">配置</font>
+
+<font style="color:rgb(51, 51, 51);">现在的默认 CDN 地址被放在了主题的</font><font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">/scripts/events/config.js</font><font style="color:rgb(51, 51, 51);">中：</font>
 
 ```javascript
 /**
@@ -176,14 +183,15 @@ hexo.extend.filter.register("before_generate", () => {
 });
 ```
 
-所以只要快速替换掉这里的 CDN，就可以切换到我们自建的 CDN 上。
+<font style="color:rgb(51, 51, 51);">所以只要快速替换掉这里的 CDN，就可以切换到我们自建的 CDN 上。</font>
 
-# 成果
+# <font style="color:rgb(0, 0, 0);">成果</font>
 
-将 cdn.jsdelivr.net 全部替换为自己的反代源后，成果就诞生了：
-**（以下 2 种任选一种即可）**
+<font style="color:rgb(51, 51, 51);">将</font><font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">cdn.jsdelivr.net</font><font style="color:rgb(51, 51, 51);">全部替换为自己的反代源后，成果就诞生了：</font>
 
-## 【代理后的 1 成果】
+**<font style="color:#F759AB;">（以下 2 种任选一种即可）</font>**
+
+## <font style="color:rgb(51, 51, 51);">【代理后的 1 成果】</font>
 
 ```javascript
 /**
@@ -334,7 +342,7 @@ hexo.extend.filter.register("before_generate", () => {
 });
 ```
 
-## 【代理后的 2 成果】
+## <font style="color:rgb(51, 51, 51);">【代理后的 2 成果】</font>
 
 ```javascript
 /**
@@ -496,6 +504,8 @@ hexo.extend.filter.register("before_generate", () => {
 });
 ```
 
-替换完后，运行
-hexo cl && hexo g -d
-部署后，就成功切换到了你的反代源上。你也可以直接复制博主的成果进行使用~
+<font style="color:rgb(51, 51, 51);">替换完后，运行</font>
+
+<font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">hexo cl && hexo g -d</font>
+
+<font style="color:rgb(51, 51, 51);">部署后，就成功切换到了你的反代源上。你也可以直接复制博主的成果进行使用~</font>

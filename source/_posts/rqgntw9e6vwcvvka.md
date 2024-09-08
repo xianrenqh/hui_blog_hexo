@@ -2,19 +2,29 @@
 title: 通过 Python|PHP 生成mysql数据字典
 urlname: rqgntw9e6vwcvvka
 date: '2024-05-21 09:03:33 +0000'
-tags:
-  - mysql
-  - 数据字典
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.cc'
-copyright_url:
-copyright_author:
-cover:
+tags: []
+categories: []
 ---
 
-> 使用 PHP 和 python 生成数据字典，直接上代码，并保存到 markdown 里面
+tags: [mysql,数据字典]
 
-## php
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
+
+copyright_author_href: https://www.xiaohuihui.cc
+
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+> <font style="color:rgb(51, 51, 51);">  
+> </font><font style="color:rgb(51, 51, 51);">使用PHP和python生成数据字典，直接上代码，并保存到markdown里面</font>
+
+<font style="color:rgb(51, 51, 51);"></font>
+
+## <font style="color:rgb(51, 51, 51);">php</font>
 
 ```php
 <?php

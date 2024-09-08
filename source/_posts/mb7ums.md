@@ -10,9 +10,9 @@ categories:
 copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
-在宝塔控制面板-》软件商店 找到 webhook，点击安装并编辑如下命令：
+<font style="color:rgb(77, 77, 77);">在宝塔控制面板-》软件商店 找到 webhook，点击安装并编辑如下命令：</font>
 
-```
+```plain
 #!/bin/bash
 echo ""
 #输出当前时间

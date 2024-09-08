@@ -14,85 +14,89 @@ cover: >-
   https://www.sxkawzp.cn/upload/2020/2/mysql1-12a849f2afe54669a6cc3259e9d380ac.jpg
 ---
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649645235333-50c0c21c-f619-40d2-a2cc-04e39d484716.png#clientId=u78daabba-49db-4&from=paste&height=503&id=u9de5a5e2&originHeight=555&originWidth=900&originalType=binary∶=1&rotation=0&showTitle=false&size=116531&status=done&style=none&taskId=uff38ef90-5ac3-4ff7-ad55-dfe5c18811b&title=&width=815.0943689560213)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649645235333-50c0c21c-f619-40d2-a2cc-04e39d484716.png)
 
-## 常用的语句
+## <font style="color:rgb(83, 104, 121);">常用的语句</font>
 
-### 查询
+### <font style="color:rgb(83, 104, 121);">查询 </font>
 
-> select \* from bbs where id=1;
+> <font style="color:rgb(83, 104, 121);">select \* from bbs where id=1;</font>
 
-### 增加
+### <font style="color:rgb(83, 104, 121);">增加 </font>
 
-> insert into bbs (name,data_year) values ("jack","1993-10-01");
+> <font style="color:rgb(83, 104, 121);">insert into bbs (name,data_year) values ("jack","1993-10-01");</font>
 
-### 修改
+### <font style="color:rgb(83, 104, 121);">修改 </font>
 
-> update bbs set name="tom",sex=1,age=18 where name="jack";
+> <font style="color:rgb(83, 104, 121);">update bbs set name="tom",sex=1,age=18 where name="jack";</font>
 
-### 删除
+### <font style="color:rgb(83, 104, 121);">删除 </font>
 
-> delete form bbs where id=2;
+> <font style="color:rgb(83, 104, 121);">delete form bbs where id=2;</font>
 
-## 更多语句
+<font style="color:rgb(83, 104, 121);"></font>
 
-### 进入数据库：
+## <font style="color:rgb(83, 104, 121);">更多语句</font>
+
+### <font style="color:rgb(83, 104, 121);">进入数据库：</font>
 
 ```sql
 mysql -u root -p
 mysql -h localhost -u root -p database_name
 ```
 
-### 列出数据库：
+### <font style="color:rgb(83, 104, 121);">列出数据库：</font>
 
 ```sql
 show databases;
 ```
 
-### 选择数据库：
+### <font style="color:rgb(83, 104, 121);">选择数据库：</font>
 
 ```sql
 use databases_name;
 ```
 
-### 列出数据表：
+<font style="color:rgb(83, 104, 121);"></font>
+
+### <font style="color:rgb(83, 104, 121);">列出数据表：</font>
 
 ```sql
 show tables;
 ```
 
-### 显示表格列的属性：
+### <font style="color:rgb(83, 104, 121);">显示表格列的属性：</font>
 
 ```sql
 show columns from table_name;
 describe table_name;
 ```
 
-### 导出整个数据库：
+### <font style="color:rgb(83, 104, 121);">导出整个数据库：</font>
 
 ```sql
 mysqldump -u user_name -p database_name > /tmp/file_name
 ```
 
-> 例如：mysqldump -u root -p test_db > d:/test_db.sql
+> <font style="color:rgb(83, 104, 121);">例如：mysqldump -u root -p test_db > d:/test_db.sql</font>
 
-### 导出一个表：
+### <font style="color:rgb(83, 104, 121);">导出一个表：</font>
 
 ```sql
 mysqldump -u user_name -p database_name table_name > /tmp/file_name
 ```
 
-> 例如：mysqldump -u root -p test_db table1 > d:/table1.sql
+> <font style="color:rgb(83, 104, 121);">例如：mysqldump -u root -p test_db table1 > d:/table1.sql</font>
 
-### 导出一个数据库结构：
+### <font style="color:rgb(83, 104, 121);">导出一个数据库结构：</font>
 
 ```sql
 mysqldump -u user_name -p -d --add--table database_name > file_name
 ```
 
-> 例如：mysqldump -u root -p -d --add-drop-table test_db > test_db.sql
+> <font style="color:rgb(83, 104, 121);">例如：mysqldump -u root -p -d --add-drop-table test_db > test_db.sql</font>
 
-### 导入数据库：
+### <font style="color:rgb(83, 104, 121);">导入数据库：</font>
 
 ```sql
 source file_name;
@@ -100,151 +104,173 @@ source file_name;
 mysql -u user_name -p database_name < file_name
 ```
 
-> 例如：
-> source /tmp/bbs.sql；
-> source d:/bbs.sql；
-> mysql -u root -p bbs < "d:/bbs.sql"
-> mysql -u root -p bbs < "/tmp/bbs.sql"
+> <font style="color:rgb(83, 104, 121);">例如：</font>
+>
+> <font style="color:rgb(83, 104, 121);">source /tmp/bbs.sql；</font>
+>
+> <font style="color:rgb(83, 104, 121);">source d:/bbs.sql；</font>
+>
+> <font style="color:rgb(83, 104, 121);">mysql -u root -p bbs < "d:/bbs.sql"</font>
+>
+> <font style="color:rgb(83, 104, 121);">mysql -u root -p bbs < "/tmp/bbs.sql"</font>
+>
+> <font style="color:rgb(83, 104, 121);"></font>
 
-### 将文本文件导入数据表中（excel 与之相同）
+### <font style="color:rgb(83, 104, 121);">将文本文件导入数据表中（excel 与之相同）</font>
 
 ```sql
 load data infile "tables.txt" into table table_name;
 ```
 
-> 例如：
-> load data infile "/tmp/bbs.txt" into table bbs；
-> load data infile "/tmp/bbs.xls" into table bbs；
-> load data infile "d:/bbs.txt" into table bbs；
-> load data infile "d:/bbs.xls" into table bbs；
+> <font style="color:rgb(83, 104, 121);">例如：</font>
+>
+> <font style="color:rgb(83, 104, 121);">load data infile "/tmp/bbs.txt" into table bbs；</font>
+>
+> <font style="color:rgb(83, 104, 121);">load data infile "/tmp/bbs.xls" into table bbs；</font>
+>
+> <font style="color:rgb(83, 104, 121);">load data infile "d:/bbs.txt" into table bbs；</font>
+>
+> <font style="color:rgb(83, 104, 121);">load data infile "d:/bbs.xls" into table bbs；</font>
 
-### 将数据表导出为文本文件（excel 与之相同）
+### <font style="color:rgb(83, 104, 121);">将数据表导出为文本文件（excel 与之相同）</font>
 
 ```sql
 select * into outfile "path_file_name" from table_name;
 ```
 
 > 例如：
-> select _ into outfile "/tmp/bbs.txt" from bbs；
-> select _ into outfile "/tmp/bbs.xls" from bbs where id=1;
-> select _ into outfile "d:/bbs.txt" from bbs;
-> select _ into outfile "d:/bbs.xls" from bbs where id=1;
+>
+> <font style="color:rgb(83, 104, 121);">select</font><font style="color:rgb(83, 104, 121);"> \* into outfile "/tmp/bbs.txt" from bbs；</font>
+>
+> <font style="color:rgb(83, 104, 121);">select \* into outfile "/tmp/bbs.xls" from bbs where id=1;</font>
+>
+> <font style="color:rgb(83, 104, 121);">select \* into outfile "d:/bbs.txt" from bbs;</font>
+>
+> <font style="color:rgb(83, 104, 121);">select \* into outfile "d:/bbs.xls" from bbs where id=1;</font>
 
-### 创建数据库时先判断数据库是否存在：
+### <font style="color:rgb(83, 104, 121);">创建数据库时先判断数据库是否存在：</font>
 
 ```sql
 create database if not exists database_name;
 ```
 
-> 例如：create database if not exists bbs
+> <font style="color:rgb(83, 104, 121);">例如：create database if not exists bbs</font>
 
-### 创建数据库：
+### <font style="color:rgb(83, 104, 121);">创建数据库：</font>
 
 ```sql
 create database database_name;
 ```
 
-> 例如：create database bbs;
+> <font style="color:rgb(83, 104, 121);">例如：create database bbs;</font>
 
-### 删除数据库：
+### <font style="color:rgb(83, 104, 121);">删除数据库：</font>
 
 ```sql
 drop database database_name;
 ```
 
-> 例如：drop database bbs;
+> <font style="color:rgb(83, 104, 121);">例如：drop database bbs;</font>
 
-### 创建数据表：
+### <font style="color:rgb(83, 104, 121);">创建数据表：</font>
 
 ```sql
 mysql> create table <table_name> ( <column 1 name> <col. 1 type> <col. 1 details>,<column 2 name> <col. 2 type> <col. 2 details>, ...);
 ```
 
-> 例如：create table (id int not null auto_increment primary key,name char(16) not null default "jack",date_year date not null);
+> <font style="color:rgb(83, 104, 121);">例如：create table (id int not null auto_increment primary key,name char(16) not null default "jack",date_year date not null);</font>
 
-### 删除数据表中数据：
+### <font style="color:rgb(83, 104, 121);">删除数据表中数据：</font>
 
 ```sql
 delete from table_name;
 ```
 
-> 例如：
-> delete from bbs;
-> delete from bbs where id=2;
+> <font style="color:rgb(83, 104, 121);">例如：</font>
+>
+> <font style="color:rgb(83, 104, 121);">delete from bbs;</font>
+>
+> <font style="color:rgb(83, 104, 121);">delete from bbs where id=2;</font>
 
-### 删除数据库中的数据表：
+### <font style="color:rgb(83, 104, 121);">删除数据库中的数据表：</font>
 
 ```sql
 drop table table_name;
 ```
 
-> 例如：
-> drop table test_db;
-> rm -f database_name/table_name._ (linux 下）
-> 例如：
-> rm -rf bbs/accp._
+> <font style="color:rgb(83, 104, 121);">例如：</font>
+>
+> <font style="color:rgb(83, 104, 121);">drop table test_db;</font>
+>
+> <font style="color:rgb(83, 104, 121);">rm -f database_name/table_name.\* (linux 下）</font>
+>
+> <font style="color:rgb(83, 104, 121);">例如：</font>
+>
+> <font style="color:rgb(83, 104, 121);">rm -rf bbs/accp.\*</font>
 
-### 向数据库中添加数据：
+### <font style="color:rgb(83, 104, 121);">向数据库中添加数据：</font>
 
 ```sql
 insert into table_name set column_name1=value1,column_name2=value2;
 ```
 
-> 例如：insert into bbs set name="jack",date_year="1993-10-01";
+> <font style="color:rgb(83, 104, 121);">例如：insert into bbs set name="jack",date_year="1993-10-01";</font>
 
 ```sql
 insert into table_name values (column1,column2,...);
 ```
 
-> 例如：insert into bbs ("2","jack","1993-10-02")
+> <font style="color:rgb(83, 104, 121);">例如：insert into bbs ("2","jack","1993-10-02")</font>
 
 ```sql
 insert into table_name (column_name1,column_name2,...) values (value1,value2);
 ```
 
-> 例如：insert into bbs (name,data_year) values ("jack","1993-10-01");
+> <font style="color:rgb(83, 104, 121);">例如：insert into bbs (name,data_year) values ("jack","1993-10-01");</font>
 
-### 查询数据表中的数据：
+<font style="color:rgb(83, 104, 121);"></font>
+
+### <font style="color:rgb(83, 104, 121);">查询数据表中的数据：</font>
 
 ```sql
 select * from table_name;
 ```
 
-> 例如：select \* from bbs where id=1;
+> <font style="color:rgb(83, 104, 121);">例如：select \* from bbs where id=1;</font>
 
-### 修改数据表中的数据：
+### <font style="color:rgb(83, 104, 121);">修改数据表中的数据：</font>
 
 ```sql
 update table_name set col_name=new_value where id=1;
 ```
 
-> 例如：update bbs set name="tom",age=18 where name="jack";
+> <font style="color:rgb(83, 104, 121);">例如：update bbs set name="tom",age=18 where name="jack";</font>
 
-### 增加一个字段：
+### <font style="color:rgb(83, 104, 121);">增加一个字段：</font>
 
 ```sql
 alter table table_name add column field_name datatype not null default "1";
 ```
 
-> 例如：alter table bbs add column tel char(16) not null;
+> <font style="color:rgb(83, 104, 121);">例如：alter table bbs add column tel char(16) not null;</font>
 
-### 增加多个字段：(column 可省略不写）
+### <font style="color:rgb(83, 104, 121);">增加多个字段：(column 可省略不写）</font>
 
 ```sql
 alter table table_name add column filed_name1 datatype,add column filed_name2 datatype;
 ```
 
-> 例如：alter table bbs add column tel char(16) not null,add column address text;
+> <font style="color:rgb(83, 104, 121);">例如：alter table bbs add column tel char(16) not null,add column address text;</font>
 
-### 删除一个字段：
+### <font style="color:rgb(83, 104, 121);">删除一个字段：</font>
 
 ```sql
 alter table table_name drop field_name;
 ```
 
-> 例如：alter table bbs drop tel;
+> <font style="color:rgb(83, 104, 121);">例如：alter table bbs drop tel;</font>
 
-### 修改字段的数据类型：
+### <font style="color:rgb(83, 104, 121);">修改字段的数据类型：</font>
 
 ```sql
 1. alter table table_name modify id int unsigned;
@@ -253,55 +279,55 @@ alter table table_name drop field_name;
 #修改列id的名字为sid，而且把属性修改为int unsigned
 ```
 
-### 修改一个字段的默认值：
+### <font style="color:rgb(83, 104, 121);">修改一个字段的默认值：</font>
 
 ```sql
 alter table table_name modify column_name datatype not null default "";
 ```
 
-> 例如：alter table test_db modify name char(16) default not null "yourname";
+> <font style="color:rgb(83, 104, 121);">例如：alter table test_db modify name char(16) default not null "yourname";</font>
 
-### 对表重新命名：
+### <font style="color:rgb(83, 104, 121);">对表重新命名：</font>
 
 ```sql
 alter table table_name rename as new_table_name;
 ```
 
-> 例如：alter table bbs rename as bbs_table;
+> <font style="color:rgb(83, 104, 121);">例如：alter table bbs rename as bbs_table;</font>
 
 ```sql
 rename table old_table_name to new_table_name;
 ```
 
-> 例如：rename table test_db to accp;
+> <font style="color:rgb(83, 104, 121);">例如：rename table test_db to accp;</font>
 
-### 从已经有的表中复制表的结构：
+### <font style="color:rgb(83, 104, 121);">从已经有的表中复制表的结构：</font>
 
 ```sql
 create table table2 select * from table1 where 1<>1;
 ```
 
-> 例如：create table test_db select \* from accp where 1<>1;
+> <font style="color:rgb(83, 104, 121);">例如：create table test_db select \* from accp where 1<>1;</font>
 
-### 查询时间：
+### <font style="color:rgb(83, 104, 121);">查询时间：</font>
 
 ```sql
 select now();
 ```
 
-### 查询当前用户：
+### <font style="color:rgb(83, 104, 121);">查询当前用户：</font>
 
 ```sql
 select user();
 ```
 
-### 查询数据库版本：
+### <font style="color:rgb(83, 104, 121);">查询数据库版本：</font>
 
-```
+```plain
 select version();
 ```
 
-### 创建索引：
+### <font style="color:rgb(83, 104, 121);">创建索引：</font>
 
 ```sql
 alter table table1 add index ind_id(id);
@@ -309,48 +335,48 @@ create index ind_id on table1(id);
 create unique index ind_id on table1(id);//建立唯一性索引
 ```
 
-### 删除索引：
+### <font style="color:rgb(83, 104, 121);">删除索引：</font>
 
 ```sql
 drop index idx_id on table1;
 alter table table1 drop index ind_id;
 ```
 
-### 联合字符或者多个列（将 id 与":"和列 name 和"="连接）
+### <font style="color:rgb(83, 104, 121);">联合字符或者多个列（将 id 与":"和列 name 和"="连接）</font>
 
 ```sql
 select concat(id，':',name,'=') from table;
 ```
 
-### limit（选出 10 到 20 条）
+### <font style="color:rgb(83, 104, 121);">limit（选出 10 到 20 条）</font>
 
 ```sql
 select * from bbs order by id limit 9,10;
 ```
 
-> （从查询结果中列出第几到几条的记录）
+> <font style="color:rgb(83, 104, 121);">（从查询结果中列出第几到几条的记录）</font>
 
-### 增加一个管理员账号：
+### <font style="color:rgb(83, 104, 121);">增加一个管理员账号：</font>
 
 ```sql
 grant all on *.* to user@localhost identified by "password";
 ```
 
-### 创建表是先判断表是否存在
+### <font style="color:rgb(83, 104, 121);">创建表是先判断表是否存在</font>
 
 ```sql
 create table if not exists students(……);
 ```
 
-### 复制表：
+### <font style="color:rgb(83, 104, 121);">复制表：</font>
 
 ```sql
 create table table2 select * from table1;
 ```
 
-> 例如：create table test_db select \* from accp;
+> <font style="color:rgb(83, 104, 121);">例如：create table test_db select \* from accp;</font>
 
-### 授于用户远程访问 mysql 的权限
+### <font style="color:rgb(83, 104, 121);">授于用户远程访问 mysql 的权限</font>
 
 ```sql
 grant all privileges on *.* to "root"@"%" identified by "password" with grant option;
@@ -360,21 +386,21 @@ select user,host from user;
 update user set host="%" where user="user_name";
 ```
 
-### 查看当前状态
+### <font style="color:rgb(83, 104, 121);">查看当前状态</font>
 
 ```sql
 show status;
 ```
 
-### 查看当前连接的用户
+### <font style="color:rgb(83, 104, 121);">查看当前连接的用户</font>
 
 ```sql
 show processlist;
 ```
 
-> （如果是 root 用户，则查看全部的线程，得到的用户连接数同 show status;里的 Threads_connected 值是相同的）!
+> <font style="color:rgb(83, 104, 121);">（如果是 root 用户，则查看全部的线程，得到的用户连接数同 show status;里的 Threads_connected 值是相同的）!</font>
 
-### 替换字段中的部分数据
+### <font style="color:rgb(83, 104, 121);">替换字段中的部分数据</font>
 
 > UPDATE 你的表名 SET 你要查找的字段明=REPLACE(你要查找的字段明,'你要替换的字符串','你需要替换成什么');
 

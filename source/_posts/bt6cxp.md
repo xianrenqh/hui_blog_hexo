@@ -12,7 +12,9 @@ copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
 遇到个很幼稚的问题，用 json_encode 把数组转换为 json 时，发现转化的值为 null。怎么回事呢？查找手册：发现了下面的话：
+
 该函数只能接受 UTF-8 编码的数据（译注：指字符/字符串类型的数据）
+
 原来数组中有中文，需要转码哦，写个转换字符编码的函数吧：
 
 ```php
@@ -38,7 +40,7 @@ return $str;
 }
 ```
 
-对于数组，通过下面方式 json_encode 调用，一切 ok ~~~
+<font style="color:rgb(83, 104, 121);">对于数组，通过下面方式 json_encode 调用，一切 ok ~~~</font>
 
 ```php
 $json_api=json_encode(encodeConvert($json_api,'gb2312','utf-8'));

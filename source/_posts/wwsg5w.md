@@ -9,15 +9,15 @@ categories: 学无止境
 copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
-# 安装 git
+# <font style="color:rgb(82, 82, 82);">安装 git</font>
 
 ```git
 yum install git
 ```
 
-# 安装 webhook 插件
+# <font style="color:rgb(82, 82, 82);">安装 webhook 插件</font>
 
-添加 shell 脚本，如上图，点击添加，数据名称 和 执行脚本(此处执行脚本框中 直接输入 shell 脚本可能会被过滤，所以可以先随便添加点东西，然后再重新添加 shell 脚本)，shell 脚本如下
+<font style="color:rgb(82, 82, 82);">添加 shell 脚本，如上图，点击添加，数据名称 和 执行脚本(此处执行脚本框中 直接输入 shell 脚本可能会被过滤，所以可以先随便添加点东西，然后再重新添加 shell 脚本)，shell 脚本如下</font>
 
 ```shell
 #!/bin/bash
@@ -64,13 +64,13 @@ fi
 
 ```
 
-点击查看密钥
+<font style="color:rgb(82, 82, 82);">点击查看密钥</font>
 
-> 获取地址：http://面板/hook?...
+> <font style="color:rgb(82, 82, 82);">获取地址：http://面板/hook?...</font>
 
-# 添加公钥
+# <font style="color:rgb(82, 82, 82);">添加公钥</font>
 
-如何生成 public key
+<font style="color:rgb(82, 82, 82);">如何生成 public key</font>
 
 ```git
 cd root/.ssh
@@ -79,13 +79,18 @@ ssh-keygen
 cat id\_rsa.pub
 ```
 
-\*\*
-第一步，检查本机是否存在 SSH key
-如下图调出 Git Bash 窗口，输入下面的命令 ls -al ~/.ssh ，如果有文件 id_rsa.pub 或 id_dsa.pub，则直接进入步骤 3 将 SSH key 添加到 GitHub 中，否则进入第二步生成 SSH key
+<font style="color:rgb(82, 82, 82);">\*\*</font>
 
-第二步：
-在命令行中输入 ssh-keygen -t rsa -C ["your_emial@examle.com](mailto:%22your_emial@examle.com)"
-默认会在相应路径下（/c/Users/Administrator/.ssh/id_rsa）生成 id_rsa 和 id_rsa.pub 、known_hosts 三个文件，如下面代码所示
+<font style="color:rgb(82, 82, 82);">第一步，检查本机是否存在 SSH key</font>
+
+<font style="color:rgb(82, 82, 82);">如下图调出 Git Bash 窗口，输入下面的命令 ls -al ~/.ssh ，如果有文件</font><font style="color:rgb(82, 82, 82);background-color:rgb(247, 247, 247);">id_rsa.pub</font><font style="color:rgb(82, 82, 82);"> 或 </font><font style="color:rgb(82, 82, 82);background-color:rgb(247, 247, 247);">id_dsa.pub</font><font style="color:rgb(82, 82, 82);">，则直接进入步骤 3 将 SSH key 添加到 GitHub 中，否则进入第二步生成 SSH key</font>
+
+<font style="color:rgb(82, 82, 82);"></font>
+
+<font style="color:rgb(82, 82, 82);">第二步：  
+</font><font style="color:rgb(82, 82, 82);">在命令行中输入 ssh-keygen -t rsa -C</font><font style="color:rgb(82, 82, 82);"> </font>["your_emial@examle.com](mailto:%22your_emial@examle.com)<font style="color:rgb(82, 82, 82);">"</font>
+
+<font style="color:rgb(82, 82, 82);">默认会在相应路径下（/c/Users/Administrator/.ssh/id_rsa）生成 id_rsa 和 id_rsa.pub 、known_hosts 三个文件，如下面代码所示</font>
 
 ```shell
 $ ssh-keygen -t rsa -C "your_emial@examle.com"
@@ -113,15 +118,19 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-在码云中进行对应操作，找到对应项目，在'Webhooks 设置'右侧点击添加，然后输入地址，默认选中 Push，密码为空，提交。
+<font style="color:rgb(82, 82, 82);">在码云中进行对应操作，找到对应项目，在'Webhooks 设置'右侧点击添加，然后输入地址，默认选中 Push，密码为空，提交。</font>
 
-在登录服务器相关目录（wwwroot）用 git 命令 克隆一般码云中的代码：
+<font style="color:rgb(82, 82, 82);"></font>
+
+<font style="color:rgb(82, 82, 82);"></font>
+
+<font style="color:rgb(82, 82, 82);">在登录服务器相关目录（wwwroot）用 git 命令 克隆一般码云中的代码：</font>
 
 ```git
 git clone https://gitee.com/xianrenqh/huicmf_tp6
 ```
 
-拉取项目代码测试一下（首次需要执行前两行命令）master 为分支名称
+<font style="color:rgb(82, 82, 82);">拉取项目代码测试一下（首次需要执行前两行命令）master 为分支名称</font>
 
 ```git
 git init
@@ -129,7 +138,7 @@ git remote add origin "你的码云或coding项目地址（ssh或https）"
 git pull origin master
 ```
 
-解决每次都需要输入密码的问题：（进行一次 push or pull,输入一次密码以后就可以保存凭证了。）
+<font style="color:rgb(82, 82, 82);">解决每次都需要输入密码的问题：（进行一次 push or pull,输入一次密码以后就可以保存凭证了。）</font>
 
 ```git
 git config --global credential.helper store

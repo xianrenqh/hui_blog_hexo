@@ -18,19 +18,19 @@ npm install nativefier -g
 
 # 使用
 
-设置 npm 源为
+<font style="color:rgb(82, 82, 82);">设置 npm 源为</font>
 
 ```shell
 npm config set registry https://registry.npm.taobao.org/
 ```
 
-在 nativefier 后加上需要转换的网站地址, 比如:
+<font style="color:rgb(82, 82, 82);">在 nativefier 后加上需要转换的网站地址, 比如:</font>
 
 ```shell
  nativefier "https://www.zhihu.com/"
 ```
 
-第一次打包需要下载 Eletron 框架, 很慢, 要有耐心......
+<font style="color:rgb(82, 82, 82);">第一次打包需要下载 Eletron 框架, 很慢, 要有耐心......</font>
 
 ```shell
 nativefier --name "恒星C端" "https://www.toushivip.com/tshxs"

@@ -2,19 +2,27 @@
 title: Nginx的优化和压力测试
 urlname: hgr8sf
 date: '2022-07-04 02:25:56 +0000'
-tags:
-  - 压测
-  - nginx
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.net'
-copyright_url: 'https://blog.csdn.net/qq_30038111/article/details/79794377'
-copyright_author:
-cover:
+tags: []
+categories: []
 ---
 
-我们要测试 nginx 的负载能力，需要借助压力测试工具。本博客是使用 Apache 服务器自带的一个 web 压力测试工具 ApacheBench ，简称 ab。ab 是一个命令行工具，即通过 ab 命令行，模拟多个请求同时对某一 URL 地址进行访问，因此可以用来测试目标服务器的负载压力。
+tags: [压测,nginx]
 
-## ab 的安装
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
+
+copyright_author_href: https://www.xiaohuihui.net
+
+<font style="color:rgb(38, 38, 38);">copyright_url: </font>https://blog.csdn.net/qq_30038111/article/details/79794377<font style="color:rgb(38, 38, 38);">  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+<font style="color:rgb(77, 77, 77);">我们要测试 </font>nginx<font style="color:rgb(77, 77, 77);"> 的负载能力，需要借助压力测试工具。本博客是使用 Apache 服务器自带的一个 web 压力测试工具 ApacheBench ，简称 ab。ab 是一个命令行工具，即通过 ab 命令行，模拟多个请求同时对某一 URL 地址进行访问，因此可以用来测试目标服务器的负载压力。</font><font style="color:rgb(51, 51, 51);">  
+</font>
+
+## <font style="color:rgb(79, 79, 79);">ab 的安装</font>
 
 ab 的安装可以去官网下载，如果不想安装 apache，又想使用 ab 命令，可以直接安装工具包 httpd-tools，该工具包会将 ab 命令安装到 /usr/bin 下，因此在任何地方都可以调用：
 
@@ -46,18 +54,18 @@ ab -help
 ab -c 5000 -n 200000 http://192.168.222.101:80/index.html
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1656901686719-232b21a9-be96-433a-9922-d3da97cd4a03.png#clientId=u8461f789-44d5-4&from=paste&id=ue14b4672&originHeight=832&originWidth=815&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=uc30e4186-cd48-450c-adeb-180f209b095&title=)![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1656901712665-f366e7d2-1b3a-4c35-9f3f-07c9558c4cea.png#clientId=u8461f789-44d5-4&from=paste&id=ue01e64ee&originHeight=349&originWidth=837&originalType=url∶=1&rotation=0&showTitle=false&status=done&style=none&taskId=u374982e4-aa74-452c-b51b-1ceee80aff1&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1656901686719-232b21a9-be96-433a-9922-d3da97cd4a03.png)![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1656901712665-f366e7d2-1b3a-4c35-9f3f-07c9558c4cea.png)
 
-## 优化思路
+## <font style="color:rgb(79, 79, 79);">优化思路</font>
 
-每个请求都需要建立 socket 连接，那么影响并发量的因素之一：
+<font style="color:rgb(77, 77, 77);">每个请求都需要建立 socket 连接，那么影响并发量的因素之一：</font>
 
-1. 客户端不允许一次性创建过多的连接
-2. 服务端不允许一次性创建过多的连接
-   每个请求都要访问一些资源，那么影响并发量的因素之一：
-3. 服务端不允许一个文件在同一时间点被访问 N 次，相当于一个文件在服务端打开 N 次
+1. <font style="color:rgba(0, 0, 0, 0.75);">客户端不允许一次性创建过多的连接</font>
+2. <font style="color:rgba(0, 0, 0, 0.75);">服务端不允许一次性创建过多的连接  
+   </font><font style="color:rgba(0, 0, 0, 0.75);">每个请求都要访问一些资源，那么影响并发量的因素之一：</font>
+3. <font style="color:rgba(0, 0, 0, 0.75);">服务端不允许一个文件在同一时间点被访问 N 次，相当于一个文件在服务端打开 N 次</font>
 
-我们在使用 ab 模拟并发访问后，执行 dmesg 命令，查看请求的信息
+<font style="color:rgb(77, 77, 77);">我们在使用 ab 模拟并发访问后，执行 dmesg 命令，查看请求的信息</font>
 
 ```shell
 dmesg
@@ -65,10 +73,11 @@ dmesg
 # 解释：在同一时间有过多的请求访问 80 端口，导致系统误认为遭受了洪水攻击
 ```
 
-从上面的优化分析中，我们可以从 socket 和文件两个层面进行 Nginx 的高并发优化。
-**socket：分为系统层面和 nginx 层面：**
+<font style="color:rgb(77, 77, 77);">从上面的优化分析中，我们可以从 socket 和文件两个层面进行 Nginx 的高并发优化。</font>
 
-- 系统层面
+**<font style="color:rgb(77, 77, 77);">socket：分为系统层面和 nginx 层面：</font>**
+
+- <font style="color:rgba(0, 0, 0, 0.75);">系统层面</font>
 
 ```shell
 # 禁止洪水抵御，这个操作在重启之后失效
@@ -95,7 +104,7 @@ echo 1 > /proc/sys/net/ipv4/tcp_tw_recycle
 echo 1 > /proc/sys/net/ipv4/tcp_tw_reuse
 ```
 
-- nginx
+- <font style="color:rgba(0, 0, 0, 0.75);">nginx</font>
 
 ```shell
 # 子进程允许打开的连接数（nginx.conf）及 IO 选择
@@ -110,9 +119,9 @@ events {
 keepalive_timeout 0;
 ```
 
-**文件：分为系统层面和 nginx 层面：**
+**<font style="color:rgb(77, 77, 77);">文件：分为系统层面和 nginx 层面：</font>**
 
-- 系统层面
+- <font style="color:rgba(0, 0, 0, 0.75);">系统层面</font>
 
 ```shell
 # 设置同一个文件同一时间点可以打开 N 次，这个操作在重启之后失效
@@ -121,7 +130,7 @@ keepalive_timeout 0;
 命令：ulimit -n 20000
 ```
 
-- nginx 层面
+- <font style="color:rgba(0, 0, 0, 0.75);">nginx 层面</font>
 
 ```shell
 # nginx 进程数，按照 CPU 数目指定
@@ -130,18 +139,18 @@ worker_processes 8;
 worker_rlimit_nofile 102400;
 ```
 
-## ab 使用时的注意点
+## <font style="color:rgb(79, 79, 79);">ab 使用时的注意点</font>
 
-如果使用 A 和 B 两台虚拟机测试，用 B 上的 ab 测试 A 的 nginx ，即 A 为服务端，B 为客户端。此时需要在 B 上配置下面的参数，并且两个参数至少要等于 A 配置的值。
+<font style="color:rgb(77, 77, 77);">如果使用 A 和 B 两台虚拟机测试，用 B 上的 ab 测试 A 的 nginx ，即 A 为服务端，B 为客户端。此时需要在 B 上配置下面的参数，并且两个参数至少要等于 A 配置的值。</font>
 
 ```shell
 ulimit -n 20000
 echo 50000 > /proc/sys/net/core/somaxconn
 ```
 
-## Nginx 添加统计模块及配置
+## <font style="color:rgb(79, 79, 79);">Nginx 添加统计模块及配置</font>
 
-nginx 在安装时可以添加访问的统计模块。
+<font style="color:rgb(77, 77, 77);">nginx 在安装时可以添加访问的统计模块。</font>
 
 ```php
 ./configure --prefix=/usr/local/nginx --with-http_stub_status_module
@@ -161,7 +170,7 @@ location /status{
 }
 ```
 
-## 使用 Nginx 的统计模块查看状态
+## <font style="color:rgb(79, 79, 79);">使用 Nginx 的统计模块查看状态</font>
 
 ```php
 # ab 测试并发

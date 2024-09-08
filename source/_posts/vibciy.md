@@ -9,26 +9,30 @@ tags:
   - hexo
 categories:
   - 学无止境
-copyright_author_href: 'https://www.xiaohuihui.cc'
+copyright_author_href: 'https://www.xiaohuihui.<font style="color:rgb(38, 38, 38);">cc</font>'
 ---
 
-# 一、搭建 Hexo 博客
+# <font style="color:rgb(51, 51, 51);">一、搭建 Hexo 博客</font>
 
-本文针对已经搭建好 hexo 博客的，如果没有搭好正常的 hexo 博客的可以去看另一篇博文，搭建很方便的。
+<font style="color:rgb(51, 51, 51);">本文针对已经搭建好 hexo 博客的，如果没有搭好正常的 hexo 博客的可以去看另一篇博文，搭建很方便的。</font>
+
 使用 hexo 搭建博客地址：
+
 [使用 Hexo 搭建博客 | 小灰灰的世界](https://xiaohuihui.cc/posts/eb656981.html)
 
-# 二、Hexo 同步语雀内容
+# 二、Hexo 同步语雀内容</div>color1
 
-> 语雀免费版是无法发布“互联网可见”的文章的，使用语雀发布，需要开通会员 （99/年）
+语雀免费版是无法发布“互联网可见”的文章的，使用语雀发布，需要开通会员 （99/年）</div>
 
-用到了这个项目：
+<font style="color:rgb(51, 51, 51);"></font>
 
-> https://github.com/x-cold/yuque-hexo
+<font style="color:rgb(51, 51, 51);">用到了这个项目：</font>
 
-> 安装：npm i -g yuque-hexo
+> <font style="color:rgb(51, 51, 51);">https://github.com/x-cold/yuque-hexo</font>
 
-然后把 package.json 的内容添加上下面这些：
+> <font style="color:rgb(51, 51, 51);">安装：npm i -g yuque-hexo</font>
+
+<font style="color:rgb(51, 51, 51);">然后把 package.json 的内容添加上下面这些：</font>
 
 ```json
   "yuqueConfig": {
@@ -54,21 +58,27 @@ copyright_author_href: 'https://www.xiaohuihui.cc'
 ```
 
 这里需要说明：
-baseurl 是固定的
-login 和 repo 是如下图这样对应的，个人界面和团队界面都可以
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396601747-fc1e332a-2b6a-4ad0-bf0b-85b45608f17b.png#averageHue=%23e9e8e8&clientId=udcfe64c5-982a-4&from=paste&id=u0d64e7b4&originHeight=545&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=189765&status=done&style=none&taskId=u57aea17f-fb57-435f-8a44-af6dbe6c1cc&title=)
 
-token 是在右上角头像 -> 账户设置 -> Token 添加的，权限的话只给读取就可以
-ps.公开的知识库也要设置 Token。
-接着，
-在 "scripts" 中添加
+<font style="color:rgb(51, 51, 51);">baseurl 是固定的</font>
 
-```
+<font style="color:rgb(51, 51, 51);">login 和 repo 是如下图这样对应的，个人界面和团队界面都可以</font>
+
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396601747-fc1e332a-2b6a-4ad0-bf0b-85b45608f17b.png)
+
+<font style="color:rgb(51, 51, 51);">token 是在右上角头像 -> 账户设置 -> Token 添加的，权限的话只给读取就可以</font>
+
+<font style="color:rgb(51, 51, 51);">ps.公开的知识库也要设置 Token。</font>
+
+<font style="color:rgb(51, 51, 51);">接着，</font>
+
+<font style="color:rgb(51, 51, 51);">在 "scripts" 中添加</font>
+
+```plain
     "sync": "yuque-hexo sync",
     "clean:yuque": "yuque-hexo clean",
 ```
 
-这样整体下来我的 package.json 内容如下（参考）：
+<font style="color:rgb(51, 51, 51);">这样整体下来我的 package.json 内容如下（参考）：</font>
 
 ```json
 {
@@ -123,40 +133,51 @@ ps.公开的知识库也要设置 Token。
 }
 ```
 
-这时候，在本地调试的时候使用命令：yuque-hexo sync 就会把语雀的文章给下载下来，下载到 \source_posts
-（使用以上命令前先备份本地的\_posts 文件夹下的 md 文章，使用语雀下载的时候会先清空此文件夹）
-然后 hexo g && hexo s 就可以访问 127.0.0.1:4000 本地看一下了
-手动发布是 hexo g && hexo d
+这时候，在本地调试的时候使用命令：<font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">yuque-hexo sync </font><font style="color:rgb(51, 51, 51);">就会把语雀的文章给下载下来，下载到 \source_posts</font>
 
-### 针对语雀图片无法正常显示的解决办法
+<font style="color:#F759AB;">（使用以上命令前先备份本地的\_posts 文件夹下的 md 文章，使用语雀下载的时候会先清空此文件夹）</font>
 
-在主题的 layout 文件夹中的 post.ejs 文件中加上一句（不同主题加的位置不同）
+<font style="color:rgb(51, 51, 51);">然后 </font><font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">hexo g && hexo s</font><font style="color:rgb(51, 51, 51);"> 就可以访问 </font><font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">127.0.0.1:4000</font><font style="color:rgb(51, 51, 51);"> 本地看一下了</font>
 
-```
+<font style="color:rgb(51, 51, 51);">手动发布是 </font><font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">hexo g && hexo d</font>
+
+<font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);"></font>
+
+### <font style="color:rgb(51, 51, 51);">针对语雀图片无法正常显示的解决办法</font>
+
+<font style="color:rgb(51, 51, 51);">在主题的 layout 文件夹中的 post.ejs 文件中加上一句（不同主题加的位置不同）</font>
+
+```plain
 <meta name="referrer" content="no-referrer" />
 ```
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649404362200-7eafd317-d235-4af8-afe9-4f9c54d4dee2.png#averageHue=%23f1eeec&clientId=u68da2bd8-69aa-4&from=paste&id=u4d9c66af&originHeight=351&originWidth=841&originalType=url∶=1&rotation=0&showTitle=false&size=46710&status=done&style=none&taskId=ufd914241-d133-43ab-b845-e08191199df&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649404362200-7eafd317-d235-4af8-afe9-4f9c54d4dee2.png)
 
 小灰灰用的是 butterFly 主题，加的位置在：
+
 \themes\butterfly\layout\includes\head.pug 文件：
+
 大概在第 40 行左右添加：
+
 （PS：放在这个位置是因为百度统计的 referrer 问题。只能放在统计后面）
 
-```
+```plain
 meta(name="referrer" content="no-referrer")
 #如果上面不生效，提示 referrer被禁用，可以使用以下代码试试
 meta(name="referrer" content="no-referrer")
 ```
 
 如图：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649641758436-1971a415-4efc-45ff-87b9-1e47f9617353.png#averageHue=%232d2a2e&clientId=u6e1ca8df-731b-4&from=paste&height=700&id=u651955ce&originHeight=773&originWidth=1119&originalType=binary∶=1&rotation=0&showTitle=false&size=134271&status=done&style=none&taskId=u1edc2856-0d56-4f15-9454-c218fcf937a&title=&width=1013.4339987353198)
 
-# **三、github actions 自动更新**
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649641758436-1971a415-4efc-45ff-87b9-1e47f9617353.png)
 
-在 github 上创建一个私有仓库（因为会涉及到一些 token 啥的）仓库名字无所谓**（用来存放 hexo 源码）**
-**注意**：在仓库里面再放一个仓库是没法把里面那个仓库 push 到 github 的，只会传一个空文件夹，导致后期博客成了空白页面，最简单粗暴的办法就是把你 git clone 的 hexo 主题里的 .git 文件夹给删掉
-然后在 hexo 的目录下运行如下命令，把 hexo 的源码传到 github 远程仓库中
+# **<font style="color:rgb(0, 0, 0);">三、github actions 自动更新</font>**
+
+<font style="color:rgb(51, 51, 51);">在 github 上创建一个私有仓库（因为会涉及到一些 token 啥的）仓库名字无所谓</font>**<font style="color:rgb(51, 51, 51);">（用来存放 hexo 源码）</font>**
+
+**<font style="color:rgb(51, 51, 51);">注意</font>**<font style="color:rgb(51, 51, 51);">：在仓库里面再放一个仓库是没法把里面那个仓库 push 到 github 的，只会传一个空文件夹，导致后期博客成了空白页面，最简单粗暴的办法就是把你 git clone 的 hexo 主题里的 </font><font style="color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);">.git</font><font style="color:rgb(51, 51, 51);"> 文件夹给删掉</font>
+
+<font style="color:rgb(51, 51, 51);">然后在 hexo 的目录下运行如下命令，把 hexo 的源码传到 github 远程仓库中</font>
 
 ```git
 git init
@@ -167,32 +188,47 @@ git push -u origin master
 
 ```
 
-去 github 的 settings 创建一个 token （ps:个人中心的设置，非项目的设置）
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396898326-2a09cbe8-9587-4f19-9f13-ead9e3bd6fc1.png#averageHue=%23fdfdfc&clientId=udcfe64c5-982a-4&from=paste&id=uac4e5e7e&originHeight=390&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=89765&status=done&style=none&taskId=uc2174048-c4a7-45e5-8b7e-a72c318831b&title=)
+<font style="color:rgb(51, 51, 51);">去 github 的 settings 创建一个 token </font><font style="color:#CF1322;">（ps:个人中心的设置，非项目的设置）</font>
 
-只勾上这一个即可：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396909568-f0df156b-9310-4954-9350-da49c64404d2.png#averageHue=%23fefdfc&clientId=udcfe64c5-982a-4&from=paste&id=u1e211b98&originHeight=627&originWidth=746&originalType=url∶=1&rotation=0&showTitle=false&size=53298&status=done&style=none&taskId=ua795b964-947a-41ce-bafa-a59b4ecd46b&title=)
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396921676-0e84a878-d94d-44d7-bd5b-0d1490dd65c6.png#averageHue=%23edf2e3&clientId=udcfe64c5-982a-4&from=paste&id=u4cbbdb00&originHeight=445&originWidth=1015&originalType=url∶=1&rotation=0&showTitle=false&size=45407&status=done&style=none&taskId=u4adc989a-ec2a-4dcc-9a1d-66a0017e2b1&title=)
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396898326-2a09cbe8-9587-4f19-9f13-ead9e3bd6fc1.png)
 
-**生成了 token 之后一定要记下来**，再回来就没法看了
-然后来到刚才创建的私有仓库的 settings
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396944906-f483bf94-9454-4d5b-8fcb-5ad1d02e9003.png#averageHue=%23dbcbb9&clientId=udcfe64c5-982a-4&from=paste&id=u71d114fa&originHeight=419&originWidth=1080&originalType=url∶=1&rotation=0&showTitle=false&size=91140&status=done&style=none&taskId=u2e8da352-5627-4745-98cb-0fad22bf7af&title=)
+<font style="color:rgb(51, 51, 51);">只勾上这一个即可：</font>
 
-添加三个 secret
-**GH_REF** 是你博客的仓库地址 github.com/**\*\***/**\*\***.github.io
-注意去掉前面 https://
-**GE_TOKEN** 是刚才生成的 token
-然后来到 actions，点击 set up a workflow yourself
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396909568-f0df156b-9310-4954-9350-da49c64404d2.png)
+
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396921676-0e84a878-d94d-44d7-bd5b-0d1490dd65c6.png)
+
+**<font style="color:#FF4D4F;">生成了 token 之后一定要记下来</font>**<font style="color:#FF4D4F;">，再回来就没法看了</font>
+
+<font style="color:rgb(51, 51, 51);">然后来到刚才创建的私有仓库的 settings</font>
+
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1649396944906-f483bf94-9454-4d5b-8fcb-5ad1d02e9003.png)
+
+<font style="color:rgb(51, 51, 51);">添加三个 secret</font>
+
+**<font style="color:rgb(51, 51, 51);">GH_REF</font>**<font style="color:rgb(51, 51, 51);"> 是你博客的仓库地址 github.com/**\*\***/**\*\***.github.io</font>
+
+<font style="color:rgb(51, 51, 51);">注意去掉前面 https://</font>
+
+**<font style="color:rgb(51, 51, 51);">GE_TOKEN</font>**<font style="color:rgb(51, 51, 51);"> 是刚才生成的 token</font>
+
+<font style="color:rgb(51, 51, 51);">然后来到 actions，点击 set up a workflow yourself</font>
+
 **HEXO_DEPLOY_PRI **是新增的 ssh 密钥
-在命令行中输入：
 
-> ssh-keygen -t rsa -C "your_email@example.com"
+<font style="color:rgb(64, 64, 64);">在命令行中输入：</font>
 
-备注：
-同时生成的公钥，要放到 Hexo 生成 page 的项目的公钥下面
-（只有密钥和公钥相互匹配，才能推送静态文件到公开的项目下（page 项目））
+> <font style="color:rgb(64, 64, 64);"></font><font style="color:rgb(199, 37, 78);background-color:rgb(242, 242, 242);">ssh-keygen -t rsa -C "your_email@example.com"</font>
 
-编辑内容如下：
+<font style="color:rgb(51, 51, 51);">备注：</font>
+
+<font style="color:rgb(51, 51, 51);">同时生成的公钥，要放到 Hexo 生成 page 的项目的公钥下面</font>
+
+<font style="color:rgb(51, 51, 51);">（只有密钥和公钥相互匹配，才能推送静态文件到公开的项目下（page 项目））</font>
+
+<font style="color:rgb(51, 51, 51);"></font>
+
+<font style="color:rgb(51, 51, 51);">编辑内容如下：</font>
 
 ```yaml
 name: Hexo Deploy
@@ -274,10 +310,13 @@ jobs:
           hexo deploy
 ```
 
-下面那个 user.name 和 user.email 根据自己的情况改一下，注意对齐
-弄完之后每当 push 或 repository_dispatch 的时候都会自动的进行更新
+<font style="color:rgb(51, 51, 51);">下面那个 user.name 和 user.email 根据自己的情况改一下，注意对齐</font>
 
-# 四、配置 ServerLess 云函数
+<font style="color:rgb(51, 51, 51);">弄完之后每当 push 或 repository_dispatch 的时候都会自动的进行更新</font>
+
+<font style="color:rgb(51, 51, 51);"></font>
+
+# <font style="color:rgb(51, 51, 51);">四、配置 ServerLess 云函数</font>
 
 [Github Action 使用云函数调度服务 | 小灰灰的世界](https://xiaohuihui.cc/posts/3c85ac91.html)
 
@@ -288,15 +327,20 @@ jobs:
 # ⑥、PS：
 
 小灰灰的 Hexo 博客地址：
+
 [小灰灰的世界 - 小灰灰的世界](https://www.xiaohuihui.cc)
 
 PS：
+
 听说使用 github action 执行 ssh 可能会出现封号的情况。
+
 另外同步到 github 速度比较慢，
+
 所以小灰灰的博客代码直接使用自己的服务器搭建的，然后加个 webhook 到语雀上，这样语雀更新之后请求 webhook 执行命令直接在服务器上更新了。
+
 宝塔的 webhook 代码：
 
-```
+```plain
 #!/bin/bash
 echo ""
 #输出当前时间
@@ -327,6 +371,9 @@ fi
 ```
 
 > 服务器需要改动，要求 copy 命令的时候不要提示询问。改动方法：
+>
 > 执行：vi ~/.bashrc
+>
 > 在 alias cp=’cp -i’前加上”#”注释掉这行，:wq! 保存退出，然后重新登陆。
+>
 > 最后使用 cp -r -f 就可以了

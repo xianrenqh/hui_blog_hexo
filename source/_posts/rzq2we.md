@@ -9,7 +9,7 @@ categories: 学无止境
 copyright_author_href: 'https://www.xiaohuihui.net'
 ---
 
-### Nginx 伪静态配置为：
+### <font style="color:rgb(82, 82, 82);">Nginx 伪静态配置为：</font>
 
 ```nginx
 location / {
@@ -26,7 +26,7 @@ location / {
 }
 ```
 
-### 程序入口文件增加：
+### <font style="color:rgb(82, 82, 82);">程序入口文件增加：</font>
 
 ```php
 header("Access-Control-Allow-Origin:*");
@@ -34,9 +34,9 @@ header("Access-Control-Allow-Methods:GET, POST, OPTIONS, DELETE");
 header("Access-Control-Allow-Headers:DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type, Accept-Language, Origin, Accept-Encoding,ATJ-Device-Type,ATJ-Token");
 ```
 
-其中，Access-Control-Allow-Headers 里的值为 header 传递的自定义字段值
+<font style="color:rgb(82, 82, 82);">其中，Access-Control-Allow-Headers 里的值为 header 传递的自定义字段值</font>
 
-### 接口公共方法里增加
+### <font style="color:rgb(82, 82, 82);">接口公共方法里增加</font>
 
 ```php
 protected function initialize()

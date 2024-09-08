@@ -3,33 +3,45 @@ title: 结合ajax完成layui的分页
 urlname: whsgyxcs8f65bp08
 date: '2023-02-10 09:04:24 +0000'
 tags: []
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.cc'
-copyright_url:
-copyright_author:
-cover:
+categories: []
 ---
 
-本文为大家介绍[layui](https://so.csdn.net/so/search?q=layui&spm=1001.2101.3001.7020)的分页使用教程，步骤详细，欢迎学习。 ~
-官网地址：[https://layui.gitee.io/v2/docs/modules/laypage.html](https://layui.gitee.io/v2/docs/modules/laypage.html)
-laypage 的使用非常简单，指向一个用于存放分页的容器，通过服务端得到一些初始值，即可完成分页渲染：
+tags: []
 
-一、导入相关 JS
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
 
-```
+copyright_author_href: https://www.xiaohuihui.<font style="color:rgb(38, 38, 38);">cc</font>
+
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+<font style="color:rgb(51, 51, 51);">  
+</font><font style="color:rgb(77, 77, 77);">本文为大家介绍</font>[layui](https://so.csdn.net/so/search?q=layui&spm=1001.2101.3001.7020)<font style="color:rgb(77, 77, 77);">的分页使用教程，步骤详细，欢迎学习。 ~</font>  
+<font style="color:rgb(77, 77, 77);">官网地址：</font>[https://layui.gitee.io/v2/docs/modules/laypage.html](https://layui.gitee.io/v2/docs/modules/laypage.html)  
+<font style="color:rgb(77, 77, 77);">laypage 的使用非常简单，指向一个用于存放分页的容器，通过服务端得到一些初始值，即可完成分页渲染：</font>
+
+<font style="color:rgb(77, 77, 77);"></font>
+
+<font style="color:rgb(77, 77, 77);">一、导入相关 JS</font>
+
+```plain
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/layui.js"></script>
 ```
 
-二、选择容器
+<font style="color:rgb(77, 77, 77);">二、选择容器</font>
 
-```
+```plain
 <div id="test1"></div>
 ```
 
-三、初始化分页
+<font style="color:rgb(77, 77, 77);">三、初始化分页</font>
 
-```
+```plain
 layui.use('laypage', function(){
         $.ajax({
             type:"POST",
@@ -70,4 +82,4 @@ layui.use('laypage', function(){
 });
 ```
 
-注：以上就是结合[ajax](https://so.csdn.net/so/search?q=ajax&spm=1001.2101.3001.7020)完成 layui 的分页教程，非常简单，其他分页样式及参数介绍在官网中有很详细的介绍可以去学习。
+<font style="color:rgb(77, 77, 77);">注：以上就是结合</font>[ajax](https://so.csdn.net/so/search?q=ajax&spm=1001.2101.3001.7020)<font style="color:rgb(77, 77, 77);">完成 layui 的分页教程，非常简单，其他分页样式及参数介绍在官网中有很详细的介绍可以去学习。</font>

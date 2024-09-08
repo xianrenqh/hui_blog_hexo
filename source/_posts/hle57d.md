@@ -14,6 +14,7 @@ copyright_author_href: 'https://www.xiaohuihui.net'
 # 安装主题
 
 参考主题官网：
+
 [https://butterfly.js.org/posts/21cfbf15](https://butterfly.js.org/posts/21cfbf15#%E5%AE%89%E8%A3%9D)
 
 ## github 安装

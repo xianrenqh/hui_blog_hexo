@@ -2,15 +2,21 @@
 title: Env环境变量类库
 urlname: quq4eo
 date: '2022-06-17 01:16:25 +0000'
-tags:
-  - env
-  - 环境变量
-  - 类库
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.net'
-copyright_url:
-copyright_author:
-cover:
+tags: []
+categories: []
+---
+
+tags: [env,环境变量,类库]
+
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
+
+copyright_author_href: https://www.xiaohuihui.net
+
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
 ---
 
 ```php
@@ -111,7 +117,7 @@ Env::get('SQL.DB_DEFAULT', 'mysql')
 
 .env 文件：
 
-```
+```plain
 [SQL]
 DB_DEFAULT = mysql
 HOSTNAME = 127.0.0.1
@@ -121,3 +127,6 @@ DBPASS = 123456
 HOSTPOINT = 3306
 PREFIX = cmf_
 ```
+
+<font style="color:rgb(51, 51, 51);">  
+</font>

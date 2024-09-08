@@ -2,34 +2,44 @@
 title: 使用 Frp 为你的 Web 服务添加 https 支持
 urlname: ox8ck1uiaystwik8
 date: '2023-12-20 02:46:17 +0000'
-tags:
-  - frp
-  - https
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.cc'
-copyright_url:
-copyright_author:
-cover:
+tags: []
+categories: []
 ---
 
-> frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。
+tags: [frp,https]
 
-本**教程是根据 ftp-win 客户端 3.\*版本**
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
 
-# 下载 frp
+copyright_author_href: https://www.xiaohuihui.cc
 
-前往 GitHub 下载 frp：
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+> <font style="color:rgb(119, 119, 119);"> frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。</font>
+>
+> <font style="color:rgb(51, 51, 51);"></font>
+
+<font style="color:#DF2A3F;">本</font>**<font style="color:#DF2A3F;">教程是根据 ftp-win 客户端 3.\*版本</font>**
+
+# <font style="color:rgb(0, 0, 0);">下载 frp</font>
+
+<font style="color:rgb(51, 51, 51);">前往 GitHub 下载 frp：</font>
 
 - [Releases · fatedier/frp](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Ffatedier%2Ffrp%2Freleases&source=article&objectId=1581948)
 
-有适用于各种不同操作系统的 frp，如果你对外提供的公网服务器和实际提供 Web 服务的服务器不是同一台机器的话，需要为各自机器下载对应版本的 frp。
+<font style="color:rgb(51, 51, 51);">有适用于各种不同操作系统的 frp，如果你对外提供的公网服务器和实际提供 Web 服务的服务器不是同一台机器的话，需要为各自机器下载对应版本的 frp。</font>
 
-# 准备好 Web 服务和 SSL 证书
+# <font style="color:rgb(0, 0, 0);">准备好 Web 服务和 SSL 证书</font>
 
-你可以用任何方式开发你的 Web 服务，注意你的 Web 服务需要监听一个本机端口。
-对于本文的后续内容，你需要将证书导出成 Nginx 格式，即一个 .pem 文件和一个 .key 文件。
+<font style="color:rgb(51, 51, 51);">你可以用任何方式开发你的 Web 服务，注意你的 Web 服务需要监听一个本机端口。</font>
 
-# 配置 frp
+<font style="color:rgb(51, 51, 51);">对于本文的后续内容，你需要将证书导出成 Nginx 格式，即一个 .pem 文件和一个 .key 文件。</font>
+
+# <font style="color:rgb(0, 0, 0);">配置 frp</font>
 
 ## 配置 frps.ini
 
@@ -80,7 +90,7 @@ plugin_key_path = ./ssl/privkey.key
 
 ```
 
-## 配置 Nginx 代理
+## <font style="color:rgb(74, 74, 74);">配置 Nginx 代理</font>
 
 在本地的 nginx 服务里，新增个站点，并配置 nginx 代理：
 
@@ -119,7 +129,9 @@ server {
 ```
 
 其中 qianxun.local.com 为需要开通的 https 的域名。
+
 最后将对应的域名证书放好。
+
 然后分别启动：
 
 ```nginx

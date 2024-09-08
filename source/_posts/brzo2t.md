@@ -2,16 +2,25 @@
 title: Layui树形表格treetable的简单使用
 urlname: brzo2t
 date: '2022-05-24 10:01:18 +0000'
-tags:
-  - treetable
-  - layui
-  - 树形
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.net'
-copyright_url:
-copyright_author:
-cover:
+tags: []
+categories: []
 ---
+
+tags: [treetable,layui,树形]
+
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
+
+copyright_author_href: https://www.xiaohuihui.net
+
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+<font style="color:rgb(51, 51, 51);">  
+</font>
 
 ```html
 <body class="pear-container">

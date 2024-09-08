@@ -12,6 +12,7 @@ copyright_author_href: 'https://www.xiaohuihui.net'
 # 什么是 PHP Faker
 
 Faker 是一个生成假数据的 PHP 库，Faka 数据通常用于测试或用一些伪数据填充数据库，Faker 受到 Perl 的 Data :: Faker 和 Ruby 的 Faker 的极大启发。
+
 说白了就是：
 
 > 我们在创建完数据表格后往往需要做一些假数据，而 Faker 就是这样的工具。安装 Faker
@@ -25,7 +26,8 @@ composer require fzaninotto/faker
 ```
 
 运行以后会在 vendor 文件夹下生成：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/27022430/1650013870646-a6ba9653-b5ac-4919-b345-5745aed19374.png#clientId=u7ddbe57f-a192-4&from=paste&id=u7c034536&originHeight=184&originWidth=507&originalType=url∶=1&rotation=0&showTitle=false&size=12116&status=done&style=none&taskId=ud741bed8-b7a5-470a-8cfb-f31e12aff33&title=)
+
+![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1650013870646-a6ba9653-b5ac-4919-b345-5745aed19374.png)
 
 # 实际使用
 
@@ -77,15 +79,21 @@ class FakerData
 
 ```
 
-createInfo 输出：
+createInfo <font style="color:rgb(77, 77, 77);">输出：</font>
 
 > array:5 [
-> > 0 => "景畅"
-> > 1 => "重庆白云区"
-> > 2 => "adipisci.dignissimos@sohu.com"
-> > 3 => 55
-> > 4 => "工人"
-> > ]
+>
+> 0 => "景畅"
+>
+> 1 => "重庆白云区"
+>
+> 2 => "adipisci.dignissimos@sohu.com"
+>
+> 3 => 55
+>
+> 4 => "工人"
+>
+> ]
 
 # github 地址
 

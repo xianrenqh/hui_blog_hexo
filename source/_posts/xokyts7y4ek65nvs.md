@@ -3,20 +3,29 @@ title: 服务器常用命令
 urlname: xokyts7y4ek65nvs
 date: '2023-07-27 01:59:55 +0000'
 tags: []
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.cc'
-copyright_url:
-copyright_author:
-cover:
+categories: []
 ---
 
-### 查询 ip:
+tags: []
+
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
+
+copyright_author_href: https://www.xiaohuihui.cc
+
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+### <font style="color:rgb(51, 51, 51);">查询 ip:</font>
 
 ```shell
 ipconfig
 ```
 
-### 查看端口占用情况
+### <font style="color:rgb(51, 51, 51);">查看端口占用情况</font>
 
 ```shell
  netstat -anp | grep 8080
@@ -24,13 +33,13 @@ ipconfig
 lsof -i:8080
 ```
 
-### 查看服务
+### <font style="color:rgb(51, 51, 51);">查看服务</font>
 
-```
+```plain
 ps -ef | grep 服务名 或 ps aux |grep 服务名
 ```
 
-### 定时任务
+### <font style="color:rgb(51, 51, 51);">定时任务</font>
 
 ```shell
 #任务列表
@@ -53,14 +62,14 @@ crontab -e #编辑cron任务模式
 0 */1 * * * /etc/init.d/smb restart
 ```
 
-### 查询端口是否通：
+### <font style="color:rgb(51, 51, 51);">查询端口是否通：</font>
 
 ```shell
 ping 域名或ip 如：ping 127.0.0.1
 telnet 如：telnet 127.0.0.1 80
 ```
 
-### 防火墙开放端口（mysql）
+### <font style="color:rgb(51, 51, 51);">防火墙开放端口（mysql）</font>
 
 ```shell
 #查看对外开放的端口状态
@@ -104,19 +113,19 @@ firewall-cmd --query-port=123/tcp
 firewall-cmd --permanent --remove-port=123/tcp
 ```
 
-### keepalived 的 VIP 问题
+### <font style="color:rgb(51, 51, 51);">keepalived 的 VIP 问题</font>
 
 ```shell
 firewall-cmd --direct --permanent --add-rule ipv4 filter INPUT 0 --in-interface ens33 --destination 127.0.0.18 --protocol vrrp -j ACCEPT
 ```
 
-### 加入开机自启动
+### <font style="color:rgb(51, 51, 51);">加入开机自启动</font>
 
 ```shell
 chkconfig keepalived on
 ```
 
-### 查看文件大小：
+### <font style="color:rgb(51, 51, 51);">查看文件大小：</font>
 
 ```shell
 #查看文件大小
@@ -129,7 +138,7 @@ du -sh
 ll -h
 ```
 
-### 压缩和解压缩
+### <font style="color:rgb(51, 51, 51);">压缩和解压缩</font>
 
 ```shell
 #zip命令
@@ -138,7 +147,7 @@ zip -d myfile.zip smart.txt #压缩文件
 unzip -o -d /home/sunny myfile.zip  #解压缩
 ```
 
-### 开关机命令
+### <font style="color:rgb(51, 51, 51);">开关机命令</font>
 
 ```shell
 #立刻进行关机
@@ -148,9 +157,9 @@ shutdown -h now
 reboot
 ```
 
-### docker 相关：
+### <font style="color:rgb(51, 51, 51);">docker 相关：</font>
 
-#### a、从 docker inspect 查看 docker run 的运行命令参数
+#### <font style="color:rgb(51, 51, 51);">a、从 docker inspect 查看 docker run 的运行命令参数</font>
 
 ```shell
 --name在Name表示容器名称；
@@ -168,7 +177,7 @@ nginx:latest在Config.Image表示镜像名称
 --link php74fpm 和php74fpm的容器互联  在NetworkSettings.Networks.Links可以找到
 ```
 
-#### b、查看 docker 容器 ip:
+#### <font style="color:rgb(51, 51, 51);">b、查看 docker 容器 ip:</font>
 
 ```shell
 docker inspect --format '{{ .NetworkSettings.IPAddress }}' <container-ID>
@@ -176,13 +185,13 @@ docker inspect --format '{{ .NetworkSettings.IPAddress }}' <container-ID>
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
 ```
 
-#### c、查看容器 ip:
+#### <font style="color:rgb(51, 51, 51);">c、查看容器 ip:</font>
 
 ```shell
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
 ```
 
-查看 python 版本
+<font style="color:rgb(51, 51, 51);">查看 python 版本</font>
 
 ```shell
 #liunx系统默认安装了python2
@@ -191,17 +200,17 @@ python -V
 python3 -V
 ```
 
-## 数据库命令：
+## <font style="color:rgb(51, 51, 51);">数据库命令：</font>
 
-### 修改当前登录用户的密码
+### <font style="color:rgb(51, 51, 51);">修改当前登录用户的密码</font>
 
-```
+```plain
 ALTER USER USER() IDENTIFIED BY "password"
 ```
 
-### 新增用户并赋权
+### <font style="color:rgb(51, 51, 51);">新增用户并赋权</font>
 
-```
+```plain
 #创建用户
 CREATE USER 'username'@'%' IDENTIFIED BY 'password';
 #用户授权
@@ -210,9 +219,9 @@ GRANT ALL ON *.* TO 'username'@'%';
 flush privileges;
 ```
 
-### 导出/导入数据库
+### <font style="color:rgb(51, 51, 51);">导出/导入数据库</font>
 
-```
+```plain
 #备份mysql命令:（导出）
 mysqldump -uroot -proot 库名 > 路径\ceshi_copy.sql
 
@@ -221,22 +230,25 @@ mysql> use 数据库;
 mysql>source d:\bak\bak.sql
 ```
 
-## win 系统常用命令
+## <font style="color:rgb(51, 51, 51);">win 系统常用命令</font>
 
-### win 系统 dos 监听端口：
+### <font style="color:rgb(51, 51, 51);">win 系统 dos 监听端口：</font>
 
-```
+```plain
 netstat -ano|findstr 80
 ```
 
-### win 系统杀死进程：
+### <font style="color:rgb(51, 51, 51);">win 系统杀死进程：</font>
 
-```
+```plain
 tskill 进程号
 ```
 
-查找文件
+<font style="color:rgb(51, 51, 51);">查找文件</font>
 
 ```shell
 dir "new sc."* /s
 ```
+
+<font style="color:rgb(51, 51, 51);">  
+</font>

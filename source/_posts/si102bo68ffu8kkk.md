@@ -2,29 +2,34 @@
 title: 使用workerman接收websocket消息，并在thinkphp6控制器里处理取得的数据
 urlname: si102bo68ffu8kkk
 date: '2024-07-18 01:29:21 +0000'
-tags:
-  - workerman
-  - websocket
-  - thinkphp
-  - php
-categories: 学无止境
-copyright_author_href: 'https://www.xiaohuihui.cc'
-copyright_url:
-copyright_author:
-cover:
+tags: []
+categories: []
 ---
 
-# 一、创建 workerman 服务，并启动
+tags: [workerman,websocket,thinkphp,php]
 
-> 用以接收 websocket 消息
+categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
 
-## 1、安装 workerman 服务
+copyright_author_href: https://www.xiaohuihui.cc
 
-```
+<font style="color:rgb(38, 38, 38);">copyright_url:  
+</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
+
+<font style="color:rgb(33, 37, 41);">cover:</font>
+
+---
+
+# <font style="color:rgb(51, 51, 51);">一、创建 workerman 服务，并启动</font>
+
+> <font style="color:rgb(51, 51, 51);">用以接收 websocket 消息</font>
+
+## <font style="color:rgb(51, 51, 51);">1、安装 workerman 服务</font>
+
+```plain
 composer require workerman/workerman
 ```
 
-## 2、根目录下创建文件：**server.php**
+## 2、根目录下创建文件：**<font style="color:#DF2A3F;">server.php</font>**
 
 ### 方法 1：使用回调函数
 
