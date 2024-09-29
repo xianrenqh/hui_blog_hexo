@@ -2,21 +2,15 @@
 title: layui流加载 终止flow.load()，执行第二个流加载时禁止上一个流加载执行
 urlname: lnrzuc6fgyw6wcfm
 date: '2024-01-16 03:08:13 +0000'
-tags: []
-categories: []
----
-
-tags: [layui,流加载,flow]
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - layui
+  - 流加载
+  - flow
+categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 <font style="color:rgb(51, 51, 51);">  

@@ -2,21 +2,14 @@
 title: 4种方法替换JavaScript里所有出现的字符串
 urlname: ibf8huh9p9n5golw
 date: '2023-08-07 01:43:46 +0000'
-tags: []
-categories: []
----
-
-tags: []
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: 小灰灰</font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - javascript
+  - 字符串
+categories: 学无止境
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': 小灰灰</font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 在 JavaScript 代码中出现这个字符串：

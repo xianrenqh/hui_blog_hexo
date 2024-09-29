@@ -2,21 +2,15 @@
 title: php redis数据分页的简单操作代码
 urlname: kvbkvgbt61nwkuzf
 date: '2023-09-25 01:55:06 +0000'
-tags: []
-categories: []
----
-
-tags: []
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - redis
+  - 分页
+categories:
+  - 学无止境
+copyright_author_href: 'https://www.xiaohuihui.cc'
+copyright_url:
+copyright_author:
+cover:
 ---
 
 > 目前使用的是 thinkphp，所以基本引入类库的方法使用的是 tp 的引入方法，其他引入方式一样

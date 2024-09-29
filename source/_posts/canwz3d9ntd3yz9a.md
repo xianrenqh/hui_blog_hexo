@@ -3,20 +3,11 @@ title: 微信公众号对接开发api自动回复功能-php
 urlname: canwz3d9ntd3yz9a
 date: '2023-10-20 06:26:48 +0000'
 tags: []
-categories: []
----
-
-tags: []
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 <font style="color:rgb(51, 51, 51);">  

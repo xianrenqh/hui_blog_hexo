@@ -2,21 +2,15 @@
 title: 服务器常用命令
 urlname: xokyts7y4ek65nvs
 date: '2023-07-27 01:59:55 +0000'
-tags: []
-categories: []
----
-
-tags: []
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - 服务器
+  - 命令
+  - linux
+categories: 学无止境
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 ### <font style="color:rgb(51, 51, 51);">查询 ip:</font>

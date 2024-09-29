@@ -2,26 +2,17 @@
 title: 使用 Frp 为你的 Web 服务添加 https 支持
 urlname: ox8ck1uiaystwik8
 date: '2023-12-20 02:46:17 +0000'
-tags: []
-categories: []
----
-
-tags: [frp,https]
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - frp
+  - https
+categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 > <font style="color:rgb(119, 119, 119);"> frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。</font>
->
-> <font style="color:rgb(51, 51, 51);"></font>
 
 <font style="color:#DF2A3F;">本</font>**<font style="color:#DF2A3F;">教程是根据 ftp-win 客户端 3.\*版本</font>**
 

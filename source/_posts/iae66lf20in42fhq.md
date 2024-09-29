@@ -2,8 +2,10 @@
 title: Nginx配置导致的503 Service Temporarily Unavailable问题
 urlname: iae66lf20in42fhq
 date: '2023-07-27 09:03:03 +0000'
-tags: []
-categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+tags:
+  - nginx
+  - 503
+categories: 学无止境
 copyright_author_href: 'https://www.xiaohuihui.cc'
 '</font><font style="color:rgb(38, 38, 38);">copyright_author': 小灰灰 </font>
 '<font style="color:rgb(33, 37, 41);">cover': </font>

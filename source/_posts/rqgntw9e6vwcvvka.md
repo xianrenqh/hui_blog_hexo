@@ -2,21 +2,14 @@
 title: 通过 Python|PHP 生成mysql数据字典
 urlname: rqgntw9e6vwcvvka
 date: '2024-05-21 09:03:33 +0000'
-tags: []
-categories: []
----
-
-tags: [mysql,数据字典]
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - mysql
+  - 数据字典
+categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 > <font style="color:rgb(51, 51, 51);">  

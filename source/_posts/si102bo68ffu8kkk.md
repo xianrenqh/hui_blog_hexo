@@ -2,21 +2,16 @@
 title: 使用workerman接收websocket消息，并在thinkphp6控制器里处理取得的数据
 urlname: si102bo68ffu8kkk
 date: '2024-07-18 01:29:21 +0000'
-tags: []
-categories: []
----
-
-tags: [workerman,websocket,thinkphp,php]
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - workerman
+  - websocket
+  - thinkphp
+  - php
+categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 # <font style="color:rgb(51, 51, 51);">一、创建 workerman 服务，并启动</font>

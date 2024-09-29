@@ -2,21 +2,14 @@
 title: php简单读取文档数据的几种方法对比和效率
 urlname: heb7ffb3o4bicvqf
 date: '2024-04-17 02:18:36 +0000'
-tags: []
-categories: []
----
-
-tags: [读取文档,效率]
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: 小灰灰</font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - 读取文档
+  - 效率
+categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': 小灰灰</font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 > <font style="color:rgb(51, 51, 51);">在处理大数据文件时，效率往往受到文件大小、内存限制、CPU 性能以及具体实现算法的影响。以下是对之前给出的几种方法在处理大数据效率方面的分析：</font>

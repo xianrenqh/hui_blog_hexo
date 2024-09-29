@@ -2,24 +2,16 @@
 title: php使用Google Authenticator (Google2fa)进行二次验证
 urlname: mbx3ei0pz3fn1yog
 date: '2024-04-15 07:40:36 +0000'
-tags: []
-categories: []
+tags:
+  - Google2fa，Google Authenticator，Authenticator
+categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+copyright_author_href: 'https://www.xiaohuihui.cc'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': 小灰灰</font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
-tags: [Google2fa，Google Authenticator，Authenticator]
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.cc
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: 小灰灰</font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
----
-
-# <font style="color:rgb(51, 51, 51);">什么是 google2fa</font>
+# <font style="color:rgb(51, 51, 51);">什么是 google2fa？</font>
 
 <font style="color:rgb(36, 41, 47);">Google2FA 是 Google Authenticator 的简称，是一种基于时间的一次性密码（TOTP）算法，用于实现双因素身份验证。双因素身份验证通过要求用户除了输入密码外，还需提供另一个因素（通常是生成的一次性验证码），以提高账户的安全性。</font>
 
@@ -27,7 +19,7 @@ copyright_author_href: https://www.xiaohuihui.cc
 
 <font style="color:rgb(36, 41, 47);">Google2FA 库是一个用于 PHP 的库，可以帮助开发人员轻松地集成双因素身份验证功能到他们的应用程序中。通过 Google2FA，开发人员可以生成密钥、生成二维码供用户扫描、验证用户输入的验证码等操作，从而实现安全的双因素身份验证。</font>
 
-# <font style="color:rgb(51, 51, 51);">为什么要使用 google2fa</font>
+# <font style="color:rgb(51, 51, 51);">为什么要使用 google2fa？</font>
 
 <font style="color:rgb(36, 41, 47);">使用 Google2FA 或类似的库可以为应用程序增加额外的安全层，防止未经授权的访问和保护用户数据安全。这种双因素身份验证在许多网站和应用程序中被广泛采用，以提高账户的安全性。</font><font style="color:rgb(51, 51, 51);">  
 </font>

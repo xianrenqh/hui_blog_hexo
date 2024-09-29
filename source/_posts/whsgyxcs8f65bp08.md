@@ -2,21 +2,15 @@
 title: 结合ajax完成layui的分页
 urlname: whsgyxcs8f65bp08
 date: '2023-02-10 09:04:24 +0000'
-tags: []
-categories: []
----
-
-tags: []
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.<font style="color:rgb(38, 38, 38);">cc</font>
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - ajax
+  - layui
+  - 分页
+categories: 学无止境
+copyright_author_href: 'https://www.xiaohuihui.<font style="color:rgb(38, 38, 38);">cc</font>'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 <font style="color:rgb(51, 51, 51);">  

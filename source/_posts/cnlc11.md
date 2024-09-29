@@ -2,21 +2,13 @@
 title: elasticsearch8.x使用笔记
 urlname: cnlc11
 date: '2022-09-16 06:09:20 +0000'
-tags: []
-categories: []
----
-
-tags: [elasticsearch]
-
-categories: <font style="color:rgb(38, 38, 38);">学无止境</font>
-
-copyright_author_href: https://www.xiaohuihui.<font style="color:rgb(38, 38, 38);">cc</font>
-
-<font style="color:rgb(38, 38, 38);">copyright_url:  
-</font><font style="color:rgb(38, 38, 38);">copyright_author: </font>
-
-<font style="color:rgb(33, 37, 41);">cover:</font>
-
+tags:
+  - elasticsearch
+categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+copyright_author_href: 'https://www.xiaohuihui.<font style="color:rgb(38, 38, 38);">cc</font>'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>
+'<font style="color:rgb(33, 37, 41);">cover': </font>
+<font style="color:rgb(38, 38, 38);">copyright_url:
 ---
 
 > <font style="color:rgb(51, 51, 51);">  

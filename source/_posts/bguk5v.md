@@ -3,23 +3,18 @@ title: nginx 常用配置详解
 urlname: bguk5v
 date: '2022-08-24 08:02:49 +0000'
 tags:
-  - nginx
   - 配置
-categories: '<font style="color:rgb(38, 38, 38);">学无止境</font>'
+  - nginx
+categories:
+  - 学无止境
 copyright_author_href: 'https://juejin.cn/user/1953149470376301'
-'<font style="color:rgb(38, 38, 38);">copyright_url': >-
-  </font>https://juejin.cn/post/7134540187064860679#heading-34<font
-  style="color:rgb(38, 38, 38);">
-'</font><font style="color:rgb(38, 38, 38);">copyright_author': </font>IAM17
+'<font style="color:rgb(38, 38, 38);">copyright_url': 'https://juejin.cn/post/7134540187064860679#heading-34'
+'</font><font style="color:rgb(38, 38, 38);">copyright_author': IAM17</font>
 '<font style="color:rgb(33, 37, 41);">cover': >-
-  </font>https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png#clientId=u81110d56-3058-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uc10ad34f&margin=%5Bobject%20Object%5D&name=%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220824161836.png&originHeight=393&originWidth=666&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=84791&status=done&style=none&taskId=ud1e4e7a9-8543-465f-b83c-ba4d1551b6f&title=
+  https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png#clientId=u81110d56-3058-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uc10ad34f&margin=%5Bobject%20Object%5D&name=%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220824161836.png&originHeight=393&originWidth=666&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=84791&status=done&style=none&taskId=ud1e4e7a9-8543-465f-b83c-ba4d1551b6f&title=</font>
 ---
 
-- [ ] ![](https://cdn.nlark.com/yuque/0/2022/png/27022430/1661329137182-5c82dc4b-de6c-4ddd-9605-adbee98b5d0c.png)<font style="color:rgb(51, 51, 51);">  
-      </font></div>color3
-      <font style="color:rgb(51, 51, 51);">环境为 CentOS 7。 nginx 版本 1.21</font></div>
-
-<font style="color:rgb(51, 51, 51);"></font>
+> <font style="color:rgb(51, 51, 51);"> 环境为:：CentOS 7。 nginx 版本： 1.21</font>
 
 ## <font style="color:rgb(51, 51, 51);">配置文件入口</font>
 
@@ -62,9 +57,9 @@ sudo nginx -s reload
 <font style="color:rgb(51, 51, 51);">对于我们请求的内容，浏览器的处理方式是不一样的。浏览器如何判断内容，是根据 响应头</font><font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(255, 80, 44);background-color:rgb(255, 245, 245);">Content-Type</font><font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(51, 51, 51);">在入口配置文件 nginx.conf 中有这样两句：</font>
 
 ```shell
-include             /etc/nginx/mime.types;
+include             /etc/nginx/mime.types;
 
-default_type        application/octet-stream;
+default_type        application/octet-stream;
 ```
 
 <font style="color:rgb(51, 51, 51);">mine.types 是</font><font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(255, 80, 44);background-color:rgb(255, 245, 245);">Content-type</font><font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(51, 51, 51);">和文件后缀名的映射表。比如 xx.css 文件的</font><font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(255, 80, 44);background-color:rgb(255, 245, 245);">Content-type</font><font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(51, 51, 51);">是</font><font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(255, 80, 44);background-color:rgb(255, 245, 245);">text/css</font><font style="color:rgb(255, 80, 44);background-color:rgb(255, 245, 245);"> </font><font style="color:rgb(51, 51, 51);">。 default_type 是默认的 type。比如当访问 /a 的时候，如果 a 文件存在，nginx 会返回 a 文件，响应头</font><font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(255, 80, 44);background-color:rgb(255, 245, 245);">Content-type：application/octet-stream</font><font style="color:rgb(51, 51, 51);">。 浏览器对</font><font style="color:rgb(255, 80, 44);background-color:rgb(255, 245, 245);">application/octet-stream</font><font style="color:rgb(51, 51, 51);">的处理方式是下载，而不是展示。</font>
@@ -76,7 +71,7 @@ location /css {
   add_header Content-type text/css;
 }
 location /css {
-  default_type  text/css;
+  default_type  text/css;
 }
 ```
 
@@ -310,8 +305,8 @@ proxy_pass http://127.0.0.1:3000/;
 ### <font style="color:rgb(51, 51, 51);">try_files</font>
 
 ```properties
-try_files file ... uri;
-try_files file ... =code;
+try_files file ... uri;
+try_files file ... =code;
 ```
 
 <font style="color:rgb(51, 51, 51);">举两个例子，对应这两种语法。</font>
@@ -377,7 +372,7 @@ location /index.html{
 ## <font style="color:rgb(51, 51, 51);">error_page</font>
 
 ```makefile
-error_page code ... [=[response]] uri;
+error_page code ... [=[response]] uri;
 ```
 
 <font style="color:rgb(51, 51, 51);">error_page 会产生内部跳转</font>
@@ -712,9 +707,9 @@ if (!-f $request_filename)
 ### <font style="color:rgb(51, 51, 51);">return</font>
 
 ```shell
-return code [text];
-return code URL;
-return URL;
+return code [text];
+return code URL;
+return URL;
 ```
 
 ```shell
